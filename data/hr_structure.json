@@ -1,0 +1,182 @@
+{
+  "company": "Fracktal Works",
+  "_note": "Edit roles, departments, skills, and capacity to match your actual org structure. ClickUp user IDs are pre-filled from your workspace.",
+  "departments": [
+    {
+      "name": "Leadership",
+      "head": "Vijay Raghav Varada",
+      "teams": [
+        {
+          "name": "Management",
+          "members": [
+            {
+              "name": "Vijay Raghav Varada",
+              "email": "vjvarada@fracktal.in",
+              "role": "Director",
+              "skills": ["company strategy", "product vision", "business development", "team leadership", "investor relations"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 236494607
+            },
+            {
+              "name": "Suresh Nagaraj",
+              "email": "suresh@fracktal.in",
+              "role": "Head of Accounts",
+              "skills": ["accounts management", "finance", "bookkeeping", "financial reporting", "vendor payments", "billing"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100836404
+            },
+            {
+              "name": "Pooja Rajan",
+              "email": "rajan.pooja@fracktal.in",
+              "role": "HR Lead",
+              "skills": ["HR management", "recruitment", "employee relations", "onboarding", "performance management", "payroll"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100836403
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Engineering",
+      "head": "TBD",
+      "teams": [
+        {
+          "name": "Engineering Team",
+          "members": [
+            {
+              "name": "Ayush Sarkar",
+              "email": "sarkar.ayush@fracktal.in",
+              "role": "Mechatronics Engineer",
+              "skills": ["mechatronics", "CAD", "electronics", "firmware", "mechanical design", "FDM", "SLA", "product prototyping", "R&D"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100842373
+            },
+            {
+              "name": "Suryansh Lal",
+              "email": "suryansh.lal@fracktal.in",
+              "role": "Mechanical Engineer",
+              "skills": ["CAD", "product design", "hardware testing", "3D printing", "DFM"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100842374
+            },
+            {
+              "name": "Pavan Siddapuram",
+              "email": "pavan.siddapuram@fracktal.in",
+              "role": "Software Engineer",
+              "skills": ["Python", "web development", "firmware", "API integrations", "embedded systems", "React"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100862267
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Operations",
+      "head": "Kiran Kumar S",
+      "teams": [
+        {
+          "name": "Operations Team",
+          "members": [
+            {
+              "name": "Kiran Kumar S",
+              "email": "kirankumar@fracktal.in",
+              "role": "Operations Head",
+              "skills": ["operations management", "production planning", "vendor management", "team leadership", "quality control", "supply chain"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100858676
+            },
+            {
+              "name": "Divya JM",
+              "email": "operation@fracktal.in",
+              "role": "Operations Executive",
+              "skills": ["customer support", "order management", "sales operations", "CRM", "invoicing"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100855863
+            },
+            {
+              "name": "SOUGATA MAJI",
+              "email": "sougata.maji@fracktal.in",
+              "role": "Head of Fracktory",
+              "skills": ["production management", "3D printer operations", "FDM", "machine maintenance", "mechanical design", "post-processing", "production scheduling"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 100932003
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Design & Marketing",
+      "head": "Ishaan Pilar",
+      "teams": [
+        {
+          "name": "Design & Marketing Team",
+          "members": [
+            {
+              "name": "Ishaan Pilar",
+              "email": "ishaanpilar@fracktal.in",
+              "role": "Design & Marketing Executive",
+              "skills": ["graphic design", "social media marketing", "content creation", "brand identity", "video editing", "Adobe Creative Suite"],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 236652627
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "External / Contractors",
+      "head": "TBD",
+      "teams": [
+        {
+          "name": "Contractors",
+          "members": [
+            {
+              "name": "Raja Sohal",
+              "email": "rajasohal04@gmail.com",
+              "role": "Software Contractor",
+              "skills": [],
+              "status": "active",
+              "capacity_hours_per_week": 40,
+              "current_load_hours_per_week": 0,
+              "available_hours_per_week": 40,
+              "clickup_user_id": 272439149
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

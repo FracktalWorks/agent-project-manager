@@ -1,0 +1,22 @@
+{
+  "name": "hr-manager",
+  "description": "HR project management agent — plans, prioritises, delegates and tracks company projects via ClickUp.",
+  "version": "0.1.0",
+  "skill_repos": [],
+  "integrations": ["anthropic", "clickup"],
+  "model_tier": "tier-2",
+  "execution_budget": {
+    "max_runtime_seconds": 300,
+    "max_llm_calls": 20,
+    "max_tool_calls": 40
+  },
+  "triggers": {
+    "cron": [
+      { "schedule": "0 9 * * MON", "payload": { "mode": "weekly_review" } }
+    ],
+    "webhooks": []
+  },
+  "authority": "suggest_apply",
+  "max_mutation_attempts": 1,
+  "tags": ["hr", "project-management", "clickup", "delegation"]
+}
