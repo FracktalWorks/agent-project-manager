@@ -1,5 +1,5 @@
 """
-self_anneal_diagnostics.py — Health checks and learnings log for agent-hr-manager.
+self_anneal_diagnostics.py — Health checks and learnings log for agent-project-manager.
 
 Usage:
     python scripts/self_anneal_diagnostics.py --check api_health

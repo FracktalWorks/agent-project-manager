@@ -1,4 +1,4 @@
-# agent-hr-manager
+# agent-project-manager
 
 HR project management agent — plans, prioritises, delegates and tracks company projects via ClickUp.
 
@@ -68,7 +68,7 @@ Open this workspace in VS Code and chat:
 ## Project Structure
 
 ```
-agent-hr-manager/
+agent-project-manager/
 ├── config.json                   # CommandCenter agent contract
 ├── graph.py                      # LangGraph build_graph() entry point
 ├── pyproject.toml

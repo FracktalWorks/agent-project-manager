@@ -1,4 +1,4 @@
-# Data Directory — agent-hr-manager
+# Data Directory — agent-project-manager
 
 This directory contains reference data used by the agent.
 

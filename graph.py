@@ -1,4 +1,4 @@
-"""agent-hr-manager — LangGraph StateGraph."""
+"""agent-project-manager — LangGraph StateGraph."""
 from __future__ import annotations
 
 import os

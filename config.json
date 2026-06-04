@@ -1,5 +1,5 @@
 {
-  "name": "hr-manager",
+  "name": "agent-project-manager",
   "description": "HR project management agent — plans, prioritises, delegates and tracks company projects via ClickUp.",
   "version": "0.1.0",
   "skill_repos": [],

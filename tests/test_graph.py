@@ -1,4 +1,4 @@
-"""Minimum viable tests for agent-hr-manager."""
+"""Minimum viable tests for agent-project-manager."""
 import sys
 from pathlib import Path
 
