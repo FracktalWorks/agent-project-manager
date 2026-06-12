@@ -37,9 +37,6 @@ class AgentState(TypedDict, total=False):
 
 
 _INTEGRATION_ENV_MAP: dict[str, dict[str, str]] = {
-    "anthropic": {
-        "ANTHROPIC_API_KEY": "api_key",
-    },
     "clickup": {
         "CLICKUP_API_TOKEN": "api_token",
         "CLICKUP_TEAM_ID":   "team_id",
@@ -154,7 +151,7 @@ async def chat_node(state: AgentState) -> dict[str, Any]:
         messages=[{"role": "system", "content": system}] + messages_for_llm,
     )
 
-    # Extract <mem>...</mem> tags (Anthropic stateless memory pattern)
+    # Extract <mem>...</mem> tags (stateless memory pattern)
     memories_to_save = [
         {"text": m.group(1).strip(), "category": "fact", "confidence": 0.85}
         for m in re.finditer(r"<mem>(.*?)</mem>", response, re.DOTALL)

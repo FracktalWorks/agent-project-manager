@@ -499,7 +499,7 @@ def build_agents():
             client = OpenAIChatCompletionClient(
                 base_url=os.environ.get("LITELLM_BASE_URL", "http://litellm:4000") + "/v1",
                 api_key=os.environ.get("LITELLM_API_KEY", "sk-local"),
-                model="gpt-4o",
+                model="tier2-sonnet",
             )
         except ImportError:
             raise ImportError(

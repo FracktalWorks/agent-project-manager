@@ -50,7 +50,7 @@ agent-<name>/
 ├── compatibility.md          # This file
 │
 ├── prompts/
-│   └── system.md             # PRIMARY system prompt for CommandCenter / Anthropic mode
+│   └── system.md             # PRIMARY system prompt for CommandCenter mode
 │
 ├── skills/
 │   ├── <skill-name>/
@@ -197,7 +197,7 @@ Full (all fields CommandCenter reads):
   "description": "One-line description.",
   "version": "0.1.0",
   "skill_repos": [],
-  "integrations": ["anthropic", "zoho-crm", "apollo"],
+  "integrations": ["zoho-crm", "apollo"],
   "model_tier": "tier-2",
   "execution_budget": {
     "max_runtime_seconds": 300,
@@ -274,7 +274,6 @@ class AgentState(TypedDict, total=False):
 
 
 _INTEGRATION_ENV_MAP: dict[str, dict[str, str]] = {
-    "anthropic": {"ANTHROPIC_API_KEY": "api_key"},
     "zoho-crm": {
         "ZOHO_CLIENT_ID":     "client_id",
         "ZOHO_CLIENT_SECRET": "client_secret",
@@ -358,7 +357,7 @@ async def chat_node(state: AgentState) -> dict[str, Any]:
         messages=[{"role": "system", "content": system}] + messages_for_llm,
     )
 
-    # Extract <mem>...</mem> tags (Anthropic stateless memory pattern)
+    # Extract <mem>...</mem> tags (stateless memory pattern)
     memories_to_save = [
         {"text": m.group(1).strip(), "category": "fact", "confidence": 0.85}
         for m in re.finditer(r"<mem>(.*?)</mem>", response, re.DOTALL)
@@ -394,7 +393,7 @@ def build_graph() -> StateGraph:
 
 ## 7. Memory pattern — `memories_to_save` via `<mem>` tag
 
-Agents use the **Anthropic stateless memory pattern**:
+Agents use the **stateless memory pattern**:
 
 1. Executor injects prior memories into the system prompt via `state["context"]["memories"]`.
 2. The LLM emits durable facts wrapped in `<mem>...</mem>` tags anywhere in its response.
@@ -428,7 +427,6 @@ Integration name → `.env` variable mapping for `agent-sales-assistant`:
 
 | Integration key | `.env` variable(s) |
 |---|---|
-| `anthropic` | `ANTHROPIC_API_KEY` |
 | `apollo` | `APOLLO_API_KEY` |
 | `serpapi` | `SERPAPI_API_KEY` |
 | `apify` | `APIFY_API_TOKEN` |
@@ -625,7 +623,7 @@ def test_graph_has_chat_node():
 | `sales-methodology` | `skills/sales-methodology/SKILL.md` | Tracy, Blount, Cardone, Ross, Weinberg, Rackham |
 | `self-annealing` | `skills/self-annealing/SKILL.md` | Error recovery + continuous improvement |
 
-**Integrations:** `anthropic`, `apollo`, `serpapi`, `apify`, `anymailfinder`, `instantly`, `zoho-crm`, `google-sheets`
+**Integrations:** `apollo`, `serpapi`, `apify`, `anymailfinder`, `instantly`, `zoho-crm`, `google-sheets`
 
 **Dual-mode:** VS Code Copilot Chat (`.github/agents/agent-sales-assistant.agent.md`) + CommandCenter (`graph.py` / `config.json`) — both read the same `prompts/system.md` + `skills/*/SKILL.md` source of truth.
 

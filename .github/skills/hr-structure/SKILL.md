@@ -78,7 +78,7 @@ When using these IDs in ClickUp API calls, pass them as **flat integers** in a l
 Run whenever new resumes are added to `data/Resumes/Full-Time/` or `data/Resumes/Interns/`:
 
 ```bash
-# With LLM (best quality — requires OPENAI_API_KEY in .env)
+# With LLM (best quality — requires LLM API key in .env)
 python scripts/ingest_resumes.py
 
 # Heuristic-only (no API key needed)

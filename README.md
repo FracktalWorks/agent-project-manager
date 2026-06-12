@@ -114,7 +114,6 @@ agent-project-manager/
 
 | Key | Where to get it |
 |---|---|
-| `ANTHROPIC_API_KEY` | console.anthropic.com |
 | `CLICKUP_API_TOKEN` | ClickUp → Settings → Apps → API Token |
 | `CLICKUP_TEAM_ID` | Visible in ClickUp URL |
 
