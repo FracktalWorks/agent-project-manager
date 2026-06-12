@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
-ingest_resumes.py — Parse PDF resumes from data/ folders, extract skills and
-expertise via LLM (OpenAI) or heuristic fallback, then update hr_structure.json
-with enriched profile data.
+ingest_resumes.py — Parse PDF resumes from data/ folders, extract skills via
+heuristic keyword matching, then update hr_structure.json with enriched profile data.
 
 Reads from:
-  data/Interns Resume/*.pdf
-  data/FW_Employees/*.pdf  (if any)
+  data/Resumes/Full-Time/*.pdf
+  data/Resumes/Interns/*.pdf
 
 Writes to:
   data/hr_structure.json      — skills arrays updated / new interns added
@@ -15,7 +14,6 @@ Writes to:
 Usage:
   python scripts/ingest_resumes.py
   python scripts/ingest_resumes.py --dry-run        # preview without writing
-  python scripts/ingest_resumes.py --no-llm         # heuristic-only extraction
 """
 from __future__ import annotations
 
@@ -112,62 +110,6 @@ def extract_skills_heuristic(text: str) -> list[str]:
         if re.search(r"\b" + re.escape(kw) + r"\b", text_lower):
             found.append(kw)
     return found
-
-
-# ---------------------------------------------------------------------------
-# LLM-based extraction (OpenAI)
-# ---------------------------------------------------------------------------
-
-def extract_profile_via_llm(text: str, filename: str) -> dict[str, Any]:
-    """
-    Use OpenAI to parse a resume into a structured profile.
-    Falls back to heuristic extraction if the API is unavailable.
-    """
-    try:
-        from openai import OpenAI
-    except ImportError:
-        print("  [INFO] openai package not installed — using heuristic extraction.")
-        return _heuristic_profile(text, filename)
-
-    api_key = os.environ.get("OPENAI_API_KEY", "")
-    if not api_key:
-        print("  [INFO] OPENAI_API_KEY not set — using heuristic extraction.")
-        return _heuristic_profile(text, filename)
-
-    client = OpenAI(api_key=api_key)
-
-    prompt = f"""You are a resume parser. Extract structured information from the resume text below.
-Return ONLY a valid JSON object with these fields:
-{{
-  "name": "Full Name",
-  "email": "email@example.com or null",
-  "phone": "phone number or null",
-  "education": ["degree, institution, year"],
-  "skills": ["skill1", "skill2", ...],
-  "experience_summary": "1-2 sentence summary of professional background",
-  "years_experience": estimated_number_or_null,
-  "domain": "primary domain (e.g. Software, Mechanical, Design, Data Science, etc.)"
-}}
-
-Resume filename: {filename}
-Resume text:
-{text[:4000]}
-"""
-
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0,
-        )
-        raw = response.choices[0].message.content.strip()
-        # Strip markdown code fences if present
-        raw = re.sub(r"^```[a-z]*\n?", "", raw)
-        raw = re.sub(r"\n?```$", "", raw)
-        return json.loads(raw)
-    except Exception as e:
-        print(f"  [WARN] LLM call failed ({e}) — using heuristic extraction.")
-        return _heuristic_profile(text, filename)
 
 
 def _heuristic_profile(text: str, filename: str) -> dict[str, Any]:
@@ -330,7 +272,6 @@ def upsert_member(hr_data: dict, profile: dict[str, Any], matched_key: str | Non
 def main() -> None:
     parser = argparse.ArgumentParser(description="Ingest resumes → update hr_structure.json")
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing files")
-    parser.add_argument("--no-llm", action="store_true", help="Use heuristic extraction only")
     args = parser.parse_args()
 
     if args.dry_run:
@@ -376,10 +317,7 @@ def main() -> None:
             stats["skipped"] += 1
             continue
 
-        if args.no_llm:
-            profile = _heuristic_profile(text, pdf_path.name)
-        else:
-            profile = extract_profile_via_llm(text, pdf_path.name)
+        profile = _heuristic_profile(text, pdf_path.name)
 
         profile["source_file"] = str(pdf_path.relative_to(REPO_ROOT))
         all_profiles.append(profile)

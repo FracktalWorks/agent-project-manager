@@ -15,6 +15,7 @@ venv/
 
 # Outputs — keep memory files but skip temp build artefacts
 outputs/.tmp/
+outputs/morning_report_*.md
 
 # .tmp/ — track utilities + READMEs; ignore cache data and intermediates
 .tmp/*
@@ -30,6 +31,10 @@ outputs/.tmp/
 # OS
 .DS_Store
 Thumbs.db
+
+# Sensitive HR data — never commit
+data/Employee_Contact*
+data/Resumes/
 
 # IDE
 .vscode/settings.json

@@ -13,7 +13,6 @@ Architecture (DOE v2):
 from __future__ import annotations
 
 import asyncio
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -484,28 +483,17 @@ def build_agents():
     """
     try:
         from agent_framework import Agent
-        from agent_framework.openai import OpenAIChatCompletionClient
-        client = OpenAIChatCompletionClient(
-            base_url=os.environ.get("LITELLM_BASE_URL", "http://litellm:4000") + "/v1",
-            api_key=os.environ.get("LITELLM_API_KEY", ""),
-            model="tier2-sonnet",
-        )
         AgentClass = Agent
     except ImportError:
         # Fallback for local VS Code dev — agent_framework not installed
         try:
             from autogen_agentchat.agents import AssistantAgent as AgentClass  # type: ignore
-            from autogen_ext.models.openai import OpenAIChatCompletionClient    # type: ignore
-            client = OpenAIChatCompletionClient(
-                base_url=os.environ.get("LITELLM_BASE_URL", "http://litellm:4000") + "/v1",
-                api_key=os.environ.get("LITELLM_API_KEY", "sk-local"),
-                model="tier2-sonnet",
-            )
         except ImportError:
             raise ImportError(
                 "Neither agent_framework nor autogen_agentchat is installed. "
                 "Install agent_framework for CommandCenter or autogen_agentchat for local dev."
             )
+    # Model client is provided by CommandCenter (BYOK) — agent does not create its own.
 
     return [AgentClass(
         name="agent-project-manager",
@@ -538,7 +526,6 @@ def build_agents():
             search_project_memory,
             run_diagnostics,
         ],
-        model_client=client,
     )]
 
 

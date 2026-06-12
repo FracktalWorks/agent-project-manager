@@ -33,8 +33,6 @@ def check_api_health() -> list[str]:
         issues.append("CLICKUP_API_TOKEN is not set in environment / .env")
     if not os.environ.get("CLICKUP_TEAM_ID", ""):
         issues.append("CLICKUP_TEAM_ID is not set in environment / .env")
-    if not os.environ.get("ANTHROPIC_API_KEY", ""):
-        issues.append("ANTHROPIC_API_KEY is not set in environment / .env")
     return issues
 
 
