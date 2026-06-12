@@ -1,1 +1,11 @@
-﻿{"decisions": []}
+﻿{
+	"decisions": [
+		{
+			"date": "2026-06-09",
+			"title": "Control Center-first upgrade scope",
+			"decision": "Prioritize only Control Center, Linux baseline, and OctoPrint upgrade work; defer Klipper task creation.",
+			"rationale": "Reduce scope and complete core platform compatibility quickly.",
+			"outcome": "6 parent tasks with subtasks were created in ClickUp under Control Center and assigned to Swaminath with end-of-week due dates."
+		}
+	]
+}

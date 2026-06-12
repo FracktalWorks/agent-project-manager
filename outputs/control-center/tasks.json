@@ -1,0 +1,147 @@
+{
+  "list_id": "901611246899",
+  "default_assignees": [101084655],
+  "default_due": "2026-06-13",
+  "default_priority": 2,
+  "_note": "Control Center — Raspbian Lite upgrade, PyQt5 X stack, OctoPrint compat, kernel tuning. Sprint: 2026-06-09 to 2026-06-13. Assignee: Swaminath (101084655).",
+  "tasks": [
+    {
+      "name": "Build Raspbian Lite baseline image",
+      "description": "Deliver a reproducible Raspberry Pi OS Lite baseline image suitable for Control Center deployment.\n\nPrerequisites: none\nDone when: baseline boots and setup script completes on target hardware.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Lock target Raspberry Pi OS Lite version and architecture",
+          "description": "Pin the exact Pi OS Lite release and CPU architecture. Document in version manifest.\nDone when: version and architecture are recorded in the manifest file.",
+          "priority": 3
+        },
+        {
+          "name": "Install minimal required system packages for Control Center stack",
+          "description": "Install only the packages required by Control Center and its dependencies on the clean Lite image.\nDone when: package list is validated against a known-good dependency matrix.",
+          "priority": 3
+        },
+        {
+          "name": "Create reproducible baseline setup script with version manifest",
+          "description": "Write a single idempotent setup script that reproduces the baseline from a fresh Lite image.\nDone when: running the script on a clean image produces a working baseline without manual steps.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Enable PyQt5 X runtime via xinit",
+      "description": "Bring up minimal X environment and run Control Center reliably via xinit.\n\nPrerequisites: baseline image exists and boots\nDone when: Control Center auto-starts after reboot and UI is usable.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Install minimal Xorg and xinit packages on Lite image",
+          "description": "Identify and install the smallest Xorg + xinit package set that supports PyQt5 rendering.\nDone when: xinit can start an X session without errors.",
+          "priority": 3
+        },
+        {
+          "name": "Configure xinit startup to launch Control Center PyQt5 app",
+          "description": "Create .xinitrc or equivalent that launches Control Center on X start.\nDone when: xinit starts and Control Center window is visible.",
+          "priority": 3
+        },
+        {
+          "name": "Validate auto-start after reboot and basic UI responsiveness",
+          "description": "Reboot the device and confirm Control Center starts automatically and responds to input.\nDone when: tested on two reboots with no manual intervention required.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Upgrade OctoPrint to latest stable",
+      "description": "Upgrade backend OctoPrint to current stable version with safe configuration migration.\n\nPrerequisites: baseline image and network access\nDone when: service starts, API is reachable, and Control Center can query printer state.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Install latest stable OctoPrint in isolated Python environment",
+          "description": "Install OctoPrint latest stable in a dedicated virtualenv. Pin version in manifest.\nDone when: OctoPrint service starts successfully.",
+          "priority": 3
+        },
+        {
+          "name": "Migrate existing configuration and verify service startup",
+          "description": "Copy existing printer profiles, users, and settings. Verify OctoPrint starts without config errors.\nDone when: all prior settings are present and service is healthy.",
+          "priority": 3
+        },
+        {
+          "name": "Verify API connectivity and baseline printer state retrieval",
+          "description": "Make an authenticated API call from Control Center to OctoPrint and retrieve printer connection state.\nDone when: Control Center can see printer status via the API.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Update Control Center for OctoPrint compatibility",
+      "description": "Ensure Control Center works with latest OctoPrint while preserving legacy fallback where required.\n\nPrerequisites: OctoPrint upgraded and reachable\nDone when: login and core printer commands work on target OctoPrint version.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Implement OctoPrint version detection in Control Center backend client",
+          "description": "Add version detection at startup so Control Center knows which API behaviour to use.\nDone when: version is read from /api/version and stored in session state.",
+          "priority": 3
+        },
+        {
+          "name": "Update breaking auth or API calls for latest OctoPrint",
+          "description": "Identify and fix all Control Center API calls that changed or broke in the new OctoPrint version.\nDone when: no API call fails against the latest OctoPrint with a 4xx or 5xx.",
+          "priority": 3
+        },
+        {
+          "name": "Retain legacy login or API fallback path for backward compatibility",
+          "description": "Keep old code paths active and gate them behind version check so old installs still work.\nDone when: Control Center passes basic smoke test against both old and new OctoPrint versions.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Tune Linux kernel boot and performance settings",
+      "description": "Apply stability-first kernel and boot parameter tuning for 3D-printer hardware on Raspberry Pi.\n\nPrerequisites: baseline image boots\nDone when: print-path services are stable and no regressions are observed on a test print.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Configure boot startup files for stable USB serial and low-latency I/O",
+          "description": "Edit /boot/config.txt and cmdline.txt for USB serial stability and reduced I/O latency.\nDone when: USB serial connection to printer MCU is stable across reboot.",
+          "priority": 3
+        },
+        {
+          "name": "Disable non-essential services and modules to reduce jitter",
+          "description": "Identify and disable system services and kernel modules not needed for printer operation.\nDone when: systemd service list is reviewed and non-essential items are masked.",
+          "priority": 3
+        },
+        {
+          "name": "Set safe memory, thermal, and swap behavior for long print sessions",
+          "description": "Configure swap policy, OOM handling, and thermal throttle thresholds for unattended long prints.\nDone when: device survives a 4+ hour test print without thermal throttle or OOM events.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Run end-to-end validation and rollback check",
+      "description": "Validate critical Control Center plus OctoPrint workflows and prove rollback path exists.\n\nPrerequisites: all above tasks complete\nDone when: validation checklist passes and rollback is documented and tested.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Validate login, session persistence, and user management flows",
+          "description": "Log in to Control Center, verify session persists across network interruption, and confirm user management works.\nDone when: login, session, and user creation pass without errors.",
+          "priority": 3
+        },
+        {
+          "name": "Validate printer connect and start/pause/resume/cancel flows",
+          "description": "Connect to a live printer, start a print, pause, resume, and cancel. Confirm state is reflected correctly in UI.\nDone when: all four commands succeed and printer state updates in Control Center UI.",
+          "priority": 3
+        },
+        {
+          "name": "Execute rollback to previous image and document recovery steps",
+          "description": "Reflash the previous known-good image, confirm the printer is operational, and write the rollback runbook.\nDone when: rollback runbook is written and rollback was executed successfully at least once.",
+          "priority": 3
+        }
+      ]
+    }
+  ]
+}

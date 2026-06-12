@@ -1,0 +1,211 @@
+{
+  "name": "Julia Series",
+  "slug": "julia-series",
+  "list_id": "901611246751",
+  "clickup_list_url": "https://app.clickup.com/90161241740/90165087954/list/901611246751",
+  "doc_view_name": "Julia Series — Documentation",
+  "status": "Active",
+  "phase": "Design",
+  "last_updated": "2026-06-06",
+
+  "description": "The Julia Series is Fracktal's next-generation desktop 3D printer, redesigned from the ground up for printing performance materials — carbon fibre composites, ABS composites, and similar engineering-grade feedstocks. Primary target market: industrial tooling, jigs, and fixtures.",
+
+  "team": [
+    {"name": "Vijay Raghav Varada", "role": "Project Lead / PCB Design"},
+    {"name": "SOUGATA MAJI",        "role": "Mechanical Design / CAD"},
+    {"name": "Ayush Sarkar",        "role": "Mechatronics / Electronics"}
+  ],
+
+  "objectives": [
+    "Produce a desktop 3D printer capable of reliably printing carbon fibre and ABS composites",
+    "Implement an enclosed heated chamber to handle high-performance materials",
+    "Deploy a CAN-bus toolhead architecture for plug-and-play replaceability",
+    "Integrate an eddy-current inductive sensor for automatic calibration and bed levelling",
+    "Deliver a parametric, scalable chassis that supports Single and IDEX variants"
+  ],
+
+  "scope_in": [
+    "Julia Single — CoreXY, 256×256×300 mm build volume",
+    "Julia IDEX — Hybrid CoreXY with dual carriages",
+    "CAN-bus toolhead electronics",
+    "Eddy-current inductive sensor for the toolhead",
+    "Optional HEPA filter module",
+    "Optional chamber heater module",
+    "PCB update for MKS Robin v3 compatibility"
+  ],
+  "scope_out": [
+    "Pellet extrusion (separate Penrose project)",
+    "SLS / SLA variants",
+    "Build volume larger than 256×256×300 mm in v1",
+    "Production-ready manufacturing documentation (follows design validation)"
+  ],
+
+  "timeline": {
+    "start": "2026-06-01",
+    "end":   "2026-12-31"
+  },
+
+  "milestones": [
+    {"milestone": "CAD Sprint 1 Complete (chassis, back panel, HEPA, heater)", "date": "2026-06-07", "owner": "SOUGATA MAJI", "status": "In Progress"},
+    {"milestone": "PCB Update — MKS Robin v3",                                 "date": "2026-06-07", "owner": "Vijay Raghav Varada", "status": "In Progress"},
+    {"milestone": "Updated carriage with inductive sensor",                     "date": "2026-06-09", "owner": "Vijay Raghav Varada", "status": "Upcoming"},
+    {"milestone": "First prototype assembly",                                   "date": "TBD",        "owner": "TBD",                 "status": "Upcoming"},
+    {"milestone": "Design validation complete",                                  "date": "TBD",        "owner": "TBD",                 "status": "Upcoming"}
+  ],
+
+  "dependencies": [
+    "MKS Robin v3 PCB must be completed before firmware bring-up",
+    "Eddy-current sensor selection (custom or off-shelf) gates carriage CAD",
+    "IDEX variant depends on single-extruder baseline validation"
+  ],
+
+  "functional_requirements": [
+    {"req": "Print carbon fibre composite filament (CF-PLA, CF-PETG, CF-Nylon)", "priority": "H", "status": "Open"},
+    {"req": "Enclosed and heated chamber reaching at least 50°C ambient",         "priority": "H", "status": "Open"},
+    {"req": "CAN-bus toolhead interface — plug-and-play replacement in < 5 min",  "priority": "H", "status": "Open"},
+    {"req": "Eddy-current sensor calibrates pressure advance automatically per material", "priority": "H", "status": "Open"},
+    {"req": "CoreXY motion system with IDEX extension for dual-material printing", "priority": "M", "status": "Open"},
+    {"req": "HEPA filter for composite particulate capture",                       "priority": "M", "status": "Open"},
+    {"req": "Parametric chassis — volume change requires only model rescale",      "priority": "M", "status": "Open"}
+  ],
+  "nonfunctional_requirements": [
+    {"req": "Print quality at 0.2 mm layer height with CF composite",              "target": "Surface Ra < 20 µm", "status": "Open"},
+    {"req": "Idle chamber heat-up time",                                            "target": "< 10 min to 50°C",  "status": "Open"},
+    {"req": "Toolhead swap time",                                                   "target": "< 5 min",           "status": "Open"},
+    {"req": "Machine footprint",                                                    "target": "≤ 500×500 mm base", "status": "Open"}
+  ],
+  "constraints": [
+    "Must use Klipper firmware ecosystem",
+    "Toolhead CAN bus: must be compatible with off-shelf EBB-series or equivalent",
+    "Chassis must be manufacturable with Fracktal's in-house sheet metal and FDM capabilities",
+    "Cost target for BOM (single unit) to be defined"
+  ],
+  "personas": [
+    {"name": "Industrial tooling engineer", "description": "Needs structural jigs, fixtures, and brackets printed from CF composites at desktop scale, without sending to a bureau."},
+    {"name": "R&D engineer", "description": "Iterates on composite prototype parts, needs consistent mechanical properties across prints."}
+  ],
+
+  "architecture": "The Julia Series uses a fully enclosed CoreXY gantry. The chassis is a sheet-metal and aluminium extrusion frame, designed parametrically so all variants share the same component tree. Electronics live on a central control board (MKS Robin v3 or equivalent), with toolhead electronics distributed over CAN bus to the toolhead PCB. Klipper runs on a Raspberry Pi mounted inside the enclosure.",
+
+  "how_it_works": "Motion: CoreXY H-bot with dual stepper motors driving the X/Y gantry. Z is driven by a single leadscrew (single) or dual leadscrews (IDEX).\n\nToolhead: A CAN-bus module on the toolhead carries the hotend thermistor, heater, part-cooling fan, and the eddy-current inductive sensor. The sensor measures nozzle displacement relative to the extruder body to calibrate pressure advance and perform bed levelling without a separate probe.\n\nChamber: A sheet-metal enclosure with optional active heating (resistive heater + thermistor) and optional HEPA filter for composite particulate. Desiccant management is separate (see Penrose Dryer project).\n\nFirmware: Klipper, configured via printer.cfg. CAN bus toolhead uses canboot bootloader.",
+
+  "design_decisions": [
+    {
+      "title": "CAN-bus toolhead over cable loom",
+      "context": "Previous printers used a drag-chain cable loom — fragile, hard to replace, limits toolhead modularity.",
+      "decision": "All toolhead electronics communicate over CAN bus (2-wire + power). Single toolhead PCB.",
+      "rationale": "Reduces wiring complexity, enables plug-and-play toolhead swap, aligns with Klipper CAN support (katapult/canboot).",
+      "consequences": "Requires custom or semi-custom CAN toolhead PCB. EBB36/42 off-shelf options evaluated as baseline."
+    },
+    {
+      "title": "Eddy-current inductive sensor as bed probe + pressure advance calibrator",
+      "context": "CR Touch / BLTouch probes are slow and wear-prone. Linear advance calibration is currently manual.",
+      "decision": "Toolhead-mounted eddy-current sensor (nozzle-relative displacement) for both bed levelling and pressure advance.",
+      "rationale": "Eliminates separate probe, enables automatic material profiling, increases repeatability.",
+      "consequences": "Sensor PCB design or off-shelf selection needed. Firmware integration with Klipper required."
+    },
+    {
+      "title": "Parametric chassis design",
+      "context": "Fracktal has multiple printer variants with different build volumes. Separate full CAD models for each are expensive to maintain.",
+      "decision": "Single parametric chassis — build volume is a top-level parameter. All variants derive from the same model.",
+      "rationale": "Reduces CAD maintenance burden; new variants only require parameter changes, not redesign.",
+      "consequences": "Initial CAD effort higher; requires disciplined parametric modelling practice."
+    }
+  ],
+
+  "subsystems": [
+    {
+      "name": "Toolhead",
+      "status": "Design",
+      "owner": "Ayush Sarkar",
+      "description": "The toolhead carries the hotend, extruder motor, part-cooling fan, and eddy-current sensor. All electronics interface via CAN bus to the main board.",
+      "specs": [
+        "CAN bus interface (canboot/katapult bootloader)",
+        "Eddy-current inductive sensor for pressure advance calibration and bed levelling",
+        "Compatible with E3D Revo or equivalent hotend ecosystem",
+        "Support for nozzle sizes 0.25 mm to 0.8 mm"
+      ],
+      "known_issues": [
+        "CAN toolhead PCB: custom vs off-shelf (EBB36/42) decision pending (owner: Vijay)"
+      ]
+    },
+    {
+      "name": "Motion System",
+      "status": "Design",
+      "owner": "SOUGATA MAJI",
+      "description": "CoreXY H-bot gantry for XY. Z driven by single leadscrew (Julia Single) or dual leadscrews (Julia IDEX). Hybrid CoreXY IDEX variant adds a second carriage on an independent Y rail.",
+      "specs": [
+        "CoreXY — XY speeds up to 300 mm/s target",
+        "Z resolution: 0.01 mm",
+        "Build volume: 256 × 256 × 300 mm (both variants)",
+        "IDEX: Klipper IDEX mode, independent dual carriages on shared gantry"
+      ],
+      "known_issues": [
+        "IDEX Y-axis motion: belt vs leadscrew not yet decided (owner: Vijay)",
+        "Z-axis re-arrangement may be required depending on motor cooling separation (Sougata)"
+      ]
+    },
+    {
+      "name": "Chamber Heating & Filtration",
+      "status": "Design",
+      "owner": "SOUGATA MAJI",
+      "description": "Enclosed chamber with optional active heating for ABS/CF printing and optional HEPA filtration for composite particulate capture.",
+      "specs": [
+        "Target chamber temperature: 50°C minimum (60°C+ TBD for CF composites)",
+        "HEPA filter: smaller form factor with active air circulation (redesign in progress)",
+        "Compact resistive heater addition (CAD in Sprint 1)"
+      ],
+      "known_issues": [
+        "Chamber heater target temperature not finalised: 60°C for ABS or higher for CF composites? (owner: Vijay)"
+      ]
+    },
+    {
+      "name": "Electronics & PCB",
+      "status": "Design",
+      "owner": "Vijay Raghav Varada",
+      "description": "Central control board is an updated legacy PCB targeting MKS Robin v3 compatibility. CAN bus backbone connects to toolhead PCB.",
+      "specs": [
+        "MKS Robin v3 pinout compatibility",
+        "CAN bus interface (TWAI or external CAN transceiver)",
+        "Raspberry Pi 4 as Klipper host (mounted inside enclosure)",
+        "Power supply: 24V main, 5V for Pi and fans"
+      ],
+      "known_issues": [
+        "PCB update for MKS Robin v3 is URGENT — due 2026-06-07 (owner: Vijay)"
+      ]
+    },
+    {
+      "name": "Firmware",
+      "status": "Not Started",
+      "owner": "Vijay Raghav Varada",
+      "description": "Klipper firmware on Raspberry Pi. Toolhead firmware on CAN PCB using katapult (canboot) bootloader. printer.cfg to be built alongside hardware bring-up.",
+      "specs": [
+        "Klipper (mainline) on Raspberry Pi 4",
+        "Katapult bootloader on CAN toolhead PCB",
+        "Pressure advance auto-calibration via eddy-current sensor integration"
+      ],
+      "known_issues": [
+        "Firmware config cannot start until PCB and toolhead PCB are finalised"
+      ]
+    }
+  ],
+
+  "open_questions": [
+    {"question": "Toolhead CAN PCB: custom in-house design or off-shelf EBB36/42?",              "owner": "Vijay Raghav Varada", "status": "Open"},
+    {"question": "IDEX second carriage Y-axis motion: belt or leadscrew?",                        "owner": "Vijay Raghav Varada", "status": "Open"},
+    {"question": "Chamber heater target temperature: 60°C (ABS) or higher for CF composites?",  "owner": "Vijay Raghav Varada", "status": "Open"},
+    {"question": "Eddy-current sensor: select off-shelf unit or design in-house PCB?",           "owner": "Ayush Sarkar",        "status": "Open"}
+  ],
+
+  "risks": [
+    {"risk": "CAN toolhead PCB decision delays toolhead CAD and firmware start", "likelihood": "H", "impact": "H", "mitigation": "Evaluate EBB36 as drop-in baseline; custom PCB as stretch goal", "owner": "Vijay"},
+    {"risk": "PCB update for MKS Robin v3 takes longer than 1 sprint",           "likelihood": "M", "impact": "H", "mitigation": "Time-box to 2 days; escalate if blocked", "owner": "Vijay"},
+    {"risk": "Eddy sensor firmware integration is non-trivial in Klipper",       "likelihood": "M", "impact": "M", "mitigation": "Prototype firmware integration early on existing machine", "owner": "Ayush"},
+    {"risk": "IDEX Y-axis design adds significant CAD scope",                    "likelihood": "M", "impact": "M", "mitigation": "Complete and validate Single variant first; IDEX is phase 2", "owner": "SOUGATA"}
+  ],
+
+  "external_links": {
+    "GitHub (CAD / Manufacturing Drawings)": "https://github.com/fracktal-works/julia-series",
+    "CAD Files (Google Drive)": "Add link here"
+  }
+}

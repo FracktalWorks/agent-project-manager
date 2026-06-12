@@ -1,1 +1,20 @@
-﻿{"follow_ups": []}
+﻿{
+	"follow_ups": [
+		{
+			"date_created": "2026-06-09",
+			"project": "Control Center",
+			"assignee": "Swaminath",
+			"due_date": "2026-06-13",
+			"status": "open",
+			"summary": "Complete Control Center/Linux/OctoPrint minimum scope tasks and subtasks created in ClickUp.",
+			"task_ids": [
+				"86d39e5dp",
+				"86d39e5f3",
+				"86d39e5gu",
+				"86d39e5jy",
+				"86d39e5mk",
+				"86d39e5pb"
+			]
+		}
+	]
+}

@@ -1,1 +1,44 @@
-﻿{"lessons": []}
+﻿{
+  "lessons": [
+    {
+      "id": "L-001",
+      "date": "2026-06-06",
+      "title": "ClickUp assignees silently ignored on PUT",
+      "pattern": "Task created with 200 OK but assignees are empty in ClickUp UI",
+      "root_cause": "PUT /api/v2/task/{id} ignores the assignees field entirely. Also: wrong format [{'id': 123}] used instead of flat int list [123].",
+      "fix": "Set assignees ONLY at creation time via POST /api/v2/list/{list_id}/task. Use flat integer list: [100842373], not [{'id': 100842373}].",
+      "prevention": "See clickup-ops SKILL.md API Rules section. Always use create_task() canonical template.",
+      "project": "photo-booth"
+    },
+    {
+      "id": "L-002",
+      "date": "2026-06-06",
+      "title": "ClickUp status not found error on task creation",
+      "pattern": "POST returns {\"err\":\"Status not found\",\"ECODE\":\"CRTSK_001\"}",
+      "root_cause": "Status string in payload doesn't match the list's exact configured status names. E.g. sent 'to do' when list uses 'todo'.",
+      "fix": "Always fetch the list first (GET /api/v2/list/{id}) and read the exact status strings from the 'statuses' array before creating tasks.",
+      "prevention": "See clickup-ops SKILL.md Rule 5. Run _check_statuses script before any bulk task creation.",
+      "project": "photo-booth"
+    },
+    {
+      "id": "L-003",
+      "date": "2026-06-06",
+      "title": "ClickUp subtask creation 404 via /subtask endpoint",
+      "pattern": "POST /api/v2/task/{id}/subtask returns 404 page not found",
+      "root_cause": "The /subtask endpoint does not exist in this ClickUp workspace configuration.",
+      "fix": "Create subtasks via POST /api/v2/list/{list_id}/task with 'parent': parent_task_id in the payload.",
+      "prevention": "See clickup-ops SKILL.md Rule 6 and create_subtask() canonical template.",
+      "project": "photo-booth"
+    },
+    {
+      "id": "L-004",
+      "date": "2026-06-06",
+      "title": "ClickUp due dates off by one day in IST",
+      "pattern": "Task created for Jun 9 appears as Jun 8 in ClickUp",
+      "root_cause": "datetime(yyyy, mm, dd).timestamp() uses midnight UTC, which is 05:30 IST next day — ClickUp displays the UTC date.",
+      "fix": "Use datetime(yyyy, mm, dd, 18, 0).timestamp() * 1000 and set due_date_time: False. 18:00 local safely falls on the correct calendar date in any timezone.",
+      "prevention": "Always use the ms() helper: def ms(y,m,d): return int(datetime(y,m,d,18,0).timestamp()*1000)",
+      "project": "general"
+    }
+  ]
+}

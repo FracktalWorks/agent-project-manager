@@ -1,0 +1,175 @@
+{
+  "name": "Penrose Pellet Extruder",
+  "slug": "penrose-pellet-extruder",
+  "list_id": "901611050642",
+  "clickup_list_url": "https://app.clickup.com/90161241740/90165087954/list/901611050642",
+  "doc_view_name": "Penrose Pellet Extruder — Documentation",
+  "status": "Active",
+  "phase": "Build",
+  "last_updated": "2026-06-06",
+
+  "description": "Penrose is Fracktal's large-format pellet extrusion platform. Instead of filament, it extrudes thermoplastic pellets — enabling higher throughput, lower material cost, and better compatibility with specialty composites and flexibles. v2 addresses assembly alignment issues found in the beta units.",
+
+  "team": [
+    {"name": "Vijay Raghav Varada", "role": "Project Lead"},
+    {"name": "Ayush Sarkar",        "role": "Mechatronics / Assembly"},
+    {"name": "Suryansh Lal",        "role": "Mechanical Design / CAD / Manufacturing Drawings"}
+  ],
+
+  "objectives": [
+    "Deliver a production-ready v2 pellet extruder that eliminates the alignment failure modes seen in beta units",
+    "Validate v2 at the 515 Base Workshop, Bangalore beta site",
+    "Establish a clear validated material set and acceptance test criteria",
+    "Create manufacturing drawings sufficient for reproducible production"
+  ],
+
+  "scope_in": [
+    "Penrose v2 extruder head mechanical redesign (axial bearing holders, couplings, assembly changes)",
+    "v2 assembly and validation at 515 Base Workshop (IDEX beta unit)",
+    "Manufacturing drawings (GitHub: fracktal-works/penrose-pellet-extruder-manufacturing)",
+    "User manual (first version)",
+    "Validated material set (materials to be defined)"
+  ],
+  "scope_out": [
+    "Hisar (1 Coy) site upgrade until 515 Base validation is complete",
+    "Hybrid pellet + milling head architecture (future phase)",
+    "New printer chassis design (extruder is a module; chassis is a separate project)"
+  ],
+
+  "timeline": {
+    "start": "2026-05-01",
+    "end":   "2026-08-31"
+  },
+
+  "milestones": [
+    {"milestone": "Manufacturing drawings on GitHub",                   "date": "2026-06-15", "owner": "Suryansh Lal",    "status": "In Progress"},
+    {"milestone": "v2 extruder assembly complete at 515 Base",         "date": "TBD",        "owner": "Ayush Sarkar",    "status": "Upcoming"},
+    {"milestone": "v2 validation run — alignment and extrusion tests", "date": "TBD",        "owner": "Ayush Sarkar",    "status": "Upcoming"},
+    {"milestone": "User manual first draft",                           "date": "TBD",        "owner": "TBD",             "status": "Upcoming"},
+    {"milestone": "v2 sign-off and Hisar deployment decision",         "date": "TBD",        "owner": "Vijay Raghav Varada", "status": "Upcoming"}
+  ],
+
+  "dependencies": [
+    "Manufacturing drawings must be complete before production run can be ordered",
+    "515 Base beta unit must be available for v2 swap during validation window",
+    "Accepted material set must be defined before user manual can be finalised"
+  ],
+
+  "functional_requirements": [
+    {"req": "Pellet extrusion — continuous operation without head misalignment under load",     "priority": "H", "status": "Open"},
+    {"req": "Throughput: 500 g/hr sustained at operating temperature",                          "priority": "H", "status": "Open"},
+    {"req": "Nozzle size range: 0.6 mm to 3.0 mm swap without full disassembly",               "priority": "H", "status": "Open"},
+    {"req": "Compatible with IDEX printer chassis (Penrose IDEX beta unit at 515 Base)",        "priority": "H", "status": "Open"},
+    {"req": "Consistent extrusion performance across: PE, PP, TPU, CF-blended feedstocks",     "priority": "M", "status": "Open"},
+    {"req": "Extruder removable and replaceable without removing the print head from the gantry", "priority": "M", "status": "Open"}
+  ],
+  "nonfunctional_requirements": [
+    {"req": "Head misalignment under 24 h continuous operation",  "target": "< 0.1 mm lateral drift", "status": "Open"},
+    {"req": "Assembly time for field technician (experienced)",   "target": "< 45 min",               "status": "Open"},
+    {"req": "Operating temperature range",                        "target": "180°C to 300°C nozzle",  "status": "Open"}
+  ],
+  "constraints": [
+    "Must fit the existing IDEX beta printer carriage envelope",
+    "Components must be sourceable in India with < 2-week lead time",
+    "Assembly must be achievable with standard hand tools (no press-fits requiring jigs)"
+  ],
+  "personas": [
+    {"name": "Workshop operator (515 Base)", "description": "Runs the machine daily for large-format industrial part production. Needs the head to work reliably for multi-hour jobs without intervention."},
+    {"name": "Field service technician",     "description": "Swaps nozzles and services the extruder on-site. Needs clear procedures and standard tooling."}
+  ],
+
+  "architecture": "The Penrose pellet extruder is a modular head that mounts to a large-format CoreXY or IDEX gantry. It consists of a hopper, screw drive mechanism, heated barrel, and nozzle. The drive is a stepper-motor-controlled auger screw. The barrel is heated via band heaters with a thermocouple feedback loop.\n\nThe v2 redesign focuses on the mechanical connection between the drive motor and the screw — improving axial bearing holders and couplings to prevent the misalignment failures seen in beta.",
+
+  "how_it_works": "Pellets are gravity-fed from a top-mounted hopper into the barrel. A stepper-driven auger screw conveys and compresses the pellets, melting them via the heated barrel. Melt is extruded through the nozzle under constant pressure from the screw.\n\nThe extruder is mounted to the gantry carriage. On the IDEX variant, two independent extruder heads share the same gantry on dual carriages.\n\nDifference from filament: there is no bowden tube or direct-drive — the screw provides the motive force. Retraction is achieved by briefly reversing the screw.",
+
+  "design_decisions": [
+    {
+      "title": "v2 focuses on axial bearing and coupling redesign (not full rebuild)",
+      "context": "Beta units failed due to head misalignment under sustained load. Root cause: insufficient axial constraint on the screw drive shaft.",
+      "decision": "Targeted redesign of axial bearing holders and motor-to-screw couplings. All other subsystems carried forward.",
+      "rationale": "Fastest path to eliminating the failure mode; avoids unnecessary scope expansion.",
+      "consequences": "If the redesign does not fully resolve misalignment, a more comprehensive v2.1 will be required."
+    },
+    {
+      "title": "Validate at 515 Base before deploying to Hisar",
+      "context": "Hisar site (1 Coy) has a single-head unit. 515 Base has the IDEX unit — harder test case. If it works on IDEX, it will work on single.",
+      "decision": "v2 validation is done first at 515 Base on the IDEX unit.",
+      "rationale": "De-risks field deployment; IDEX unit is a more demanding test environment.",
+      "consequences": "Hisar deployment is delayed until 515 Base validation is complete."
+    }
+  ],
+
+  "subsystems": [
+    {
+      "name": "Screw Drive & Motor Coupling",
+      "status": "Design — v2 Revision",
+      "owner": "Suryansh Lal",
+      "description": "The auger screw is driven by a NEMA 23 stepper motor via a flexible coupling. The v2 revision redesigns the axial bearing holders to better constrain the screw shaft under load.",
+      "specs": [
+        "NEMA 23 stepper, 3.0 A, 2.0 Nm hold torque",
+        "Flexible jaw coupling (spider) between motor and screw shaft",
+        "Angular contact bearing pair at the drive end (v2 redesign)"
+      ],
+      "known_issues": [
+        "Beta units: screw shaft migrates axially under sustained load — root cause of misalignment",
+        "v2 bearing holder design to be validated at 515 Base"
+      ]
+    },
+    {
+      "name": "Heated Barrel & Nozzle",
+      "status": "Carry-forward from v1",
+      "owner": "Ayush Sarkar",
+      "description": "The barrel is a steel tube with a wrap-around band heater. Nozzle is a standard thread-on format (compatible with 0.6 mm–3.0 mm range).",
+      "specs": [
+        "Band heater: 200W, 240V",
+        "Temperature range: 180°C to 300°C",
+        "Nozzle thread: M12 or equivalent (to be confirmed from current design)",
+        "Thermocouple: Type K, barrel mid-point"
+      ],
+      "known_issues": []
+    },
+    {
+      "name": "Hopper & Feed System",
+      "status": "Carry-forward from v1",
+      "owner": "Ayush Sarkar",
+      "description": "Gravity-feed hopper mounted above the barrel. Pellets fall under gravity into the screw entry zone.",
+      "specs": [
+        "Hopper capacity: ~500 g",
+        "No active drying — relies on pre-dried pellets or Penrose Dryer integration"
+      ],
+      "known_issues": [
+        "No active moisture management — sensitive materials require pre-drying"
+      ]
+    },
+    {
+      "name": "Gantry Interface",
+      "status": "Stable",
+      "owner": "Suryansh Lal",
+      "description": "The extruder mounts to the gantry carriage plate. The IDEX variant uses dual independent carriages sharing the same gantry Y rail.",
+      "specs": [
+        "Carriage plate: aluminium, standard IDEX mount pattern",
+        "Weight budget: < 2.0 kg assembled extruder head"
+      ],
+      "known_issues": []
+    }
+  ],
+
+  "open_questions": [
+    {"question": "What are the final pass/fail criteria for the v2 acceptance test at 515 Base?",    "owner": "Vijay Raghav Varada", "status": "Open"},
+    {"question": "Which materials are in the first validated material set?",                         "owner": "Vijay Raghav Varada", "status": "Open"},
+    {"question": "What instrumentation is required for the 515 Base validation run?",               "owner": "Ayush Sarkar",        "status": "Open"},
+    {"question": "Which issues from the Hisar unit should be carried into the v2 punch list?",      "owner": "Ayush Sarkar",        "status": "Open"}
+  ],
+
+  "risks": [
+    {"risk": "v2 bearing redesign does not fully resolve misalignment — requires v2.1",              "likelihood": "M", "impact": "H", "mitigation": "Add instrumented displacement measurement during validation run", "owner": "Ayush"},
+    {"risk": "515 Base beta unit not available for v2 swap (machine in active production use)",      "likelihood": "M", "impact": "M", "mitigation": "Schedule validation window with site team in advance", "owner": "Vijay"},
+    {"risk": "Manufacturing drawings delayed beyond Jun 15 — blocks production order",               "likelihood": "M", "impact": "H", "mitigation": "Suryansh to prioritise; daily check-in if needed", "owner": "Suryansh"}
+  ],
+
+  "external_links": {
+    "GitHub (Manufacturing Drawings)": "https://github.com/fracktal-works/penrose-pellet-extruder-manufacturing",
+    "CAD Files (Google Drive)": "Add link here",
+    "Test Logs": "Add link once available"
+  }
+}

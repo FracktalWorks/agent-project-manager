@@ -1,0 +1,4886 @@
+{
+  "generated_at": "2026-06-06T03:25:05.573490+00:00",
+  "total_open_tasks": 486,
+  "members": [
+    {
+      "name": "Veena M",
+      "email": "veenanairm04@gmail.com",
+      "role": "Sales Coordinator",
+      "department": "Sales",
+      "team": "Sales Team",
+      "clickup_user_id": 101084651,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "autocad",
+        "catia",
+        "fusion 360",
+        "r",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Veena_M_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Akash",
+      "email": "Akashghanekar98@gmail.com",
+      "role": "After Sales Engineer",
+      "department": "After Sales",
+      "team": "After Sales Team",
+      "clickup_user_id": 101084649,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "3d printing",
+        "mechatronics",
+        "sales"
+      ],
+      "resume_profile": {
+        "source_file": "Akash_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "BHAVITH K G",
+      "email": "kgbhavith1@gmail.com",
+      "role": "After Sales Engineer",
+      "department": "After Sales",
+      "team": "After Sales Team",
+      "clickup_user_id": 302514732,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "arduino",
+        "css",
+        "electronics",
+        "embedded systems",
+        "html",
+        "javascript",
+        "python",
+        "raspberry pi",
+        "react",
+        "robotics"
+      ],
+      "resume_profile": {
+        "source_file": "Bhavith_Aftersales_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Vinhu pprawin",
+      "email": "vinhupraveen@gmail.com",
+      "role": "After Sales Engineer",
+      "department": "After Sales",
+      "team": "After Sales Team",
+      "clickup_user_id": 101084650,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "3d printing",
+        "ansys",
+        "cad",
+        "catia",
+        "electronics",
+        "fusion 360",
+        "r",
+        "robotics"
+      ],
+      "resume_profile": {
+        "source_file": "Vinhu_pprawin_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Anirudh Mohta",
+      "email": "anirudhmohta7@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 101084653,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "arduino",
+        "cad",
+        "fpga",
+        "fusion 360",
+        "matlab",
+        "mechatronics",
+        "python",
+        "robotics",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Anirudh Mohta Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Milind Kiran",
+      "email": "milindkiran04@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 272538421,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "arduino",
+        "aws",
+        "cad",
+        "machine learning",
+        "matlab",
+        "mechatronics",
+        "python",
+        "raspberry pi",
+        "robotics",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Milind Kiran_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Piyush",
+      "email": "piyushganti@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 101084654,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "ansys",
+        "cad",
+        "catia",
+        "fusion 360",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Piyush_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Swaminath",
+      "email": "abswaminath2004@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 101084655,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "3d printing",
+        "arduino",
+        "electronics",
+        "embedded systems",
+        "fdm",
+        "firmware",
+        "flask",
+        "keras",
+        "llm",
+        "python",
+        "react",
+        "sla",
+        "tensorflow"
+      ],
+      "resume_profile": {
+        "source_file": "Swaminath_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Chandra shekhar",
+      "email": "Rangachandira1127@gmail.com",
+      "role": "Finance Executive",
+      "department": "Finance",
+      "team": "Finance Team",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "cad",
+        "r"
+      ],
+      "resume_profile": {
+        "source_file": "Chandra shekhar Resume IC.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Lakshmipathi",
+      "email": null,
+      "role": "Office Boy",
+      "department": "HR & Operations",
+      "team": "HR & Operations Team",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [],
+      "resume_profile": null
+    },
+    {
+      "name": "Sridhar",
+      "email": "sridhara1999sn@gmail.com",
+      "role": "Head of Manufacturing",
+      "department": "Manufacturing",
+      "team": "Manufacturing Team",
+      "clickup_user_id": 101085101,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [],
+      "resume_profile": {
+        "source_file": "Sridhar Resume .pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Hrithik",
+      "email": "hrithikhm04155@gmail.com",
+      "role": "Inventory & Procurement",
+      "department": "Manufacturing",
+      "team": "Manufacturing Team",
+      "clickup_user_id": 101084646,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "quality control",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Hrithik_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Rajesh Nayaka",
+      "email": null,
+      "role": "Manufacturing Engineer",
+      "department": "Manufacturing",
+      "team": "Manufacturing Team",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "electronics",
+        "r"
+      ],
+      "resume_profile": {
+        "source_file": "Rajesh Nayaka_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Guruprasad CD",
+      "email": null,
+      "role": "TBD",
+      "department": "Unassigned",
+      "team": "Pending Assignment",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [],
+      "resume_profile": null
+    },
+    {
+      "name": "Suresh Nagaraj",
+      "email": "suresh@fracktal.in",
+      "role": "Head of Accounts",
+      "department": "Finance",
+      "team": "Finance Team",
+      "clickup_user_id": 100836404,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 2,
+      "estimated_load_hours": 12.0,
+      "available_hours_per_week": 28.0,
+      "skills": [
+        "3d printing",
+        "accounts management",
+        "billing",
+        "bookkeeping",
+        "finance",
+        "financial reporting",
+        "flask",
+        "python",
+        "sales",
+        "vendor payments"
+      ],
+      "resume_profile": {
+        "source_file": "SureshNagaraj_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Ayush Sarkar",
+      "email": "sarkar.ayush@fracktal.in",
+      "role": "Mechatronics Engineer",
+      "department": "Engineering",
+      "team": "Engineering Team",
+      "clickup_user_id": 100842373,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 3,
+      "estimated_load_hours": 18.0,
+      "available_hours_per_week": 22.0,
+      "skills": [
+        "cad",
+        "dfm",
+        "electronics",
+        "fdm",
+        "firmware",
+        "go",
+        "mechanical design",
+        "mechatronics",
+        "product prototyping",
+        "python",
+        "quality control",
+        "r&d",
+        "robotics",
+        "sales",
+        "sla",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Ayush Sarkar_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Vijay Raghav Varada",
+      "email": "vjvarada@fracktal.in",
+      "role": "Director",
+      "department": "Leadership",
+      "team": "Management",
+      "clickup_user_id": 236494607,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 12,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "company strategy",
+        "product vision",
+        "business development",
+        "team leadership",
+        "investor relations"
+      ],
+      "resume_profile": null
+    },
+    {
+      "name": "Suryansh Lal",
+      "email": "suryansh.lal@fracktal.in",
+      "role": "Mechanical Engineer",
+      "department": "Engineering",
+      "team": "Engineering Team",
+      "clickup_user_id": 100842374,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 41,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "3d printing",
+        "ansys",
+        "autocad",
+        "cad",
+        "catia",
+        "dfm",
+        "electronics",
+        "fdm",
+        "fusion 360",
+        "hardware testing",
+        "matlab",
+        "product design",
+        "python",
+        "r",
+        "sla",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Suryansh Lal_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Pavan Siddapuram",
+      "email": "pavan.siddapuram@fracktal.in",
+      "role": "Software Engineer",
+      "department": "Engineering",
+      "team": "Engineering Team",
+      "clickup_user_id": 100862267,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 53,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "api integrations",
+        "aws",
+        "cad",
+        "css",
+        "django",
+        "docker",
+        "embedded systems",
+        "express",
+        "fastapi",
+        "firmware",
+        "github actions",
+        "go",
+        "javascript",
+        "llm",
+        "python",
+        "react",
+        "rust",
+        "sql",
+        "typescript",
+        "web development"
+      ],
+      "resume_profile": {
+        "source_file": "PavanS_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Kiran Kumar S",
+      "email": "kirankumar@fracktal.in",
+      "role": "Operations Head",
+      "department": "Operations",
+      "team": "Operations Team",
+      "clickup_user_id": 100858676,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 24,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "css",
+        "electronics",
+        "html",
+        "marketing",
+        "node.js",
+        "operations management",
+        "production planning",
+        "quality control",
+        "r",
+        "sales",
+        "supply chain",
+        "team leadership",
+        "ui/ux",
+        "vendor management"
+      ],
+      "resume_profile": {
+        "source_file": "Kiran kumar s.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Ishaan Pilar",
+      "email": "ishaanpilar@fracktal.in",
+      "role": "Design & Marketing Executive",
+      "department": "Design & Marketing",
+      "team": "Design & Marketing Team",
+      "clickup_user_id": 236652627,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 28,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "graphic design",
+        "social media marketing",
+        "content creation",
+        "brand identity",
+        "video editing",
+        "Adobe Creative Suite"
+      ],
+      "resume_profile": null
+    },
+    {
+      "name": "Raja Sohal",
+      "email": "rajasohal04@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 272439149,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 17,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "data science",
+        "django",
+        "flask",
+        "java",
+        "python",
+        "pytorch",
+        "react",
+        "spring",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Raja Sohal_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Pooja Rajan",
+      "email": "rajan.pooja@fracktal.in",
+      "role": "HR Lead",
+      "department": "HR & Operations",
+      "team": "HR & Operations Team",
+      "clickup_user_id": 100836403,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 30,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "employee relations",
+        "hr management",
+        "onboarding",
+        "payroll",
+        "performance management",
+        "r",
+        "recruitment"
+      ],
+      "resume_profile": {
+        "source_file": "Pooja Rajan_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Divya JM",
+      "email": "operation@fracktal.in",
+      "role": "Operations Executive",
+      "department": "HR & Operations",
+      "team": "HR & Operations Team",
+      "clickup_user_id": 100855863,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 18,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "customer support",
+        "order management",
+        "sales operations",
+        "CRM",
+        "invoicing"
+      ],
+      "resume_profile": null
+    },
+    {
+      "name": "SOUGATA MAJI",
+      "email": "sougata.maji@fracktal.in",
+      "role": "Head of Fracktory",
+      "department": "Fracktory",
+      "team": "Fracktory Team",
+      "clickup_user_id": 100932003,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 64,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "3d printer operations",
+        "3d printing",
+        "ansys",
+        "autocad",
+        "cad",
+        "fdm",
+        "fusion 360",
+        "machine maintenance",
+        "matlab",
+        "mechanical design",
+        "post-processing",
+        "production management",
+        "production scheduling",
+        "python",
+        "r",
+        "sales",
+        "sla",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Sougata Maji_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    },
+    {
+      "name": "Kallesha",
+      "email": "Kallesha337@gmail.com",
+      "role": "Fracktory Operator",
+      "department": "Fracktory",
+      "team": "Fracktory Team",
+      "clickup_user_id": 101084647,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 59,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [],
+      "resume_profile": {
+        "source_file": "Kallesha_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      }
+    }
+  ],
+  "members_with_tasks": [
+    {
+      "name": "Veena M",
+      "email": "veenanairm04@gmail.com",
+      "role": "Sales Coordinator",
+      "department": "Sales",
+      "team": "Sales Team",
+      "clickup_user_id": 101084651,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "autocad",
+        "catia",
+        "fusion 360",
+        "r",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Veena_M_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Akash",
+      "email": "Akashghanekar98@gmail.com",
+      "role": "After Sales Engineer",
+      "department": "After Sales",
+      "team": "After Sales Team",
+      "clickup_user_id": 101084649,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "3d printing",
+        "mechatronics",
+        "sales"
+      ],
+      "resume_profile": {
+        "source_file": "Akash_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "BHAVITH K G",
+      "email": "kgbhavith1@gmail.com",
+      "role": "After Sales Engineer",
+      "department": "After Sales",
+      "team": "After Sales Team",
+      "clickup_user_id": 302514732,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "arduino",
+        "css",
+        "electronics",
+        "embedded systems",
+        "html",
+        "javascript",
+        "python",
+        "raspberry pi",
+        "react",
+        "robotics"
+      ],
+      "resume_profile": {
+        "source_file": "Bhavith_Aftersales_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Vinhu pprawin",
+      "email": "vinhupraveen@gmail.com",
+      "role": "After Sales Engineer",
+      "department": "After Sales",
+      "team": "After Sales Team",
+      "clickup_user_id": 101084650,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "3d printing",
+        "ansys",
+        "cad",
+        "catia",
+        "electronics",
+        "fusion 360",
+        "r",
+        "robotics"
+      ],
+      "resume_profile": {
+        "source_file": "Vinhu_pprawin_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Anirudh Mohta",
+      "email": "anirudhmohta7@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 101084653,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "arduino",
+        "cad",
+        "fpga",
+        "fusion 360",
+        "matlab",
+        "mechatronics",
+        "python",
+        "robotics",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Anirudh Mohta Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Milind Kiran",
+      "email": "milindkiran04@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 272538421,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "arduino",
+        "aws",
+        "cad",
+        "machine learning",
+        "matlab",
+        "mechatronics",
+        "python",
+        "raspberry pi",
+        "robotics",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Milind Kiran_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Piyush",
+      "email": "piyushganti@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 101084654,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "ansys",
+        "cad",
+        "catia",
+        "fusion 360",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Piyush_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Swaminath",
+      "email": "abswaminath2004@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 101084655,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "3d printing",
+        "arduino",
+        "electronics",
+        "embedded systems",
+        "fdm",
+        "firmware",
+        "flask",
+        "keras",
+        "llm",
+        "python",
+        "react",
+        "sla",
+        "tensorflow"
+      ],
+      "resume_profile": {
+        "source_file": "Swaminath_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Chandra shekhar",
+      "email": "Rangachandira1127@gmail.com",
+      "role": "Finance Executive",
+      "department": "Finance",
+      "team": "Finance Team",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "cad",
+        "r"
+      ],
+      "resume_profile": {
+        "source_file": "Chandra shekhar Resume IC.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Lakshmipathi",
+      "email": null,
+      "role": "Office Boy",
+      "department": "HR & Operations",
+      "team": "HR & Operations Team",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [],
+      "resume_profile": null,
+      "tasks": []
+    },
+    {
+      "name": "Sridhar",
+      "email": "sridhara1999sn@gmail.com",
+      "role": "Head of Manufacturing",
+      "department": "Manufacturing",
+      "team": "Manufacturing Team",
+      "clickup_user_id": 101085101,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [],
+      "resume_profile": {
+        "source_file": "Sridhar Resume .pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Hrithik",
+      "email": "hrithikhm04155@gmail.com",
+      "role": "Inventory & Procurement",
+      "department": "Manufacturing",
+      "team": "Manufacturing Team",
+      "clickup_user_id": 101084646,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "quality control",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Hrithik_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Rajesh Nayaka",
+      "email": null,
+      "role": "Manufacturing Engineer",
+      "department": "Manufacturing",
+      "team": "Manufacturing Team",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [
+        "electronics",
+        "r"
+      ],
+      "resume_profile": {
+        "source_file": "Rajesh Nayaka_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": []
+    },
+    {
+      "name": "Guruprasad CD",
+      "email": null,
+      "role": "TBD",
+      "department": "Unassigned",
+      "team": "Pending Assignment",
+      "clickup_user_id": null,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 0,
+      "estimated_load_hours": 0.0,
+      "available_hours_per_week": 40.0,
+      "skills": [],
+      "resume_profile": null,
+      "tasks": []
+    },
+    {
+      "name": "Suresh Nagaraj",
+      "email": "suresh@fracktal.in",
+      "role": "Head of Accounts",
+      "department": "Finance",
+      "team": "Finance Team",
+      "clickup_user_id": 100836404,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 2,
+      "estimated_load_hours": 12.0,
+      "available_hours_per_week": 28.0,
+      "skills": [
+        "3d printing",
+        "accounts management",
+        "billing",
+        "bookkeeping",
+        "finance",
+        "financial reporting",
+        "flask",
+        "python",
+        "sales",
+        "vendor payments"
+      ],
+      "resume_profile": {
+        "source_file": "SureshNagaraj_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d1pk5eg",
+          "name": "New Joiners ID Cards",
+          "status": "to do",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gp55j",
+          "name": "SOP for Reimbursement",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Ayush Sarkar",
+      "email": "sarkar.ayush@fracktal.in",
+      "role": "Mechatronics Engineer",
+      "department": "Engineering",
+      "team": "Engineering Team",
+      "clickup_user_id": 100842373,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 3,
+      "estimated_load_hours": 18.0,
+      "available_hours_per_week": 22.0,
+      "skills": [
+        "cad",
+        "dfm",
+        "electronics",
+        "fdm",
+        "firmware",
+        "go",
+        "mechanical design",
+        "mechatronics",
+        "product prototyping",
+        "python",
+        "quality control",
+        "r&d",
+        "robotics",
+        "sales",
+        "sla",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Ayush Sarkar_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d37fr5x",
+          "name": "Complete Penrose V2 Testing Phase",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d37fr5r",
+          "name": "Complete Penrose V2 Assembly Phase",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d37fr5j",
+          "name": "Complete Penrose V2 Procurement Phase",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        }
+      ]
+    },
+    {
+      "name": "Vijay Raghav Varada",
+      "email": "vjvarada@fracktal.in",
+      "role": "Director",
+      "department": "Leadership",
+      "team": "Management",
+      "clickup_user_id": 236494607,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 12,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "company strategy",
+        "product vision",
+        "business development",
+        "team leadership",
+        "investor relations"
+      ],
+      "resume_profile": null,
+      "tasks": [
+        {
+          "id": "86d0epq47",
+          "name": "Social Media Execution Plan / Framework",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Social Media Content",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d0guh2y",
+          "name": "Lesson 1.5  3D Printing Process Overview",
+          "status": "backlog",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugvj",
+          "name": "Lesson 1.4  Types of 3D Printing Technologies",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugtd",
+          "name": "Lesson 1.3  The Economics of 3D Printing",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugnf",
+          "name": "Lesson 1.2  What is 3D Printing?",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugjb",
+          "name": "Lesson 1.1  Impact and possibilities of 3D printing",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gufkw",
+          "name": "Lesson 0.1 Introduction to the Course",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d3863mf",
+          "name": "PCB Design: update Legacy PCB for MKS Robin v3",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        },
+        {
+          "id": "86d3863df",
+          "name": "CAD: Updated Carriage for Inductive Sensor",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0pkubq",
+          "name": "Patent Application ALF",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0v7zvq",
+          "name": "dual Print Camera Calibration while RPI Camera streaming",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Control Center",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0hra2y",
+          "name": "Sales Sample Parts",
+          "status": "in process",
+          "space": "Fracktory",
+          "list": "Fracktory Operations",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Suryansh Lal",
+      "email": "suryansh.lal@fracktal.in",
+      "role": "Mechanical Engineer",
+      "department": "Engineering",
+      "team": "Engineering Team",
+      "clickup_user_id": 100842374,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 41,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "3d printing",
+        "ansys",
+        "autocad",
+        "cad",
+        "catia",
+        "dfm",
+        "electronics",
+        "fdm",
+        "fusion 360",
+        "hardware testing",
+        "matlab",
+        "product design",
+        "python",
+        "r",
+        "sla",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Suryansh Lal_CV.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d37qxe1",
+          "name": "Create GitHub Repository for Penrose Manufacturing Drawings",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d37fr5x",
+          "name": "Complete Penrose V2 Testing Phase",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d37fr5r",
+          "name": "Complete Penrose V2 Assembly Phase",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d2mgwv2",
+          "name": "Penrose Filament extrusion Toolhead",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d20fcp8",
+          "name": "Complete Penrose User Manual Delivery",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        },
+        {
+          "id": "86d18avc3",
+          "name": "Supplier finalization",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18avb1",
+          "name": "Prototype iteration",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18avax",
+          "name": "Latch durability tests",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18avat",
+          "name": "Door sealing tests",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18avak",
+          "name": "GD&T and tolerances",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18avad",
+          "name": "PCB mounting design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18ava5",
+          "name": "Cooler system integration",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av9w",
+          "name": "Heater and insulation integration",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av9f",
+          "name": "Desiccant chamber design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av95",
+          "name": "Quick release latch design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av8z",
+          "name": "Door + gasket seal design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av8k",
+          "name": "Internal frame structure",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av8c",
+          "name": "Spool holder design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av7p",
+          "name": "Transparent desiccant chamber design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av77",
+          "name": "Exterior aesthetic exploration",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av5k",
+          "name": "Electrical requirements",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av5d",
+          "name": "Define sealing and gasket needs",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av56",
+          "name": "Define desiccant visibility needs",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av4x",
+          "name": "Define drying chamber capacity",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av4q",
+          "name": "Determine spool compatibility",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18av4d",
+          "name": "Define performance needs",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1dm1qw",
+          "name": "U bed Under body isolation part",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cu8zr",
+          "name": "Volterra Rendered images for Manual",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cu8rb",
+          "name": "VOLTERRA m/c SPECS FOR MANUAL",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cdtyw",
+          "name": "Glass bed(Sand Blasted)",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        },
+        {
+          "id": "86d1c46gb",
+          "name": "Production Document",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1c42wh",
+          "name": "CAD Assembly from Scratch",
+          "status": "in process",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0zm7fa",
+          "name": "Tool Head Design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qd9tz",
+          "name": "Check Door design",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qd9md",
+          "name": "New Print bed",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qd9gn",
+          "name": "New U bed",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qd92k",
+          "name": "New XY Carriage",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qd8b2",
+          "name": "New tool head",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0n71q9",
+          "name": "Optimisation: All at once/One at a time",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d18awg7",
+          "name": "Air Filter Integration",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Dragon/Twin Dragon",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d37vaf7",
+          "name": "Design Phase",
+          "status": "in progress",
+          "space": "Research & Development",
+          "list": "Dragon 2026",
+          "priority": null,
+          "estimated_hours": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Pavan Siddapuram",
+      "email": "pavan.siddapuram@fracktal.in",
+      "role": "Software Engineer",
+      "department": "Engineering",
+      "team": "Engineering Team",
+      "clickup_user_id": 100862267,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 53,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "api integrations",
+        "aws",
+        "cad",
+        "css",
+        "django",
+        "docker",
+        "embedded systems",
+        "express",
+        "fastapi",
+        "firmware",
+        "github actions",
+        "go",
+        "javascript",
+        "llm",
+        "python",
+        "react",
+        "rust",
+        "sql",
+        "typescript",
+        "web development"
+      ],
+      "resume_profile": {
+        "source_file": "PavanS_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d0nggu7",
+          "name": "Create PRD Document",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Shadow Box",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0nggtu",
+          "name": "Create Task list",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Shadow Box",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d25526x",
+          "name": "smtp integration for mail",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d25520h",
+          "name": "database access with pgadmin",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d22q4tn",
+          "name": "fix mounting holes position on the baseplate",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d225e4j",
+          "name": "Codebase Audit for re-architect",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1yj3dx",
+          "name": "Fix Cylindrical Support Crash issue along with Spinner Value Rendering",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1y8mfw",
+          "name": "Testing the AWS SES mail service",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1xd3ec",
+          "name": "Forgot Password and Password Reset link over Mail",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1xd2ev",
+          "name": "Mail service creation and integration for User Verification ",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1xbzke",
+          "name": "Redesign the Portal main UI towards multi device combat",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1vy95n",
+          "name": "Code File Review and folder management across the  entire codebase",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1vehh3",
+          "name": "Auth and OAuth Error and Exception Handling and Testing",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1v2a04",
+          "name": "Data Migration from Supabase to RDS + S3",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1pwb60",
+          "name": "Create 1 Obj Storage in cloud for users .stl files store",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1pwb1x",
+          "name": "DB migration from Supabase to AWS RDS",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1j7z84",
+          "name": "Exporrt and Import APIs Routes",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1j7yvw",
+          "name": "Import and Export models to send DB",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1fyc20",
+          "name": "Design and implement the payment portals functionality",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1fyc1m",
+          "name": "Sign up and sign in along with authentication tested, corrected",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1a7fa9",
+          "name": "If clamp is moved into the part boundy, reposition it similar to how we position during import.",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1a6vb7",
+          "name": "CSG clamp cutouts AT THE END AGAIN in case of overlaps with other supports. ",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1a6tx6",
+          "name": "STEP, OBJ, 3MF import",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1a6twd",
+          "name": "Add Gussets in rectangular and cylindrical supports becoming tall",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d17y90p",
+          "name": "Allow Baseplate Collision in baseplate settings.",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d16xhad",
+          "name": "implement right click menu and include hide option",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d16x2wn",
+          "name": "Import upto 100MB file, but decimate to 25MB after importing",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d16wx6k",
+          "name": "Restore original transforms on right click",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d16wx69",
+          "name": "Level With Baseplate option on right click",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qde7c",
+          "name": "Apply Boolean and offset",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qdduc",
+          "name": "Additional Features",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qdbgp",
+          "name": "Add Supports",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qd2f2",
+          "name": "Define contact / baseplate",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d0qcuqq",
+          "name": "Import Model",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0qctwu",
+          "name": "Access & Onboarding",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhg5",
+          "name": "Auto-suggest spacing from tSlotSpacing",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhg6",
+          "name": "Drill holes into jaw blank geometry (CSG)",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhg3",
+          "name": "Diamond knurl geometry generation",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhg1",
+          "name": "Browser file download",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhg4",
+          "name": "Grip features preview in viewport",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhg0",
+          "name": "STL binary serializer",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfz",
+          "name": "Apply grip features to jaw mesh",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhg2",
+          "name": "Wire profiled geometry into Scene3D",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfy",
+          "name": "MountingHolesRenderer — visual holes",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfx",
+          "name": "3MF export",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfr",
+          "name": "JawBlankRenderer — render blank box in viewport",
+          "status": "todo",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfv",
+          "name": "Pre-export validation",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfw",
+          "name": "Regenerate profile on parameter change",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhft",
+          "name": "Render profiled mesh after CSG",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfu",
+          "name": "Serration geometry generation",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfq",
+          "name": "Bundle size optimization (1.2MB chunk)",
+          "status": "backlog",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhfp",
+          "name": "cn() deduplication",
+          "status": "todo",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nhhda",
+          "name": "Move shadcn primitives to cad-ui",
+          "status": "in progress",
+          "space": "Research & Development",
+          "list": "RapidTool: SoftJaws",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Kiran Kumar S",
+      "email": "kirankumar@fracktal.in",
+      "role": "Operations Head",
+      "department": "Operations",
+      "team": "Operations Team",
+      "clickup_user_id": 100858676,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 24,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "css",
+        "electronics",
+        "html",
+        "marketing",
+        "node.js",
+        "operations management",
+        "production planning",
+        "quality control",
+        "r",
+        "sales",
+        "supply chain",
+        "team leadership",
+        "ui/ux",
+        "vendor management"
+      ],
+      "resume_profile": {
+        "source_file": "Kiran kumar s.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d20fcp8",
+          "name": "Complete Penrose User Manual Delivery",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Penrose Pellet Extruder",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        },
+        {
+          "id": "86d18avbw",
+          "name": "Certification testing",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": {
+            "color": "#d8d8d8",
+            "id": "4",
+            "orderindex": "4",
+            "priority": "low"
+          },
+          "estimated_hours": 2.0
+        },
+        {
+          "id": "86d18avbp",
+          "name": "QC SOP creation",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": {
+            "color": "#d8d8d8",
+            "id": "4",
+            "orderindex": "4",
+            "priority": "low"
+          },
+          "estimated_hours": 2.0
+        },
+        {
+          "id": "86d18avbf",
+          "name": "Pilot batch testing",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "MDS",
+          "priority": {
+            "color": "#d8d8d8",
+            "id": "4",
+            "orderindex": "4",
+            "priority": "low"
+          },
+          "estimated_hours": 2.0
+        },
+        {
+          "id": "86d0n08tr",
+          "name": "SOP Document: Cold Pull",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Troubleshooting & Maintanance",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0huu4p",
+          "name": "7. Records & Tracking",
+          "status": "to do",
+          "space": "Fracktal Care",
+          "list": "Printer Commissioning",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0huu40",
+          "name": "6. Reference & Support",
+          "status": "to do",
+          "space": "Fracktal Care",
+          "list": "Printer Commissioning",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0huu3y",
+          "name": "5. Maintenance & Troubleshooting",
+          "status": "to do",
+          "space": "Fracktal Care",
+          "list": "Printer Commissioning",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0huju4",
+          "name": "4. Operation & Material Handling",
+          "status": "to do",
+          "space": "Fracktal Care",
+          "list": "Printer Commissioning",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0huj7g",
+          "name": "3. Calibration & Testing",
+          "status": "to do",
+          "space": "Fracktal Care",
+          "list": "Printer Commissioning",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0huhty",
+          "name": "2. Installation & Setup",
+          "status": "to do",
+          "space": "Fracktal Care",
+          "list": "Printer Commissioning",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0htr29",
+          "name": "1.Delivery & Preparation",
+          "status": "in process",
+          "space": "Fracktal Care",
+          "list": "Printer Commissioning",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d23kkc4",
+          "name": "Knowledge base creation",
+          "status": "in process",
+          "space": "Fracktal Care",
+          "list": "Knowledge Base Platform",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1109zc",
+          "name": "populate the back up files from Zoho to betterdocs.",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Knowledge Base Platform",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0pkr5p",
+          "name": "Backup Articles from Zoho Knowledge Base",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Knowledge Base Platform",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1dhccc",
+          "name": "Hands on printer",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Interns ",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1dhb4c",
+          "name": "documents drafts",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Interns ",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1dh5p9",
+          "name": "Circuit diagram",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Interns ",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d28941e",
+          "name": "Environmental Installation Requirements",
+          "status": "in process",
+          "space": "Fracktal Care",
+          "list": "Fracktal Care Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1c7gp0",
+          "name": "Comprehensive policy",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Fracktal Care Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0n0y6h",
+          "name": "Feedback SOP: Follow up with customer after on-site visit.",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Fracktal Care Operations",
+          "priority": {
+            "color": "#6fddff",
+            "id": "3",
+            "orderindex": "3",
+            "priority": "normal"
+          },
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2ayrhd",
+          "name": "Dragon 400 (y spliter)",
+          "status": "in process",
+          "space": "Fracktal Care",
+          "list": "Quality Control",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d296x5p",
+          "name": "Dragon 400",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Quality Control",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d296x0x",
+          "name": "snowflake jankal",
+          "status": "done",
+          "space": "Fracktal Care",
+          "list": "Quality Control",
+          "priority": null,
+          "estimated_hours": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Ishaan Pilar",
+      "email": "ishaanpilar@fracktal.in",
+      "role": "Design & Marketing Executive",
+      "department": "Design & Marketing",
+      "team": "Design & Marketing Team",
+      "clickup_user_id": 236652627,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 28,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "graphic design",
+        "social media marketing",
+        "content creation",
+        "brand identity",
+        "video editing",
+        "Adobe Creative Suite"
+      ],
+      "resume_profile": null,
+      "tasks": [
+        {
+          "id": "86d1uvhgf",
+          "name": "Penrose Label Creation & Branding Update",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1uvgj7",
+          "name": "2 creative posters for instagram and linkedin about fixtures",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1d9d13",
+          "name": "Design and produce promotional poster for Volterra 3D printer. Research completed - now moving into editing and scripting phase for final video content.",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1c5bgg",
+          "name": "Manipal Sponsorship",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0j4h9q",
+          "name": "Drone Process Video",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gu8ud",
+          "name": "Material- Dryer Product Video",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gu8p7",
+          "name": "SLS Story and Product Overview",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gu8mu",
+          "name": "Fracktal Company Ad",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gu8cg",
+          "name": "Twin Dragon Product Video",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gu88b",
+          "name": "Dragon Product Video",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gu880",
+          "name": "Snowflake Product Video",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Video Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1c7b24",
+          "name": "twin dragon",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "Social Media Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1c7a5h",
+          "name": "dragon campaign",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "Social Media Content",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0guh2y",
+          "name": "Lesson 1.5  3D Printing Process Overview",
+          "status": "backlog",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugvj",
+          "name": "Lesson 1.4  Types of 3D Printing Technologies",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugtd",
+          "name": "Lesson 1.3  The Economics of 3D Printing",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugnf",
+          "name": "Lesson 1.2  What is 3D Printing?",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gugjb",
+          "name": "Lesson 1.1  Impact and possibilities of 3D printing",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gufkw",
+          "name": "Lesson 0.1 Introduction to the Course",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "3D Printing Course",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0u1b4f",
+          "name": "Dragon page",
+          "status": "backlog",
+          "space": "Sales & Marketing",
+          "list": "Website_Fracktal",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d129jtn",
+          "name": "Printstick Listing",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Sales Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0u1bdw",
+          "name": "Christmas Ads: Print Stick",
+          "status": "in process",
+          "space": "Sales & Marketing",
+          "list": "Marketing Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0pzd1v",
+          "name": "Harsha Data Handover to Ishaan",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Marketing Operations",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        },
+        {
+          "id": "86d0jq27x",
+          "name": "New SLS 200 Brochure",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Marketing Operations",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d0j9vfg",
+          "name": "Print Snowflake manual",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "Marketing Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cu9m7",
+          "name": "Volterra Manual/ Quick Start guide",
+          "status": "in process",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cu8rb",
+          "name": "VOLTERRA m/c SPECS FOR MANUAL",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1nat1j",
+          "name": "Manual",
+          "status": "in process",
+          "space": "Research & Development",
+          "list": "Dragon/Twin Dragon",
+          "priority": null,
+          "estimated_hours": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Raja Sohal",
+      "email": "rajasohal04@gmail.com",
+      "role": "Intern",
+      "department": "Interns",
+      "team": "Intern Pool",
+      "clickup_user_id": 272439149,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 17,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "data science",
+        "django",
+        "flask",
+        "java",
+        "python",
+        "pytorch",
+        "react",
+        "spring",
+        "supply chain"
+      ],
+      "resume_profile": {
+        "source_file": "Raja Sohal_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d259r8q",
+          "name": "multipart baseplate height and padding to be updated live",
+          "status": "review",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2551ge",
+          "name": "fix supports bottomcap alignment , to ensure manifold meshes",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d22uvm4",
+          "name": "fix bottomcap for custom supports",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d22q4x0",
+          "name": "fix multipart basepalte resizing logic",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d20umj6",
+          "name": "rounded corners to rectangular supports",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d20um7n",
+          "name": "add gussets to clamps",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1z7520",
+          "name": "tutorial ui to scale with system resolution correctly",
+          "status": "in process",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1vya5g",
+          "name": "Gussets and Snippets approach Document",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1v2a1m",
+          "name": "gussets for automatic support generation",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1v29zc",
+          "name": "generate chamfers for gussets",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1t4d6d",
+          "name": "fix input field for supports' transform position",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1t4d1z",
+          "name": "move export api calls out of cad ui",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1qn5mh",
+          "name": "fix model cavity data not being reset on resetting the application",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1qkcct",
+          "name": "update the main landing page ui",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1qkc6n",
+          "name": "complete new tutorial implementation",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1a6twd",
+          "name": "Add Gussets in rectangular and cylindrical supports becoming tall",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "RapidTool: Fixture",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2nca57",
+          "name": "reskin app UI",
+          "status": "in progress",
+          "space": "Research & Development",
+          "list": "VSP Engine",
+          "priority": null,
+          "estimated_hours": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Pooja Rajan",
+      "email": "rajan.pooja@fracktal.in",
+      "role": "HR Lead",
+      "department": "HR & Operations",
+      "team": "HR & Operations Team",
+      "clickup_user_id": 100836403,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 30,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "employee relations",
+        "hr management",
+        "onboarding",
+        "payroll",
+        "performance management",
+        "r",
+        "recruitment"
+      ],
+      "resume_profile": {
+        "source_file": "Pooja Rajan_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d0gzezt",
+          "name": "Feedback Form_Fracktory",
+          "status": "review",
+          "space": "Sales & Marketing",
+          "list": "Sales Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1nazp4",
+          "name": "Remove Click up access - Sachin",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Marketing Operations",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        },
+        {
+          "id": "86d0gu9tv",
+          "name": "Launch Snowflake Video",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Marketing Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0d4k2j",
+          "name": "Exhibition Checklist",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Marketing Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1paw56",
+          "name": "Prompt for Static Post",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ntzee",
+          "name": "LinkedIn Post for Open Vacancy",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ntyjd",
+          "name": "Daily Overtime or Reimbursement form and documentation",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ntxga",
+          "name": "Update Holiday Calendar 2026",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ntx5k",
+          "name": "Update Handbook 2026",
+          "status": "review",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1majy8",
+          "name": "Review Meeting: Shubh",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0y2p1m",
+          "name": "JD for all Employees",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjz6d",
+          "name": "Check list for Exhibition",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0pm162",
+          "name": "Office Wall Posters",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0mmtvt",
+          "name": "Hiring After sales from NTTF (Electronic City)",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0m911w",
+          "name": "MIT 6 Months Internship (27th Oct)",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0kemjp",
+          "name": "Assist in establishing a clear hierarchy within Rohit’s team, particularly design department adjustments",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0kemjm",
+          "name": "Manage and follow up on soft skills development plan for Suryansh, coordinating with Rohit and Pooja (59:00)",
+          "status": "review",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0hy5m8",
+          "name": "Fill 3 Vacant Positions",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0hy5bx",
+          "name": "Manikandan Legal Issue",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0hfb5a",
+          "name": "Evaluation Form: Colour Category ",
+          "status": "review",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d0y05y5",
+          "name": "Exit Form",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xkan4",
+          "name": "Lakshmipathi Bhaiya's JD",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xk8fr",
+          "name": "Renovate Office",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xk723",
+          "name": "Need to have all EPFO and ESIC knowledge and updates, update employees data",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjygz",
+          "name": "Employee documents in a Folder on One Drive",
+          "status": "review",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjx3b",
+          "name": "All Fracktal Documents related to HR in one place",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjwwt",
+          "name": "Performance Review Form",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjwrq",
+          "name": "Create a mail template for Birthday Wishes from Fracktal",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjwm6",
+          "name": "Create a mail template for Service Anniversary",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gp55j",
+          "name": "SOP for Reimbursement",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Divya JM",
+      "email": "operation@fracktal.in",
+      "role": "Operations Executive",
+      "department": "HR & Operations",
+      "team": "HR & Operations Team",
+      "clickup_user_id": 100855863,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 18,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "customer support",
+        "order management",
+        "sales operations",
+        "CRM",
+        "invoicing"
+      ],
+      "resume_profile": null,
+      "tasks": [
+        {
+          "id": "86d1enzzu",
+          "name": "Penrose shipping",
+          "status": "done",
+          "space": "Sales & Marketing",
+          "list": "Sales Operations",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d1drhxv",
+          "name": "Volterra Dispatch ",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Volterra ALF",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0y2p1m",
+          "name": "JD for all Employees",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0mmtvt",
+          "name": "Hiring After sales from NTTF (Electronic City)",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0hy5m8",
+          "name": "Fill 3 Vacant Positions",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "HR",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1pk5td",
+          "name": "Cups for Employees",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0y06gh",
+          "name": "Confirmation Mail in Completion of Probation",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xkan4",
+          "name": "Lakshmipathi Bhaiya's JD",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xk8fr",
+          "name": "Renovate Office",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xk723",
+          "name": "Need to have all EPFO and ESIC knowledge and updates, update employees data",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xk6r3",
+          "name": "Coffee Machine - Cost per month (coffee beans & milk)",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjyuz",
+          "name": "Fracktal induction need to be fixed",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjyrn",
+          "name": "Rearrange Kitchen to use more space",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjypp",
+          "name": "All Frcaktal Applications with ID & Password in one sheet",
+          "status": "backlog",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjygz",
+          "name": "Employee documents in a Folder on One Drive",
+          "status": "review",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0xjx3b",
+          "name": "All Fracktal Documents related to HR in one place",
+          "status": "in process",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0m981q",
+          "name": "Work on Admin Sheet (handover from Abhinandan)",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0eprfz",
+          "name": "Ayudha Puja Arrangements",
+          "status": "done",
+          "space": "Company Operations",
+          "list": "Admin",
+          "priority": null,
+          "estimated_hours": 4.0
+        }
+      ]
+    },
+    {
+      "name": "SOUGATA MAJI",
+      "email": "sougata.maji@fracktal.in",
+      "role": "Head of Fracktory",
+      "department": "Fracktory",
+      "team": "Fracktory Team",
+      "clickup_user_id": 100932003,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 64,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [
+        "3d printer operations",
+        "3d printing",
+        "ansys",
+        "autocad",
+        "cad",
+        "fdm",
+        "fusion 360",
+        "machine maintenance",
+        "matlab",
+        "mechanical design",
+        "post-processing",
+        "production management",
+        "production scheduling",
+        "python",
+        "r",
+        "sales",
+        "sla",
+        "solidworks"
+      ],
+      "resume_profile": {
+        "source_file": "Sougata Maji_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d38d5py",
+          "name": "CAD: Back Panel — Fan Rearrangement & Smaller Fans",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d37ymym",
+          "name": "CAD: XYZ Motor Cooling Separation",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d37ykde",
+          "name": "CAD: 3.5 Inch RPi Resistive Touch Display",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d37yjmr",
+          "name": "CAD: Top Plate Redesign",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d37yjgx",
+          "name": "CAD: HEPA Filter — Smaller Filter & Active Air Circulation",
+          "status": "done",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0rjez4",
+          "name": "CAD: Chamber Heating — Compact Heater Addition",
+          "status": "to do",
+          "space": "Research & Development",
+          "list": "Julia Series",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d35ydzh",
+          "name": "POOJA ASSOCIATES QTY-50",
+          "status": "in process",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d356fhw",
+          "name": "Aquagenics",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d33c76b",
+          "name": "Pooja Associates",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d31dkmu",
+          "name": "AQUAGENICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2zbgbh",
+          "name": "TPU Shoe Sole with PLA support",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2up6jg",
+          "name": "HAND GRIP",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8ban",
+          "name": "AD SYNDICATE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8a70",
+          "name": "AQUAGENICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8a44",
+          "name": "USAM",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8a0y",
+          "name": "GE HEALTHCARE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2d49zc",
+          "name": "PENROSE MANUFACTURING PARTS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2b1t48",
+          "name": "TEXTRON",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d28w8nw",
+          "name": "VIRTUAL FOREST",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d28w8mw",
+          "name": "SCALPEL CUSTOMER BLADE INTEGRATED PRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2667gx",
+          "name": "D500 CUSTOMER BATH TUB HALF ABS PRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d25tz5z",
+          "name": "ADITYA BIRLA Litho",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d252em0",
+          "name": "AMACE PART QTY-10",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1yvmpc",
+          "name": "dayanand sagar tensile samples",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1xvute",
+          "name": "NIPER MATERIAL TEST PRINTS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1v28a7",
+          "name": "D500 customer PP print",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1tghrf",
+          "name": "GAN TOOLS REPRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1r2bpn",
+          "name": "E TO E CONNECTIONS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1pw5g2",
+          "name": "Penrose parts",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1p88dr",
+          "name": "Gan tools",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ntw79",
+          "name": "TKAP PED NYLON",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1nb1qt",
+          "name": "Fixture - Internal Use",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1mvu21",
+          "name": "INTEVA PART 2",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1mam9w",
+          "name": "Training: IDEX Calibration",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1m32f4",
+          "name": "CREDENCE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1k3uca",
+          "name": "TOYODA PARTS ASSIGNED BY ROHIT SIR AND AKASH",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1k3u4k",
+          "name": "AQUAGENICS PART 2",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1j2n50",
+          "name": "LORA NODE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1h06q3",
+          "name": "NEO MANAV ROBOTICS WHITE PLA PRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1gd6dy",
+          "name": "ACE MICROMATIC PRINT OF ABS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1exwpc",
+          "name": "AERANTA AVIONICS 2nd BATCH OF PRINTS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ehnty",
+          "name": "ARMY 3 LEG AND 4 LEG 5 SAMPLE EACH",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ehnnk",
+          "name": "INTAKE DEMO",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ehnmc",
+          "name": "ISHAAN POSITIONING LAYER UH",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag3h",
+          "name": "Ramya-Osteoforge PCL",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag39",
+          "name": "INTEVA",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag1k",
+          "name": "AQUAGENICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag1c",
+          "name": "DAYANAND SAGAR CF AND NYLON TENSILE SAMPLE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag0x",
+          "name": "DAYANAND SAGAR CF SPECIMEN",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag0g",
+          "name": "UNITED INDUTRIES",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag02",
+          "name": "AERANTA AVIONICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafzu",
+          "name": "ARMY 515 CASTING",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafyf",
+          "name": "HONDA MOBILE HOLDER",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafya",
+          "name": "TMR PLA",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafxt",
+          "name": "TMR FRABS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafxk",
+          "name": "PRAGATI",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d14mz0w",
+          "name": "army 4 leg",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d14myzn",
+          "name": "ARMY 515 3 leg",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d14mywh",
+          "name": "ABS SOCKET",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1uzy80",
+          "name": "old pellet extruder NIPER material testing",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "Fracktory Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1rr6wx",
+          "name": "Assembling the pellet extruder on snowflake.",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "Fracktory Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1nb38r",
+          "name": "Dragon/TwinDragon - Nozzle assy STL",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "Fracktory Operations",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0n07ew",
+          "name": "Get Old Pellet Extruder Running",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "Fracktory Operations",
+          "priority": {
+            "color": "#f8ae00",
+            "id": "2",
+            "orderindex": "2",
+            "priority": "high"
+          },
+          "estimated_hours": 6.0
+        },
+        {
+          "id": "86d0hra2y",
+          "name": "Sales Sample Parts",
+          "status": "in process",
+          "space": "Fracktory",
+          "list": "Fracktory Operations",
+          "priority": {
+            "color": "#f50000",
+            "id": "1",
+            "orderindex": "1",
+            "priority": "urgent"
+          },
+          "estimated_hours": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Kallesha",
+      "email": "Kallesha337@gmail.com",
+      "role": "Fracktory Operator",
+      "department": "Fracktory",
+      "team": "Fracktory Team",
+      "clickup_user_id": 101084647,
+      "status": "active",
+      "capacity_hours_per_week": 40,
+      "clickup_task_count": 59,
+      "estimated_load_hours": 40,
+      "available_hours_per_week": 0.0,
+      "skills": [],
+      "resume_profile": {
+        "source_file": "Kallesha_Resume.pdf",
+        "education": [],
+        "experience_summary": "",
+        "years_experience": null,
+        "domain": "Unknown"
+      },
+      "tasks": [
+        {
+          "id": "86d35ydzh",
+          "name": "POOJA ASSOCIATES QTY-50",
+          "status": "in process",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d356fhw",
+          "name": "Aquagenics",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d33c76b",
+          "name": "Pooja Associates",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d31dkmu",
+          "name": "AQUAGENICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2zbgbh",
+          "name": "TPU Shoe Sole with PLA support",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2up6jg",
+          "name": "HAND GRIP",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8ban",
+          "name": "AD SYNDICATE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8a70",
+          "name": "AQUAGENICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8a44",
+          "name": "USAM",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2u8a0y",
+          "name": "GE HEALTHCARE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2d49zc",
+          "name": "PENROSE MANUFACTURING PARTS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2b1t48",
+          "name": "TEXTRON",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d28w8nw",
+          "name": "VIRTUAL FOREST",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d28w8mw",
+          "name": "SCALPEL CUSTOMER BLADE INTEGRATED PRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d2667gx",
+          "name": "D500 CUSTOMER BATH TUB HALF ABS PRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d25tz5z",
+          "name": "ADITYA BIRLA Litho",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d252em0",
+          "name": "AMACE PART QTY-10",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1yvmpc",
+          "name": "dayanand sagar tensile samples",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1xvute",
+          "name": "NIPER MATERIAL TEST PRINTS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1v28a7",
+          "name": "D500 customer PP print",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1tghrf",
+          "name": "GAN TOOLS REPRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1r2bpn",
+          "name": "E TO E CONNECTIONS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1pw5g2",
+          "name": "Penrose parts",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1p88dr",
+          "name": "Gan tools",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ntw79",
+          "name": "TKAP PED NYLON",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1nb1qt",
+          "name": "Fixture - Internal Use",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1mvu21",
+          "name": "INTEVA PART 2",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1mam9w",
+          "name": "Training: IDEX Calibration",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1m32f4",
+          "name": "CREDENCE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1k3uca",
+          "name": "TOYODA PARTS ASSIGNED BY ROHIT SIR AND AKASH",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1k3u4k",
+          "name": "AQUAGENICS PART 2",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1j2n50",
+          "name": "LORA NODE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1h06q3",
+          "name": "NEO MANAV ROBOTICS WHITE PLA PRINT",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1gd6dy",
+          "name": "ACE MICROMATIC PRINT OF ABS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1fyph3",
+          "name": "CF Nylon and ABS dual nozzle print",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1exwpc",
+          "name": "AERANTA AVIONICS 2nd BATCH OF PRINTS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ehnty",
+          "name": "ARMY 3 LEG AND 4 LEG 5 SAMPLE EACH",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ehnnk",
+          "name": "INTAKE DEMO",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1ehnmc",
+          "name": "ISHAAN POSITIONING LAYER UH",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag3h",
+          "name": "Ramya-Osteoforge PCL",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag39",
+          "name": "INTEVA",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag1k",
+          "name": "AQUAGENICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag1c",
+          "name": "DAYANAND SAGAR CF AND NYLON TENSILE SAMPLE",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag0x",
+          "name": "DAYANAND SAGAR CF SPECIMEN",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag0g",
+          "name": "UNITED INDUTRIES",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cag02",
+          "name": "AERANTA AVIONICS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafzu",
+          "name": "ARMY 515 CASTING",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafyf",
+          "name": "HONDA MOBILE HOLDER",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafya",
+          "name": "TMR PLA",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafxt",
+          "name": "TMR FRABS",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d1cafxk",
+          "name": "PRAGATI",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d14mz0w",
+          "name": "army 4 leg",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d14myzn",
+          "name": "ARMY 515 3 leg",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d14mywh",
+          "name": "ABS SOCKET",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d12pf21",
+          "name": "Relier - ABS Sample Part",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d11xmnj",
+          "name": "Sample Prints",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0m8kq7",
+          "name": "Intech Gas manifold Print ",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0k6063",
+          "name": "Print: Intech Additive Gas Manifold ",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        },
+        {
+          "id": "86d0gzf2k",
+          "name": "Mother India Print",
+          "status": "done",
+          "space": "Fracktory",
+          "list": "External",
+          "priority": null,
+          "estimated_hours": 4.0
+        }
+      ]
+    }
+  ]
+}

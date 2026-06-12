@@ -70,17 +70,21 @@ Open this workspace in VS Code and chat:
 ```
 agent-project-manager/
 ├── config.json                   # CommandCenter agent contract
-├── graph.py                      # LangGraph build_graph() entry point
+├── agents.py                     # MAF build_agents() entry point
 ├── pyproject.toml
 ├── AGENTS.md                     # AI coding agent instructions
-├── prompts/system.md             # Primary system prompt
-├── skills/
-│   ├── project-planning/         # Plan projects, score priorities
-│   ├── hr-structure/             # Query org chart, find owners
-│   ├── project-tracking/         # Status reports, follow-ups
-│   ├── clickup-ops/              # ClickUp API integration
-│   ├── agent-memory/             # Persist facts across sessions
-│   └── self-annealing/           # Error recovery
+├── .github/
+│   ├── copilot-instructions.md   # Repo-wide Copilot context
+│   ├── agents/                   # VS Code custom agents
+│   ├── prompts/                  # system.md + reusable .prompt.md files
+│   ├── instructions/             # Path-scoped instructions (outputs/, .tmp/, scripts/)
+│   └── skills/
+│       ├── project-planning/         # Plan projects, score priorities
+│       ├── hr-structure/             # Query org chart, find owners
+│       ├── project-tracking/         # Status reports, follow-ups
+│       ├── clickup-ops/              # ClickUp API integration
+│       ├── agent-memory/             # Persist facts across sessions
+│       └── self-annealing/           # Error recovery
 ├── scripts/
 │   ├── project_data_manager.py   # Load/save project JSON files
 │   └── self_anneal_diagnostics.py
@@ -89,6 +93,7 @@ agent-project-manager/
 │   ├── project_priorities.json   # Auto-updated by agent
 │   └── INDEX.md
 ├── outputs/                      # Per-project step JSONs (auto-created)
+├── .tmp/                         # Caches + short-lived intermediates
 └── tests/
 ```
 
@@ -99,7 +104,7 @@ agent-project-manager/
 1. Add your `CLICKUP_API_TOKEN` and `CLICKUP_TEAM_ID` to `.env`.
 2. Ask the agent to list your ClickUp members:
    ```bash
-   python skills/clickup-ops/scripts/clickup_client.py --list-members
+   python .github/skills/clickup-ops/scripts/clickup_client.py --list-members
    ```
 3. Copy the `clickup_user_id` values into `data/hr_structure.json` for each person.
 

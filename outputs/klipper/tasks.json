@@ -1,0 +1,147 @@
+{
+  "list_id": "901615105694",
+  "default_assignees": [101084655],
+  "default_due": "2026-06-13",
+  "default_priority": 2,
+  "_note": "Klipper — validate and configure Klipper on new Raspbian Lite baseline. Sprint: 2026-06-09 to 2026-06-13. Assignee: Swaminath (101084655).",
+  "tasks": [
+    {
+      "name": "Validate Klipper host compatibility on Raspbian Lite",
+      "description": "Confirm Klipper's host-side dependencies are satisfiable on the new Lite baseline before installing.\n\nPrerequisites: Raspbian Lite baseline image is built and boots.\nDone when: all required packages are identified, installed, and version-pinned in a manifest.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Verify Python version and virtualenv install path for Klipper on new OS",
+          "description": "Confirm Klipper's minimum Python version is available and that the virtualenv can be created at the expected path.\nDone when: python3 --version matches Klipper requirements and virtualenv creates without errors.",
+          "priority": 3
+        },
+        {
+          "name": "Validate required host packages are installable",
+          "description": "Confirm gcc, make, libffi-dev, python3-dev, python3-serial and other build deps are available via apt on the Lite image.\nDone when: all packages install without errors on a clean Lite image.",
+          "priority": 3
+        },
+        {
+          "name": "Pin and record confirmed working package versions in a manifest",
+          "description": "After successful install, capture exact package versions into a manifest file for reproducible builds.\nDone when: manifest file is committed to the repository.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Install and configure Klipper service on new image",
+      "description": "Run the Klipper install process on the clean Lite baseline and configure it to start reliably.\n\nPrerequisites: host compatibility validated.\nDone when: Klipper starts, connects to MCU, and enters ready state after a cold reboot.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Run Klipper install script against the clean Lite baseline",
+          "description": "Execute install-klippy.sh (or equivalent) on the new image. Resolve any failures.\nDone when: Klipper host process starts without errors.",
+          "priority": 3
+        },
+        {
+          "name": "Configure systemd service unit for correct startup ordering",
+          "description": "Ensure the Klipper service starts after network and serial device targets are up.\nDone when: Klipper service shows active after reboot with no dependency failures.",
+          "priority": 3
+        },
+        {
+          "name": "Verify Klipper connects to MCU and enters ready state after reboot",
+          "description": "Reboot the printer and confirm Klipper successfully connects to the MCU and transitions to ready.\nDone when: tested on two consecutive reboots with no manual intervention.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Validate MCU serial and CAN communication reliability",
+      "description": "Confirm the communication channel between the Klipper host and the MCU is stable on the new OS.\n\nPrerequisites: Klipper service installed and starts.\nDone when: serial connection is stable across reboots and disconnect/reconnect events.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Test USB serial stability across cold and warm reboots",
+          "description": "Reboot three times (cold) and restart Klipper service twice (warm). Confirm MCU reconnects each time.\nDone when: all five reconnect attempts succeed without manual intervention.",
+          "priority": 3
+        },
+        {
+          "name": "Test disconnect and reconnect recovery during idle",
+          "description": "Physically unplug and replug the USB cable while Klipper is idle. Confirm Klipper recovers.\nDone when: Klipper returns to ready state within 30 seconds of replug.",
+          "priority": 3
+        },
+        {
+          "name": "Confirm baud rate and device path assignments are stable",
+          "description": "Verify /dev/serial/by-id or udev rules produce a consistent device path after reboot.\nDone when: device path is the same across three consecutive reboots.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Revalidate printer config and safety macros",
+      "description": "Confirm existing printer.cfg and macros work correctly on the new OS and Klipper version.\n\nPrerequisites: Klipper service running and MCU connected.\nDone when: config check passes and all safety macros fire correctly.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Run startup config sanity check on printer.cfg",
+          "description": "Run Klipper in config-check mode and resolve any warnings or errors in printer.cfg.\nDone when: config check exits with zero errors.",
+          "priority": 3
+        },
+        {
+          "name": "Test homing, bed mesh, and heater safety sequences",
+          "description": "Execute homing (G28), bed mesh levelling, and heater PID tune. Confirm all complete without errors.\nDone when: all three sequences complete successfully.",
+          "priority": 3
+        },
+        {
+          "name": "Verify emergency stop and fault recovery macros fire correctly",
+          "description": "Trigger an emergency stop (M112) and a simulated fault. Confirm Klipper halts safely and recovers on restart.\nDone when: e-stop halts immediately and Klipper recovers cleanly after restart.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Run print regression validation",
+      "description": "Confirm print quality and motion are at least equivalent to the previous baseline on the new OS.\n\nPrerequisites: config and macros validated.\nDone when: short, medium, and comparison prints complete without regressions.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Execute short calibration print for input shaping and pressure advance",
+          "description": "Print standard calibration patterns. Confirm results are within acceptable range.\nDone when: calibration print completes and values are recorded.",
+          "priority": 3
+        },
+        {
+          "name": "Execute a medium print (1-2 hr) and monitor for communication drops",
+          "description": "Run a 1-2 hour print job. Check Klipper logs for any serial timeouts or missed steps.\nDone when: print completes with no communication errors in logs.",
+          "priority": 3
+        },
+        {
+          "name": "Compare output quality and motion against previous baseline",
+          "description": "Measure dimensional accuracy and surface quality of the medium print vs the previous baseline print.\nDone when: no significant regression is detected and comparison is documented.",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "name": "Verify Klipper to OctoPrint command path",
+      "description": "Confirm the full command path from OctoPrint through to Klipper works on the new OS stack.\n\nPrerequisites: OctoPrint upgraded (Control Center tasks), Klipper running.\nDone when: start/pause/resume/cancel all succeed and errors propagate correctly.",
+      "priority": 2,
+      "status": "to do",
+      "subtasks": [
+        {
+          "name": "Validate job submission from OctoPrint to Klipper",
+          "description": "Upload a print file to OctoPrint and start a job. Confirm Klipper receives and begins the job.\nDone when: print job starts in Klipper from OctoPrint without errors.",
+          "priority": 3
+        },
+        {
+          "name": "Verify print state and progress events propagate back to OctoPrint",
+          "description": "Monitor OctoPrint UI and API while a job runs. Confirm percentage progress and state changes update correctly.\nDone when: progress updates appear in OctoPrint within 5 seconds of Klipper state change.",
+          "priority": 3
+        },
+        {
+          "name": "Confirm Klipper errors surface in OctoPrint and Control Center",
+          "description": "Trigger a recoverable Klipper error (e.g. temperature runaway simulation). Confirm it appears in OctoPrint and Control Center UI.\nDone when: error is visible in both interfaces within 10 seconds.",
+          "priority": 3
+        }
+      ]
+    }
+  ]
+}

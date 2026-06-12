@@ -1,1 +1,64 @@
-﻿{"projects": [{"slug": "penrose-pellet-extruder", "name": "Penrose Pellet Extruder", "clickup_doc_id": "2kz0eqmc-18436", "clickup_doc_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-18436", "external_links": {}}]}
+{
+  "projects": [
+    {
+      "slug": "penrose-pellet-extruder",
+      "name": "Penrose Pellet Extruder",
+      "clickup_list_id": "901611050642",
+      "clickup_doc_id": "2kz0eqmc-18436",
+      "clickup_doc_page_id": "2kz0eqmc-956",
+      "clickup_doc_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-18436/2kz0eqmc-956",
+      "external_links": {},
+      "clickup_list_doc_view_id": "2kz0eqmc-20336",
+      "clickup_list_doc_view_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20336",
+      "clickup_list_doc_page_id": "2kz0eqmc-1196",
+      "clickup_list_doc_page_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20276/2kz0eqmc-1196",
+      "clickup_list_doc_pages": {
+        "project_plan": "2kz0eqmc-1356",
+        "requirements": "2kz0eqmc-1376",
+        "product_docs": "2kz0eqmc-1396",
+        "subsystems": "2kz0eqmc-1416",
+        "open_questions": "2kz0eqmc-1436",
+        "overview": "2kz0eqmc-1456"
+      },
+      "clickup_list_doc_overview_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20336/2kz0eqmc-1456"
+    },
+    {
+      "slug": "julia-series",
+      "name": "Julia Series",
+      "clickup_list_id": "901611246751",
+      "clickup_doc_id": "2kz0eqmc-18436",
+      "clickup_doc_page_id": "2kz0eqmc-976",
+      "clickup_doc_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-18436/2kz0eqmc-976",
+      "external_links": {},
+      "clickup_list_doc_view_id": "2kz0eqmc-20316",
+      "clickup_list_doc_view_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20316",
+      "clickup_list_doc_page_id": "2kz0eqmc-1216",
+      "clickup_list_doc_page_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20296/2kz0eqmc-1216",
+      "clickup_list_doc_pages": {
+        "project_plan": "2kz0eqmc-1236",
+        "requirements": "2kz0eqmc-1256",
+        "product_docs": "2kz0eqmc-1276",
+        "subsystems": "2kz0eqmc-1296",
+        "open_questions": "2kz0eqmc-1316",
+        "overview": "2kz0eqmc-1336"
+      },
+      "clickup_list_doc_overview_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20316/2kz0eqmc-1336"
+    },
+    {
+      "slug": "mds",
+      "name": "MDS (Material Drying System)",
+      "clickup_list_id": "901612525485",
+      "clickup_list_doc_view_id": "2kz0eqmc-20356",
+      "clickup_list_doc_view_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20356",
+      "clickup_list_doc_pages": {
+        "project_plan": "2kz0eqmc-1556",
+        "requirements": "2kz0eqmc-1576",
+        "product_docs": "2kz0eqmc-1596",
+        "subsystems": "2kz0eqmc-1616",
+        "open_questions": "2kz0eqmc-1636",
+        "overview": "2kz0eqmc-1656"
+      },
+      "clickup_list_doc_overview_url": "https://app.clickup.com/90161241740/docs/2kz0eqmc-20356/2kz0eqmc-1656"
+    }
+  ]
+}

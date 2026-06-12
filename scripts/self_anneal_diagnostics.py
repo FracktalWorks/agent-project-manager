@@ -16,6 +16,10 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Windows consoles default to cp1252 — force UTF-8 so emoji output doesn't crash
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 AGENT_DIR   = Path(__file__).resolve().parent.parent
 DATA_DIR    = AGENT_DIR / "data"
 OUTPUTS_DIR = AGENT_DIR / "outputs"
@@ -37,7 +41,7 @@ def check_api_health() -> list[str]:
 def check_clickup_connectivity() -> list[str]:
     issues = []
     try:
-        sys.path.insert(0, str(AGENT_DIR / "skills" / "clickup-ops" / "scripts"))
+        sys.path.insert(0, str(AGENT_DIR / ".github" / "skills" / "clickup-ops" / "scripts"))
         from clickup_client import ClickUpClient
         client = ClickUpClient()
         teams = client.get_teams()

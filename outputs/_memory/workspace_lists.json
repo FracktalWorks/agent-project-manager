@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-06-06T12:34:50.852840+00:00",
+  "lists": [
+    {
+      "space_id": "90165074069",
+      "space_name": "Sales & Marketing",
+      "folder_id": "90166940540",
+      "folder_name": "Media & Content",
+      "list_id": "901611288534",
+      "list_name": "Video Content"
+    },
+    {
+      "space_id": "90165074069",
+      "space_name": "Sales & Marketing",
+      "folder_id": "90166940540",
+      "folder_name": "Media & Content",
+      "list_id": "901611288558",
+      "list_name": "Social Media Content"
+    },
+    {
+      "space_id": "90165074069",
+      "space_name": "Sales & Marketing",
+      "folder_id": "90166940540",
+      "folder_name": "Media & Content",
+      "list_id": "901611209539",
+      "list_name": "3D Printing Course"
+    },
+    {
+      "space_id": "90165074069",
+      "space_name": "Sales & Marketing",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611445492",
+      "list_name": "Website_Fracktal"
+    },
+    {
+      "space_id": "90165074069",
+      "space_name": "Sales & Marketing",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901612239654",
+      "list_name": "Sales Operations"
+    },
+    {
+      "space_id": "90165074069",
+      "space_name": "Sales & Marketing",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611288609",
+      "list_name": "Marketing Operations"
+    },
+    {
+      "space_id": "90165074069",
+      "space_name": "Sales & Marketing",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611450608",
+      "list_name": "SEO & Blogs"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940853",
+      "folder_name": "Hardware",
+      "list_id": "901611050642",
+      "list_name": "Penrose Pellet Extruder"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940853",
+      "folder_name": "Hardware",
+      "list_id": "901611246751",
+      "list_name": "Julia Series"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940853",
+      "folder_name": "Hardware",
+      "list_id": "901612525485",
+      "list_name": "MDS"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940853",
+      "folder_name": "Hardware",
+      "list_id": "901611604151",
+      "list_name": "Apollo 200/300"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940853",
+      "folder_name": "Hardware",
+      "list_id": "901615264117",
+      "list_name": "Dragon 2026"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940853",
+      "folder_name": "Hardware",
+      "list_id": "901611246732",
+      "list_name": "Snowflake"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940853",
+      "folder_name": "Hardware",
+      "list_id": "901611599472",
+      "list_name": "Volterra ALF"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901611604212",
+      "list_name": "RapidTool: Shadow Box"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901611246906",
+      "list_name": "RapidTool: Fixture"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901614456511",
+      "list_name": "RapidTool: SoftJaws"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901611246899",
+      "list_name": "Control Center"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901611051508",
+      "list_name": "Fracktory Slicer"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901611687495",
+      "list_name": "Fracktory Portal"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901614456560",
+      "list_name": "VSP Engine"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90166940863",
+      "folder_name": "Software",
+      "list_id": "901615105694",
+      "list_name": "Klipper"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90167116888",
+      "folder_name": "Application Engineering",
+      "list_id": "901611247258",
+      "list_name": "Application Engineering Backlog"
+    },
+    {
+      "space_id": "90165087954",
+      "space_name": "Research & Development",
+      "folder_id": "90167116888",
+      "folder_name": "Application Engineering",
+      "list_id": "901611470508",
+      "list_name": "3D Printed EPS Molds"
+    },
+    {
+      "space_id": "90165185086",
+      "space_name": "Company Operations",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611247186",
+      "list_name": "HR"
+    },
+    {
+      "space_id": "90165185086",
+      "space_name": "Company Operations",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611247192",
+      "list_name": "Admin"
+    },
+    {
+      "space_id": "90165185086",
+      "space_name": "Company Operations",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611247202",
+      "list_name": "Finance & Accounting"
+    },
+    {
+      "space_id": "90165185086",
+      "space_name": "Company Operations",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901615292726",
+      "list_name": "Manufacturing"
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": "90166942231",
+      "folder_name": "Knowledge Base Articles",
+      "list_id": "901611603498",
+      "list_name": "Troubleshooting & Maintanance"
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": "90166942231",
+      "folder_name": "Knowledge Base Articles",
+      "list_id": "901611443885",
+      "list_name": "Printer Commissioning"
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": "90166942231",
+      "folder_name": "Knowledge Base Articles",
+      "list_id": "901611685782",
+      "list_name": "Knowledge Base Platform"
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": "90166942231",
+      "folder_name": "Knowledge Base Articles",
+      "list_id": "901611687234",
+      "list_name": "Education & Training"
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": "90166942231",
+      "folder_name": "Knowledge Base Articles",
+      "list_id": "901612753200",
+      "list_name": "Interns "
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611247234",
+      "list_name": "Issue Escalations"
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611247251",
+      "list_name": "Fracktal Care Operations"
+    },
+    {
+      "space_id": "90165185237",
+      "space_name": "Fracktal Care",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901613553036",
+      "list_name": "Quality Control"
+    },
+    {
+      "space_id": "90165185254",
+      "space_name": "Fracktory",
+      "folder_id": "90167877627",
+      "folder_name": "Engineering Services",
+      "list_id": "901615105673",
+      "list_name": "Photo Booth"
+    },
+    {
+      "space_id": "90165185254",
+      "space_name": "Fracktory",
+      "folder_id": null,
+      "folder_name": null,
+      "list_id": "901611247262",
+      "list_name": "Fracktory Operations"
+    }
+  ]
+}

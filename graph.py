@@ -10,8 +10,8 @@ from typing import Any, TypedDict
 from langgraph.graph import END, START, StateGraph
 
 AGENT_DIR   = Path(__file__).parent.resolve()
-PROMPTS_DIR = AGENT_DIR / "prompts"
-SKILLS_DIR  = AGENT_DIR / "skills"
+PROMPTS_DIR = AGENT_DIR / ".github" / "prompts"
+SKILLS_DIR  = AGENT_DIR / ".github" / "skills"
 SCRIPTS_DIR = AGENT_DIR / "scripts"
 
 if str(SCRIPTS_DIR) not in sys.path:
@@ -56,25 +56,59 @@ def _inject_credentials(integrations: dict[str, Any]) -> None:
                 os.environ[env_var] = value
 
 
+# Skills are loaded in priority order so critical rules appear early in context.
+_SKILL_LOAD_ORDER = [
+    "clickup-ops",
+    "hr-structure",
+    "task-capture",
+    "project-planning",
+    "project-tracking",
+    "project-breakdown",
+    "project-memory",
+    "agent-memory",
+    "clickup-docs",
+    "external-integrations",
+    "self-annealing",
+    "technical-planning",
+]
+
+
 def _build_system_prompt() -> str:
     parts: list[str] = []
     system_md = PROMPTS_DIR / "system.md"
     if system_md.exists():
         parts.append(system_md.read_text(encoding="utf-8"))
         if SKILLS_DIR.exists():
-            parts.append("\n\n---\n\n## Registered Skill Tool Descriptions\n")
+            parts.append("\n\n---\n\n## Skill Reference Library\n")
+            loaded: set[str] = set()
+            for skill_name in _SKILL_LOAD_ORDER:
+                skill_md = SKILLS_DIR / skill_name / "SKILL.md"
+                if skill_md.exists():
+                    parts.append(
+                        f"\n### Skill: {skill_name}\n\n"
+                        f"{skill_md.read_text(encoding='utf-8')}"
+                    )
+                    loaded.add(skill_name)
             for skill_md in sorted(SKILLS_DIR.glob("*/SKILL.md")):
-                parts.append(
-                    f"\n### Tool: {skill_md.parent.name}\n\n"
-                    f"{skill_md.read_text(encoding='utf-8')}"
-                )
+                if skill_md.parent.name not in loaded:
+                    parts.append(
+                        f"\n### Skill: {skill_md.parent.name}\n\n"
+                        f"{skill_md.read_text(encoding='utf-8')}"
+                    )
     else:
         agents_md = AGENT_DIR / "AGENTS.md"
         if agents_md.exists():
             parts.append(agents_md.read_text(encoding="utf-8"))
         if SKILLS_DIR.exists():
+            loaded_: set[str] = set()
+            for skill_name in _SKILL_LOAD_ORDER:
+                skill_md = SKILLS_DIR / skill_name / "SKILL.md"
+                if skill_md.exists():
+                    parts.append(f"\n\n{skill_md.read_text(encoding='utf-8')}")
+                    loaded_.add(skill_name)
             for skill_md in sorted(SKILLS_DIR.glob("*/SKILL.md")):
-                parts.append(f"\n\n{skill_md.read_text(encoding='utf-8')}")
+                if skill_md.parent.name not in loaded_:
+                    parts.append(f"\n\n{skill_md.read_text(encoding='utf-8')}")
     return "\n".join(parts)
 
 

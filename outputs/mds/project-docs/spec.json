@@ -1,0 +1,204 @@
+{
+  "name": "MDS (Material Drying System)",
+  "slug": "mds",
+  "list_id": "901612525485",
+  "clickup_list_url": "https://app.clickup.com/90161241740/v/l/901612525485",
+  "doc_view_name": "MDS — Documentation",
+  "status": "Active",
+  "phase": "Build",
+  "last_updated": "2026-06-06",
+  "description": "The MDS (Material Drying System) is a filament drying enclosure designed and manufactured by Fracktal Works. It supports 1 kg and 3 kg spools, uses active heating combined with a replaceable desiccant chamber to reduce filament moisture, and integrates pneumatic filament feed-through to printers. The product is intended for use alongside Fracktal's printer fleet and is sold as an accessory. The current phase covers finalising manufacturing drawings, vendor quotation, procurement, assembly, and full functional testing — all within a one-week sprint owned entirely by Suryansh Lal. Reference: https://fracktal.in/materialdryer/",
+  "team": [
+    {"name": "Suryansh Lal",   "role": "Project Owner — Design, Fabrication, Procurement, Assembly & Test"},
+    {"name": "Anirudh Mohta",  "role": "BOM creation & ODOO naming conventions (Monday deadline)"},
+    {"name": "Kiran Kumar S",  "role": "BOM creation & ODOO naming conventions (Monday deadline)"},
+    {"name": "Vijay Raghav Varada", "role": "Project Sponsor / Review"}
+  ],
+  "objectives": [
+    "Complete manufacturing drawings and send to fabrication vendors by June 7",
+    "Receive fabricated parts and issue / procure all remaining components from inventory",
+    "Assemble the MDS unit — Suryansh to build it himself",
+    "Execute the full test plan and close all issues before June 13",
+    "Generate BOM directly from CAD and update all component names per ODOO subsystem naming convention by Monday June 9"
+  ],
+  "scope_in": [
+    "Manufacturing drawings (mechanical) for all fabricated parts",
+    "Vendor quotation and order placement",
+    "Inventory issuance and procurement of bought-out components",
+    "Full mechanical and electrical assembly",
+    "Heating, pneumatic, and electronics subsystem testing",
+    "Spool-swap and desiccant-replacement ergonomics testing",
+    "DFA (Design for Assembly) validation",
+    "BOM export from CAD + ODOO part-name alignment"
+  ],
+  "scope_out": [
+    "Mass production / manufacturing scale-up (out of this sprint)",
+    "Software UI or IoT connectivity features",
+    "CE / UL certification",
+    "Sales listing updates (separate task)"
+  ],
+  "timeline": {
+    "start": "2026-06-06",
+    "end": "2026-06-13"
+  },
+  "milestones": [
+    {"milestone": "Manufacturing drawings complete & sent to vendor",      "date": "2026-06-07", "owner": "Suryansh Lal",              "status": "In Progress"},
+    {"milestone": "BOM from CAD + ODOO naming convention updated",         "date": "2026-06-09", "owner": "Suryansh / Anirudh / Kiran", "status": "In Progress"},
+    {"milestone": "All components issued from inventory or procured",       "date": "2026-06-10", "owner": "Suryansh Lal",              "status": "Upcoming"},
+    {"milestone": "MDS unit fully assembled",                               "date": "2026-06-11", "owner": "Suryansh Lal",              "status": "Upcoming"},
+    {"milestone": "Test plan written and all tests passed",                 "date": "2026-06-13", "owner": "Suryansh Lal",              "status": "Upcoming"}
+  ],
+  "dependencies": [
+    "Vendor turnaround for fabricated parts (sheet metal / machined parts) — critical path",
+    "Inventory availability for bought-out components (bearings, heater, desiccant, pneumatic fittings)",
+    "ODOO part master — must be accessible for Suryansh / Anirudh / Kiran to update naming"
+  ],
+  "functional_requirements": [
+    {"req": "Accept both 1 kg and 3 kg filament spools without modification",              "priority": "H", "status": "Open"},
+    {"req": "Allow spool replacement without tools in under 60 seconds",                   "priority": "H", "status": "Open"},
+    {"req": "Desiccant canister must be user-replaceable without disassembling the unit",  "priority": "H", "status": "Open"},
+    {"req": "Heating system must reach and hold target drying temperature (per spec)",     "priority": "H", "status": "Open"},
+    {"req": "Pneumatic filament feed-through must route filament to printer without kinking","priority": "H","status": "Open"},
+    {"req": "Electronics subsystem must control temperature and indicate status",          "priority": "H", "status": "Open"},
+    {"req": "Full unit must be assembleable by a single person following assembly SOP",    "priority": "M", "status": "Open"},
+    {"req": "No DFA issues — fasteners, access, and assembly sequence must be validated",  "priority": "M", "status": "Open"}
+  ],
+  "nonfunctional_requirements": [
+    {"req": "Assembly time (first time)",    "target": "< 2 hours with SOP",           "status": "Open"},
+    {"req": "Drying cycle time",             "target": "Per material datasheet spec",   "status": "Open"},
+    {"req": "Spool swap time",               "target": "< 60 seconds",                  "status": "Open"},
+    {"req": "Operating noise",               "target": "< 45 dB at 1 m",               "status": "Open"},
+    {"req": "Electrical safety",             "target": "Fused, grounded enclosure",     "status": "Open"}
+  ],
+  "constraints": [
+    "Must be completed within 1 week (hard deadline: June 13, 2026)",
+    "Suryansh is the sole engineer — no additional headcount available for build/test",
+    "Components must be sourced from existing inventory first; purchase only what is missing",
+    "BOM naming must follow existing ODOO subsystem naming convention — no new naming schemes"
+  ],
+  "personas": [
+    {"name": "Printer Operator",  "description": "Uses the MDS daily alongside a Fracktal printer; needs to swap spools and desiccant quickly without needing tools or a manual"},
+    {"name": "Field Technician",  "description": "Installs and services units at customer sites (515 Base, Hisar); needs to diagnose heating and pneumatic issues in the field"}
+  ],
+  "architecture": "The MDS is a standalone heated enclosure. A sheet-metal or fabricated main body houses the spool spindle, heating element, temperature sensor, desiccant chamber, and electronics. A pneumatic fitting on the side routes the filament out to the printer via a PTFE tube. The electronics board (temperature controller + relay or PWM driver) maintains the set temperature. The enclosure has a hinged or removable lid for spool access, and a dedicated desiccant port for quick replacement.",
+  "how_it_works": "The operator places a spool on the spindle and loads the filament end through the pneumatic fitting into the printer's extruder. The heating element brings the internal temperature to the drying setpoint. The desiccant absorbs residual moisture. The printer draws filament through the PTFE tube during printing. After the spool is consumed, the lid is opened, the spool is swapped, and the filament is re-threaded — no tools required. The desiccant is replaced periodically by pulling out the canister through its dedicated access port.",
+  "design_decisions": [
+    {
+      "title": "Active heating + desiccant (hybrid drying)",
+      "context": "Desiccant-only dryers are slow and require frequent regeneration. Heating-only dryers without desiccant are less effective at low temperatures.",
+      "decision": "Use a resistive heating element with temperature controller combined with a replaceable silica gel desiccant canister.",
+      "rationale": "Hybrid approach dries faster, maintains dryness during multi-hour prints, and the desiccant extends effectiveness at lower temperatures.",
+      "consequences": "Requires electronics BOM, adds ~₹XXX to cost vs desiccant-only. Desiccant must be replaced or regenerated periodically."
+    },
+    {
+      "title": "Pneumatic filament feed-through",
+      "context": "An open slot in the enclosure loses heat and allows ambient humidity in. A sealed port is better but requires the filament to enter through a fitting.",
+      "decision": "Use a pneumatic push-fit coupling (PC4-M6 or equivalent) on the enclosure wall as the filament exit point.",
+      "rationale": "Standard 3D printer pneumatic fittings are cheap, stock items, and provide a near-airtight seal around 1.75 mm filament.",
+      "consequences": "Filament must be cut and re-threaded through the fitting when swapping spools — adds ~10 seconds to spool swap."
+    },
+    {
+      "title": "Single-engineer assembly target",
+      "context": "Field technicians and operators may need to assemble or reassemble the unit without a second person.",
+      "decision": "Design all sub-assemblies so a single person can hold and fasten them. DFA check is a mandatory test milestone.",
+      "rationale": "Reduces support burden and ensures the product is serviceable in the field.",
+      "consequences": "May constrain enclosure geometry — overhang joints requiring two hands to align must be redesigned."
+    }
+  ],
+  "subsystems": [
+    {
+      "name": "Spool Housing & Spindle",
+      "status": "Design",
+      "owner": "Suryansh Lal",
+      "description": "Holds 1 kg and 3 kg spools on a central spindle. Lid or side panel opens for spool access. Spindle must accommodate both inner-hub diameters common across standard filament brands.",
+      "specs": [
+        "Supports spool inner hub diameters: 52 mm (1 kg) and 55–56 mm (3 kg)",
+        "Spool replacement: tool-free, < 60 seconds",
+        "Spindle material: aluminium or steel rod with low-friction bearing or bushing"
+      ],
+      "known_issues": ["Inner hub clearance for 3 kg spool brands needs validation during assembly test"]
+    },
+    {
+      "name": "Heating System",
+      "status": "Design",
+      "owner": "Suryansh Lal",
+      "description": "Resistive heating element (PTC or nichrome) with a temperature controller that maintains the enclosure at the filament-specific drying setpoint. Includes a thermal fuse for safety.",
+      "specs": [
+        "Temperature range: 40°C – 70°C (adjustable)",
+        "Temperature accuracy: ±2°C",
+        "Thermal fuse / over-temperature cutout: ≥ 85°C",
+        "Heating element power: TBD (to be determined from thermal analysis)"
+      ],
+      "known_issues": ["Thermal uniformity across large 3 kg spools has not been measured yet — test item"]
+    },
+    {
+      "name": "Desiccant Chamber",
+      "status": "Design",
+      "owner": "Suryansh Lal",
+      "description": "A removable canister or cartridge filled with silica gel or molecular sieve desiccant. Accessible via a dedicated port on the enclosure without opening the main lid.",
+      "specs": [
+        "Canister replacement: tool-free via dedicated side port",
+        "Desiccant type: silica gel (colour-indicating) or molecular sieve 4Å",
+        "Estimated change interval: every 1–4 weeks depending on ambient humidity"
+      ],
+      "known_issues": ["Access port geometry needs DFA validation — must be reachable with gloves"]
+    },
+    {
+      "name": "Pneumatic Filament Feed",
+      "status": "Design",
+      "owner": "Suryansh Lal",
+      "description": "PTFE-lined pathway from inside the enclosure to a pneumatic push-fit fitting on the exterior wall. Routes 1.75 mm filament to the printer's extruder.",
+      "specs": [
+        "Filament diameter: 1.75 mm",
+        "Fitting type: PC4-M6 or equivalent push-fit pneumatic",
+        "PTFE tube ID: 2 mm",
+        "Seal: fitting provides near-airtight seal around filament during printing"
+      ],
+      "known_issues": ["Re-threading after spool swap requires pushing filament through — verify ease of use in test"]
+    },
+    {
+      "name": "Electronics & Controls",
+      "status": "Design",
+      "owner": "Suryansh Lal",
+      "description": "Temperature sensing (NTC thermistor or thermocouple), temperature controller (PID or on/off relay), power inlet, and status indicator (LED or display).",
+      "specs": [
+        "Input: 230V AC (India mains)",
+        "Temperature sensor: NTC 100K or K-type thermocouple",
+        "Controller: digital PID temperature controller with relay output",
+        "Safety: mains fuse, thermal cutout, earthed enclosure"
+      ],
+      "known_issues": ["Final BOM for electronics to be locked once CAD is complete and ODOO naming updated"]
+    },
+    {
+      "name": "Enclosure & Structure",
+      "status": "Design",
+      "owner": "Suryansh Lal",
+      "description": "Main structural body — sheet metal or fabricated panels. Provides thermal insulation, structural support for spool weight, and mounting points for all subsystems.",
+      "specs": [
+        "Material: sheet metal (powder coated) or equivalent",
+        "Must support combined weight of 3 kg spool + hardware without deflection",
+        "All internal corners accessible for cleaning",
+        "DFA: single-person assembly validated"
+      ],
+      "known_issues": ["Manufacturing drawings in progress — vendor quotation pending"]
+    }
+  ],
+  "open_questions": [
+    {"question": "What is the target drying temperature for each filament type (PLA, PETG, PA, TPU)?",                  "owner": "Suryansh Lal",  "status": "Open"},
+    {"question": "What is the heating element wattage required to reach setpoint within 30 minutes?",                   "owner": "Suryansh Lal",  "status": "Open"},
+    {"question": "Which vendor will be used for sheet metal fabrication and what is the lead time?",                    "owner": "Suryansh Lal",  "status": "Open"},
+    {"question": "Are any components not in inventory that have long procurement lead times (> 3 days)?",               "owner": "Suryansh Lal",  "status": "Open"},
+    {"question": "Has the full BOM been cross-checked against ODOO stock? Any shortfalls?",                             "owner": "Anirudh Mohta", "status": "Open"},
+    {"question": "Are all CAD component names updated per ODOO subsystem naming convention by Monday?",                 "owner": "Kiran Kumar S",  "status": "Open"}
+  ],
+  "risks": [
+    {"risk": "Vendor fabrication lead time exceeds available window (>3 days) — blocks assembly",         "likelihood": "H", "impact": "H", "mitigation": "Identify vendor day 1, confirm lead time before sending drawings; have backup vendor identified",                      "owner": "Suryansh Lal"},
+    {"risk": "Missing components not in inventory with long procurement lead times",                       "likelihood": "M", "impact": "H", "mitigation": "Run full BOM-vs-inventory check on June 7 immediately after drawings are finalised; order missing parts same day", "owner": "Suryansh Lal"},
+    {"risk": "DFA issues discovered during assembly (e.g., no access for fasteners, spindle interference)","likelihood": "M", "impact": "M", "mitigation": "Suryansh to do a CAD dry-run / virtual assembly check before sending drawings to vendor",                           "owner": "Suryansh Lal"},
+    {"risk": "Heating system does not reach setpoint or has hot spots affecting large spools",             "likelihood": "M", "impact": "M", "mitigation": "Test early in assembly sequence; if thermal performance fails, investigate insulation and element placement",        "owner": "Suryansh Lal"},
+    {"risk": "ODOO naming convention update not completed by Monday — blocks BOM submission",             "likelihood": "M", "impact": "M", "mitigation": "Anirudh and Kiran to start naming alignment in parallel with Suryansh's drawings; daily sync",                     "owner": "Anirudh Mohta"}
+  ],
+  "external_links": {
+    "Product Page": "https://fracktal.in/materialdryer/"
+  }
+}

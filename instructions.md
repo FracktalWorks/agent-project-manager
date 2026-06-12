@@ -1,5 +1,10 @@
 # Agent Builder Guide — Skills + Scripts + CommandCenter Framework
 
+> ⚠️ **DEPRECATED (v2.0, 2026-06-03).** This document describes the old `skills/ + prompts/ +
+> graph.py` layout. The repo now uses the v2.2 layout: `.github/skills/`, `.github/prompts/`,
+> `agents.py` (MAF `build_agents()`). See `agent_repo_compatibility.md` for the current
+> quick reference and `.github/copilot-instructions.md` for the authoritative layout.
+
 > **Audience:** anyone building a new agent using this workspace as a template, or migrating an existing agent to the `skills/ + scripts/ + prompts/` pattern.
 > **Framework:** DOE v2 — Skills / Orchestration / Execution.
 > **CommandCenter contract source of truth:** `config.json` schema (§5), `graph.py` contract (§6). If this doc and the code disagree, the code wins — update this doc.

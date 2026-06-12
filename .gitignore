@@ -15,7 +15,17 @@ venv/
 
 # Outputs — keep memory files but skip temp build artefacts
 outputs/.tmp/
-.tmp/
+
+# .tmp/ — track utilities + READMEs; ignore cache data and intermediates
+.tmp/*
+!.tmp/README.md
+!.tmp/*.py
+!.tmp/search_cache/
+.tmp/search_cache/*
+!.tmp/search_cache/README.md
+!.tmp/web_cache/
+.tmp/web_cache/*
+!.tmp/web_cache/README.md
 
 # OS
 .DS_Store

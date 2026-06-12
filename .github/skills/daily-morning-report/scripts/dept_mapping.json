@@ -1,0 +1,51 @@
+{
+  "_notes": {
+    "department_map": "Maps hr_structure.json dept names to report section names. Member-level _report_dept fields override this.",
+    "list_to_department": "For ClickUp spaces that span multiple departments (Sales & Marketing, Company Operations), this maps each list ID to its owning report department. Used for task-origin context, not person placement.",
+    "mixed_spaces": ["Sales & Marketing (90165074069)", "Company Operations (90165185086)"]
+  },
+  "list_to_department": {
+    "901612239654": "Sales",
+    "901611288609": "Marketing",
+    "901611288534": "Marketing",
+    "901611288558": "Marketing",
+    "901611209539": "Marketing",
+    "901611445492": "Marketing",
+    "901611450608": "Marketing",
+    "901611247186": "HR",
+    "901611247202": "Finance",
+    "901615292726": "Manufacturing",
+    "901615296992": "Founders Office"
+  },
+  "department_map": {
+    "Leadership":        "Founders Office",
+    "Engineering":       "R&D",
+    "Interns":           "R&D",
+    "Fracktory":         "Fracktory",
+    "Manufacturing":     "Manufacturing",
+    "Design & Marketing":"Marketing",
+    "Sales":             "Sales",
+    "After Sales":       "Aftersales / Fracktal Care",
+    "HR & Operations":   "HR",
+    "Finance":           "Finance",
+    "Unassigned":        "_skip"
+  },
+  "skip_marker": "_skip",
+  "skip_list_ids": [],
+  "active_colors": ["green"],
+  "paused_colors": ["yellow"],
+  "inactive_colors": ["red"],
+  "_color_convention": "green=active, yellow=paused/on-hold, red=stopped/inactive. Icons in ClickUp UI are decorative only — color is the source of truth.",
+  "report_department_order": [
+    "Founders Office",
+    "R&D",
+    "Manufacturing",
+    "Fracktory",
+    "Sales",
+    "Marketing",
+    "Aftersales / Fracktal Care",
+    "HR",
+    "Admin",
+    "Finance"
+  ]
+}

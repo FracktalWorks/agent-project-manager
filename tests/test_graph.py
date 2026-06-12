@@ -2,16 +2,31 @@
 import sys
 from pathlib import Path
 
+import pytest
+
 # Ensure repo root is on path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+try:
+    from langgraph.graph import StateGraph  # noqa: F401
+    LANGGRAPH_AVAILABLE = True
+except ImportError:
+    LANGGRAPH_AVAILABLE = False
 
+skip_if_no_langgraph = pytest.mark.skipif(
+    not LANGGRAPH_AVAILABLE,
+    reason="LangGraph not installed (graph.py retained for reference only)",
+)
+
+
+@skip_if_no_langgraph
 def test_build_graph_importable():
     from graph import build_graph
     from langgraph.graph import StateGraph
     assert isinstance(build_graph(), StateGraph)
 
 
+@skip_if_no_langgraph
 def test_graph_has_chat_node():
     from graph import build_graph
     graph = build_graph()
