@@ -13,6 +13,7 @@ Architecture (DOE v2):
 from __future__ import annotations
 
 import asyncio
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -480,20 +481,70 @@ def build_agents():
     """Return MAF agents for agent-project-manager.
 
     Called by the Dynamic Agent Loader at runtime. Synchronous, zero-argument, pure.
+    Model client connects via LiteLLM proxy (BYOK) — no hard dependency on any
+    specific LLM provider.
     """
     try:
         from agent_framework import Agent
-        AgentClass = Agent
+        from agent_framework.openai import OpenAIChatCompletionClient
+        client = OpenAIChatCompletionClient(
+            base_url=os.environ.get(
+                "LITELLM_BASE_URL", "http://litellm:4000") + "/v1",
+            api_key=os.environ.get("LITELLM_API_KEY", ""),
+            model="tier2-sonnet",
+        )
+        return [Agent(
+            name="agent-project-manager",
+            instructions=_build_system_prompt(),
+            tools=[
+                # HR Structure
+                query_hr,
+                ingest_resumes,
+                workload_analysis,
+                # ClickUp Ops
+                clickup_list_members,
+                clickup_list_spaces,
+                clickup_get_tasks,
+                clickup_create_project,
+                clickup_sync_tasks,
+                clickup_add_comment,
+                # Project Planning
+                plan_project,
+                # Project Tracking
+                fetch_project_status,
+                generate_status_report,
+                # Technical Planning
+                generate_wbs,
+                generate_gantt,
+                generate_risk_register,
+                compile_project_plan,
+                research_web,
+                search_papers,
+                # Memory & Diagnostics
+                search_project_memory,
+                run_diagnostics,
+            ],
+            client=client,
+        )]
     except ImportError:
         # Fallback for local VS Code dev — agent_framework not installed
         try:
-            from autogen_agentchat.agents import AssistantAgent as AgentClass  # type: ignore
+            from autogen_agentchat.agents import (
+                AssistantAgent as AgentClass)  # type: ignore
+            from autogen_ext.models.openai import (  # type: ignore
+                OpenAIChatCompletionClient)
+            client = OpenAIChatCompletionClient(
+                base_url=os.environ.get(
+                    "LITELLM_BASE_URL", "http://litellm:4000") + "/v1",
+                api_key=os.environ.get("LITELLM_API_KEY", "sk-local"),
+                model="tier2-sonnet",
+            )
         except ImportError:
             raise ImportError(
                 "Neither agent_framework nor autogen_agentchat is installed. "
-                "Install agent_framework for CommandCenter or autogen_agentchat for local dev."
+                "Install agent_framework for CommandCenter or "
+                "autogen_agentchat for local dev."
             )
-    # Model client is provided by CommandCenter (BYOK) — agent does not create its own.
 
     return [AgentClass(
         name="agent-project-manager",
@@ -526,6 +577,7 @@ def build_agents():
             search_project_memory,
             run_diagnostics,
         ],
+        model_client=client,
     )]
 
 
