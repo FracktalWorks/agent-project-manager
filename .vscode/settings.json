@@ -1,0 +1,19 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.agent.md": "markdown",
+    ".env.example": "dotenv",
+    ".env": "dotenv"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "search.exclude": {
+    "**/.tmp": true,
+    "**/__pycache__": true,
+    "**/.venv": true
+  }
+}

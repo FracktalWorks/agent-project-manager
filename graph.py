@@ -10,8 +10,8 @@ from typing import Any, TypedDict
 from langgraph.graph import END, START, StateGraph
 
 AGENT_DIR   = Path(__file__).parent.resolve()
-PROMPTS_DIR = AGENT_DIR / ".github" / "prompts"
-SKILLS_DIR  = AGENT_DIR / ".github" / "skills"
+INSTRUCTIONS_FILE = AGENT_DIR / "instructions.md"
+SKILLS_DIR  = AGENT_DIR / "skills"
 SCRIPTS_DIR = AGENT_DIR / "scripts"
 
 if str(SCRIPTS_DIR) not in sys.path:
@@ -72,9 +72,8 @@ _SKILL_LOAD_ORDER = [
 
 def _build_system_prompt() -> str:
     parts: list[str] = []
-    system_md = PROMPTS_DIR / "system.md"
-    if system_md.exists():
-        parts.append(system_md.read_text(encoding="utf-8"))
+    if INSTRUCTIONS_FILE.exists():
+        parts.append(INSTRUCTIONS_FILE.read_text(encoding="utf-8"))
         if SKILLS_DIR.exists():
             parts.append("\n\n---\n\n## Skill Reference Library\n")
             loaded: set[str] = set()

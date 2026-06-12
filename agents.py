@@ -13,14 +13,20 @@ Architecture (DOE v2):
 from __future__ import annotations
 
 import asyncio
+import os
 import subprocess
 import sys
 from pathlib import Path
 
+try:
+    from copilot.types import PermissionHandler
+except ImportError:
+    PermissionHandler = None  # Only available in CommandCenter runtime
+
 # ── Paths ─────────────────────────────────────────────────────────────────────
 AGENT_DIR   = Path(__file__).parent.resolve()
-PROMPTS_DIR = AGENT_DIR / ".github" / "prompts"
-SKILLS_DIR  = AGENT_DIR / ".github" / "skills"
+INSTRUCTIONS_FILE = AGENT_DIR / "instructions.md"
+SKILLS_DIR  = AGENT_DIR / "skills"
 SCRIPTS_DIR = AGENT_DIR / "scripts"
 
 if str(SCRIPTS_DIR) not in sys.path:
@@ -49,9 +55,8 @@ _SKILL_LOAD_ORDER = [
 
 def _build_system_prompt() -> str:
     parts: list[str] = []
-    system_md = PROMPTS_DIR / "system.md"
-    if system_md.exists():
-        parts.append(system_md.read_text(encoding="utf-8"))
+    if INSTRUCTIONS_FILE.exists():
+        parts.append(INSTRUCTIONS_FILE.read_text(encoding="utf-8"))
     if SKILLS_DIR.exists():
         parts.append("\n\n---\n\n## Skill Reference Library\n")
         # Load in priority order first, then any unlisted skills alphabetically
@@ -472,6 +477,33 @@ async def run_diagnostics() -> str:
     ])
 
 
+def _gateway_provider() -> dict:
+    """Return BYOK provider config pointing at the CommandCenter gateway's /v1 endpoint.
+
+    Uses the same env-var convention as agent-task-manager.  The gateway runs
+    LiteLLM via the Python SDK on port 8080 (not a separate proxy).  Falls back
+    to safe local-dev defaults when env vars are not set.
+    """
+    base_url = os.environ.get("LITELLM_BASE_URL", "http://127.0.0.1:8080")
+    api_key = os.environ.get("LITELLM_MASTER_KEY", "sk-local")
+    return {"type": "openai", "base_url": f"{base_url}/v1", "api_key": api_key}
+
+
+def _wrap_tools(tool_funcs: list) -> list:
+    """Wrap raw async functions as FunctionTool so the Copilot SDK registers them.
+
+    CommandCenter's executor wraps its own injected tools (call_agent, web_search,
+    etc.) but intentionally leaves agent-owned tools alone — each agent repo is
+    responsible for wrapping its own tools before passing them to GitHubCopilotAgent.
+    """
+    try:
+        from agent_framework._tools import normalize_tools
+        return normalize_tools(tool_funcs)
+    except ImportError:
+        # Fallback: plain functions still work with MAF runtime (not github-copilot).
+        return tool_funcs
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # Agent factory
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -498,37 +530,45 @@ def build_agents():
                 "CommandCenter or autogen_agentchat for local dev."
             )
 
+    _tool_funcs = [
+        # HR Structure
+        query_hr,
+        ingest_resumes,
+        workload_analysis,
+        # ClickUp Ops
+        clickup_list_members,
+        clickup_list_spaces,
+        clickup_get_tasks,
+        clickup_create_project,
+        clickup_sync_tasks,
+        clickup_add_comment,
+        # Project Planning
+        plan_project,
+        # Project Tracking
+        fetch_project_status,
+        generate_status_report,
+        # Technical Planning
+        generate_wbs,
+        generate_gantt,
+        generate_risk_register,
+        compile_project_plan,
+        research_web,
+        search_papers,
+        # Memory & Diagnostics
+        search_project_memory,
+        run_diagnostics,
+    ]
+
     return [AgentClass(
         name="agent-project-manager",
         instructions=_build_system_prompt(),
-        tools=[
-            # HR Structure
-            query_hr,
-            ingest_resumes,
-            workload_analysis,
-            # ClickUp Ops
-            clickup_list_members,
-            clickup_list_spaces,
-            clickup_get_tasks,
-            clickup_create_project,
-            clickup_sync_tasks,
-            clickup_add_comment,
-            # Project Planning
-            plan_project,
-            # Project Tracking
-            fetch_project_status,
-            generate_status_report,
-            # Technical Planning
-            generate_wbs,
-            generate_gantt,
-            generate_risk_register,
-            compile_project_plan,
-            research_web,
-            search_papers,
-            # Memory & Diagnostics
-            search_project_memory,
-            run_diagnostics,
-        ],
+        default_options={
+            "model": os.environ.get("COPILOT_CHAT_MODEL", "gpt-4o"),
+            "provider": _gateway_provider(),
+            "mcp_servers": {},
+            "on_permission_request": PermissionHandler.approve_all,
+        },
+        tools=_wrap_tools(_tool_funcs),
     )]
 
 

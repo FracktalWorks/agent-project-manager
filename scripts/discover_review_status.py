@@ -19,7 +19,7 @@ import time
 from pathlib import Path
 
 AGENT_DIR = Path(__file__).parent.parent
-sys.path.insert(0, str(AGENT_DIR / ".github" / "skills" / "clickup-ops" / "scripts"))
+sys.path.insert(0, str(AGENT_DIR / "skills" / "clickup-ops" / "scripts"))
 
 env_path = AGENT_DIR / ".env"
 if env_path.exists():
