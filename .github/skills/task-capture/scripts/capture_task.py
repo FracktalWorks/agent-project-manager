@@ -40,7 +40,7 @@ from pathlib import Path
 
 import httpx
 
-AGENT_DIR = Path(__file__).resolve().parents[4]
+AGENT_DIR = Path(__file__).resolve().parents[5]
 
 # Load .env from repo root without dotenv.find_dotenv() (safe in piped/subprocess contexts)
 _env_path = AGENT_DIR / ".env"

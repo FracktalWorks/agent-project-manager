@@ -17,7 +17,7 @@ generates daily morning reports, and keeps everything synchronised in ClickUp.
 - **Dual-mode** — same codebase serves both VS Code Copilot Chat
   (`.github/agents/agent-project-manager.agent.md`) and the CommandCenter orchestrator
   (`agents.py` + `config.json`)
-- **13 skill domains** in `skills/`, each with a SKILL.md + optional scripts/
+- **13 skill domains** in `.github/skills/`, each with a SKILL.md + optional scripts/
 - **Shared utilities** in `scripts/` (diagnostics, memory search, workload analysis, integrations)
 - **No LangGraph** — `graph.py` is retained for reference only; the executor calls `build_agents()` exclusively
 
@@ -30,8 +30,8 @@ generates daily morning reports, and keeps everything synchronised in ClickUp.
 | `AGENTS.md` | AI coding agent instructions (persona, skills map, ClickUp API rules, user IDs) |
 | `.github/agents/agent-project-manager.agent.md` | VS Code Copilot Chat custom agent definition |
 | `.github/prompts/system.md` | Primary system prompt (loaded by `agents.py`) |
-| `skills/*/SKILL.md` | Per-skill instructions (13 skills) |
-| `skills/*/scripts/` | Python scripts that do the actual work for each skill |
+| `.github/skills/*/SKILL.md` | Per-skill instructions (13 skills) |
+| `.github/skills/*/scripts/` | Python scripts that do the actual work for each skill |
 | `data/hr_structure.json` | Org chart — the HR source of truth |
 | `outputs/_memory/` | Persistent memory (risk log, decisions, follow-ups, project registry) |
 
@@ -62,7 +62,8 @@ python scripts/self_anneal_diagnostics.py
 agent-project-manager/
 ├── agents.py               ← Entry point (must export build_agents() -> list[BaseAgent])
 ├── config.json             ← CommandCenter contract
-├── skills/                 ← 13 skill domains, each with SKILL.md + scripts/
+├── .github/
+│   └── skills/             ← 13 skill domains, each with SKILL.md + scripts/
 ├── scripts/                ← Shared utilities (on sys.path at runtime)
 ├── data/                   ← HR structure, project priorities, resumes
 ├── outputs/                ← Per-project artifacts + _memory/ (JSON + FTS5 SQLite)
@@ -72,7 +73,7 @@ agent-project-manager/
 ```
 
 **Critical patterns:**
-- Skill scripts resolve the repo root via `Path(__file__).resolve().parents[4]` — moving a
+- Skill scripts resolve the repo root via `Path(__file__).resolve().parents[5]` — moving a
   script changes this count
 - Credentials: `os.getenv(...)` works in both modes (`.env` for local, env injection for CommandCenter)
 - `max_mutation_attempts: 1` — never retry a failed ClickUp write automatically

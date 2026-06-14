@@ -14,7 +14,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-AGENT_DIR = Path(__file__).resolve().parents[4]
+AGENT_DIR = Path(__file__).resolve().parents[5]
 DATA_DIR  = AGENT_DIR / "data"
 sys.path.insert(0, str(Path(__file__).parent))
 

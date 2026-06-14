@@ -36,7 +36,7 @@ from typing import Any
 # ---------------------------------------------------------------------------
 SCRIPT_DIR  = Path(__file__).resolve().parent
 SKILLS_DIR  = SCRIPT_DIR.parent.parent          # .github/skills/
-REPO_ROOT   = SKILLS_DIR.parents[1]              # repo root (above .github/)
+REPO_ROOT   = SKILLS_DIR.parent                  # repo root (skills/ is at root)
 
 HR_FILE     = REPO_ROOT / "data" / "hr_structure.json"
 DEPT_MAP    = SCRIPT_DIR / "dept_mapping.json"

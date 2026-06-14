@@ -43,7 +43,7 @@ import os
 import sys
 from pathlib import Path
 
-AGENT_DIR = Path(__file__).resolve().parents[4]
+AGENT_DIR = Path(__file__).resolve().parents[5]
 CACHE_FILE = AGENT_DIR / "outputs" / "_memory" / "workspace_lists.json"
 sys.path.insert(0, str(AGENT_DIR / ".github" / "skills" / "clickup-ops" / "scripts"))
 

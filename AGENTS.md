@@ -21,7 +21,7 @@ List colors are the **source of truth** for project activity state. Icons in the
 
 ## Architecture (3-layer DOE v2)
 
-**Layer 1: Skills (`skills/*/SKILL.md`)** — detailed instructions for each capability domain.
+**Layer 1: Skills (`.github/skills/*/SKILL.md`)** — detailed instructions for each capability domain.
 **Layer 2: Orchestration (YOU)** — read skills, call scripts in the right order, confirm with the user before writing to ClickUp.
 **Layer 3: Execution (`.github/skills/*/scripts/`, `scripts/`)** — Python scripts that do the actual API work.
 
@@ -31,18 +31,18 @@ List colors are the **source of truth** for project activity state. Icons in the
 
 | Skill | SKILL.md | Purpose |
 |---|---|---|
-| `project-planning` | `skills/project-planning/SKILL.md` | Priority scoring, sprint planning, planning pipeline orchestration |
-| `technical-planning` | `skills/technical-planning/SKILL.md` | End-to-end technical project plans: requirements, research, system architecture (Mermaid), V-model WBS, Gantt, risk register, team assignment from HR data |
-| `project-breakdown` | `skills/project-breakdown/SKILL.md` | WBS, PERT, Gantt, ADRs, Risk Register — deep technical decomposition |
-| `hr-structure` | `skills/hr-structure/SKILL.md` | Query org chart, find the right person, check capacity |
-| `project-tracking` | `skills/project-tracking/SKILL.md` | Periodic status checks, at-risk detection, follow-ups |
-| `clickup-ops` | `skills/clickup-ops/SKILL.md` | ClickUp API — tasks, assignments, deadlines, follow-ups |
-| `clickup-docs` | `skills/clickup-docs/SKILL.md` | Create/edit ClickUp Docs with per-project PRD pages and external links |
-| `external-integrations` | `skills/external-integrations/SKILL.md` | Link GitHub, Notion, Google Docs/Sheets, Obsidian to projects |
-| `agent-memory` | `skills/agent-memory/SKILL.md` | Session-level memory via `<mem>` tags + Tier 1 JSON files |
-| `project-memory` | `skills/project-memory/SKILL.md` | Dual-tier persistent memory: risk log, decision journal, follow-ups |
-| `self-annealing` | `skills/self-annealing/SKILL.md` | Error recovery and continuous improvement |
-| `daily-morning-report` | `skills/daily-morning-report/SKILL.md` | Daily bird's-eye report: department-wise project breakdown + people workload rollup (overloaded / behind / on track / idle) + suggested assignments for idle/light-load people |
+| `project-planning` | `.github/skills/project-planning/SKILL.md` | Priority scoring, sprint planning, planning pipeline orchestration |
+| `technical-planning` | `.github/skills/technical-planning/SKILL.md` | End-to-end technical project plans: requirements, research, system architecture (Mermaid), V-model WBS, Gantt, risk register, team assignment from HR data |
+| `project-breakdown` | `.github/skills/project-breakdown/SKILL.md` | WBS, PERT, Gantt, ADRs, Risk Register — deep technical decomposition |
+| `hr-structure` | `.github/skills/hr-structure/SKILL.md` | Query org chart, find the right person, check capacity |
+| `project-tracking` | `.github/skills/project-tracking/SKILL.md` | Periodic status checks, at-risk detection, follow-ups |
+| `clickup-ops` | `.github/skills/clickup-ops/SKILL.md` | ClickUp API — tasks, assignments, deadlines, follow-ups |
+| `clickup-docs` | `.github/skills/clickup-docs/SKILL.md` | Create/edit ClickUp Docs with per-project PRD pages and external links |
+| `external-integrations` | `.github/skills/external-integrations/SKILL.md` | Link GitHub, Notion, Google Docs/Sheets, Obsidian to projects |
+| `agent-memory` | `.github/skills/agent-memory/SKILL.md` | Session-level memory via `<mem>` tags + Tier 1 JSON files |
+| `project-memory` | `.github/skills/project-memory/SKILL.md` | Dual-tier persistent memory: risk log, decision journal, follow-ups |
+| `self-annealing` | `.github/skills/self-annealing/SKILL.md` | Error recovery and continuous improvement |
+| `daily-morning-report` | `.github/skills/daily-morning-report/SKILL.md` | Daily bird's-eye report: department-wise project breakdown + people workload rollup (overloaded / behind / on track / idle) + suggested assignments for idle/light-load people |
 
 ---
 
@@ -92,7 +92,7 @@ List colors are the **source of truth** for project activity state. Icons in the
 - `data/` — HR structure, project catalog, templates
 - `scripts/` — shared utility scripts
 - `.tmp/` — caches and short-lived intermediates (rules: `.github/instructions/tmp-folder.instructions.md`)
-- `skills/` — skill instructions + skill scripts
+- `.github/skills/` — skill instructions + skill scripts
 - `.github/prompts/` — system prompt + reusable task prompts
 - `.github/instructions/` — path-scoped folder and coding rules
 - `.env` — API keys (local only, never commit)

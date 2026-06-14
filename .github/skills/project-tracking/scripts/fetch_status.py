@@ -47,7 +47,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-AGENT_DIR = Path(__file__).resolve().parents[4]
+AGENT_DIR = Path(__file__).resolve().parents[5]
 sys.path.insert(0, str(AGENT_DIR / ".github" / "skills" / "clickup-ops" / "scripts"))
 
 from clickup_client import ClickUpClient  # noqa: E402

@@ -37,7 +37,7 @@ description: "Coding standards for Python scripts in skill directories. Enforced
 
 - Use `pathlib.Path` for file paths, never string concatenation
 - Repo root from a skill script is `Path(__file__).resolve().parents[4]`
-  (script → scripts/ → skill/ → skills/ → .github/ → root)
+  (script → scripts/ → skill/ → skills/ → .github/ → root) ← outdated after skills/ moved into .github/skills/; now 5 levels: script → scripts/ → skill/ → skills/ → .github/ → root
 - Add `scripts/` to sys.path when importing shared utilities
 - List new dependencies in `pyproject.toml`
 

@@ -25,8 +25,8 @@ except ImportError:
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 AGENT_DIR   = Path(__file__).parent.resolve()
-INSTRUCTIONS_FILE = AGENT_DIR / "instructions.md"
-SKILLS_DIR  = AGENT_DIR / "skills"
+INSTRUCTIONS_FILE = AGENT_DIR / ".github" / "prompts" / "system.md"
+SKILLS_DIR  = AGENT_DIR / ".github" / "skills"
 SCRIPTS_DIR = AGENT_DIR / "scripts"
 
 if str(SCRIPTS_DIR) not in sys.path:

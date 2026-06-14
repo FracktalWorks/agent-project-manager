@@ -100,14 +100,14 @@ Kiran:               100858676
 1. **Understand the request** — classify: new project, task update, delegation, status report, HR query, docs request, integration link, or ClickUp operation.
 2. **Load context** — read `data/hr_structure.json` (people/capacity), `outputs/_memory/project_registry.json` (projects/IDs), `outputs/_memory/risk_log.json` (open risks), `outputs/_memory/follow_ups.json` (pending follow-ups).
 3. **Surface open risks and follow-ups** — if any open risk (score ≥ 6) or follow-up (due ≤ 7 days) is relevant to this conversation, mention it proactively before proceeding.
-4. **Prioritise** — use the priority matrix in `skills/project-planning/SKILL.md` to score and rank against existing work.
-5. **Break down** — for any new project or complex task, use `skills/project-breakdown/SKILL.md` to produce WBS, PERT estimates, Gantt chart, ADRs, and a Risk Register before touching ClickUp.
-6. **Delegate** — match work to named people using `skills/hr-structure/SKILL.md`; never over-assign; always provide who/what/why/how/prerequisites/done-when.
-7. **Sync to ClickUp** — use `skills/clickup-ops/SKILL.md` to create/update spaces, lists, tasks, assignees, deadlines, statuses, and comments. **Confirm before every write.**
-8. **Document** — use `skills/clickup-docs/SKILL.md` to create or update the Folder/Space Doc with a project PRD page for any new or significantly updated project.
-9. **Link external resources** — use `skills/external-integrations/SKILL.md` to connect GitHub repos, Google Docs/Sheets, Notion pages, and Obsidian notes to the project Doc.
-10. **Track & report** — use `skills/project-tracking/SKILL.md` for status reports, at-risk detection, and follow-up drafting.
-11. **Remember** — use `skills/project-memory/SKILL.md` and `skills/agent-memory/SKILL.md` to persist all decisions, risks, open questions, and follow-ups immediately during the session. Do not wait until the end.
+4. **Prioritise** — use the priority matrix in `.github/skills/project-planning/SKILL.md` to score and rank against existing work.
+5. **Break down** — for any new project or complex task, use `.github/skills/project-breakdown/SKILL.md` to produce WBS, PERT estimates, Gantt chart, ADRs, and a Risk Register before touching ClickUp.
+6. **Delegate** — match work to named people using `.github/skills/hr-structure/SKILL.md`; never over-assign; always provide who/what/why/how/prerequisites/done-when.
+7. **Sync to ClickUp** — use `.github/skills/clickup-ops/SKILL.md` to create/update spaces, lists, tasks, assignees, deadlines, statuses, and comments. **Confirm before every write.**
+8. **Document** — use `.github/skills/clickup-docs/SKILL.md` to create or update the Folder/Space Doc with a project PRD page for any new or significantly updated project.
+9. **Link external resources** — use `.github/skills/external-integrations/SKILL.md` to connect GitHub repos, Google Docs/Sheets, Notion pages, and Obsidian notes to the project Doc.
+10. **Track & report** — use `.github/skills/project-tracking/SKILL.md` for status reports, at-risk detection, and follow-up drafting.
+11. **Remember** — use `.github/skills/project-memory/SKILL.md` and `.github/skills/agent-memory/SKILL.md` to persist all decisions, risks, open questions, and follow-ups immediately during the session. Do not wait until the end.
 
 ---
 
@@ -134,7 +134,7 @@ Before creating any task in ClickUp:
 
 ## Skills
 
-See `skills/*/SKILL.md` for detailed instructions for each domain:
+See `.github/skills/*/SKILL.md` for detailed instructions for each domain:
 
 | Skill | Purpose |
 |---|---|
