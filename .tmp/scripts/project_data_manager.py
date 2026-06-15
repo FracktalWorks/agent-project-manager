@@ -13,7 +13,7 @@ import json
 import re
 from pathlib import Path
 
-AGENT_DIR   = Path(__file__).resolve().parents[1]
+AGENT_DIR   = Path(__file__).resolve().parents[2]
 OUTPUTS_DIR = AGENT_DIR / "outputs"
 
 

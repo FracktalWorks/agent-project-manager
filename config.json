@@ -1,11 +1,10 @@
 {
   "name": "agent-project-manager",
-  "runtime": "github-copilot",
   "description": "Project management and HR delegation agent for Fracktal Works. Plans projects, breaks down technical work, delegates to the right people based on resume-inferred skills and live ClickUp workload, tracks risks and follow-ups, syncs to ClickUp, and creates technical project plans (WBS, Gantt, risk register). Trigger keywords: project plan, delegate, assign, WBS, Gantt, workload, who is free, ClickUp, risk, status report, technical planning.",
   "version": "0.2.1",
   "skill_repos": [],
   "integrations": ["clickup", "serpapi"],
-  "model_tier": "tier-2",
+  "model_tier": "tier-balanced",
   "execution_budget": {
     "max_runtime_seconds": 600,
     "max_llm_calls": 30,

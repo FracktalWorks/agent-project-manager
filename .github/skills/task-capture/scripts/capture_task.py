@@ -54,7 +54,7 @@ if _env_path.exists():
 
 TOKEN = os.environ.get("CLICKUP_API_TOKEN", "")
 H = {"Authorization": TOKEN, "Content-Type": "application/json"}
-DATA_DIR = AGENT_DIR / "data"
+DATA_DIR = AGENT_DIR / "agent-data"
 OUTPUT_DIR = AGENT_DIR / "outputs"
 
 STOPWORDS = {"a", "an", "the", "to", "for", "of", "in", "on", "at", "and", "or", "is", "it"}

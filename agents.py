@@ -8,7 +8,7 @@ unchanged — both modes share the same .github/prompts/system.md +
 Architecture (DOE v2):
   Layer 1 (Skills)        — .github/skills/*/SKILL.md + .github/skills/*/scripts/
   Layer 2 (Orchestration) — THIS FILE (GitHubCopilotAgent via MAF)
-  Layer 3 (Execution)     — scripts/ shared utilities + skill scripts
+  Layer 3 (Execution)     — .tmp/scripts/ shared utilities + skill scripts
 """
 from __future__ import annotations
 
@@ -18,19 +18,25 @@ import subprocess
 import sys
 from pathlib import Path
 
-try:
-    from copilot.types import PermissionHandler
-except ImportError:
-    PermissionHandler = None  # Only available in CommandCenter runtime
-
 # ── Paths ─────────────────────────────────────────────────────────────────────
 AGENT_DIR   = Path(__file__).parent.resolve()
 INSTRUCTIONS_FILE = AGENT_DIR / ".github" / "prompts" / "system.md"
 SKILLS_DIR  = AGENT_DIR / ".github" / "skills"
-SCRIPTS_DIR = AGENT_DIR / "scripts"
+SCRIPTS_DIR = AGENT_DIR / ".tmp" / "scripts"
 
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
+
+
+# ── Subprocess helpers ────────────────────────────────────────────────────────
+
+def _run_env() -> dict:
+    """Add .tmp/scripts/ to PYTHONPATH so skill scripts can import shared utilities."""
+    env = os.environ.copy()
+    existing = env.get("PYTHONPATH", "")
+    scripts = str(SCRIPTS_DIR)
+    env["PYTHONPATH"] = f"{scripts}{os.pathsep}{existing}" if existing else scripts
+    return env
 
 
 # ── System prompt builder ─────────────────────────────────────────────────────
@@ -46,7 +52,8 @@ _SKILL_LOAD_ORDER = [
     "project-breakdown",     # periodic: WBS, Gantt, risks
     "project-memory",        # periodic: decisions, risks, follow-ups
     "agent-memory",          # periodic: session memory
-    "clickup-docs",          # occasional: documentation
+    "daily-morning-report",   # periodic: morning reports, workload snapshots
+    "clickup-docs",           # occasional: documentation
     "external-integrations", # occasional: GitHub, Notion links
     "self-annealing",        # diagnostic: error recovery
     "technical-planning",    # heavy: research, WBS generation
@@ -78,11 +85,15 @@ def _build_system_prompt() -> str:
     return "\n".join(parts)
 
 
+SYSTEM_PROMPT = _build_system_prompt()
+
+
 # ── Shared subprocess helper ──────────────────────────────────────────────────
 
 async def _run(cmd: list[str]) -> str:
     result = await asyncio.to_thread(
-        subprocess.run, cmd, capture_output=True, text=True, cwd=str(AGENT_DIR)
+        subprocess.run, cmd, capture_output=True, text=True,
+        cwd=str(AGENT_DIR), env=_run_env(),
     )
     if result.returncode != 0:
         raise RuntimeError(result.stderr[:1000] or f"Script exited {result.returncode}")
@@ -447,6 +458,33 @@ async def search_papers(topic: str, output_slug: str = "", limit: int = 20) -> s
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# DAILY MORNING REPORT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+async def generate_morning_report(department: str = "") -> str:
+    """Generate a daily morning report from live ClickUp data showing only tasks
+    that are overdue, due today, due tomorrow, or actively in-process.
+
+    Includes department-wise breakup, people workload rollup (overloaded / behind /
+    on track / idle), and AI-suggested assignments for idle/light-load team members
+    based on skill matching.
+
+    Use this tool when the user asks for a morning report, daily report, work
+    report, project overview, team status, who is doing what, workload summary,
+    or what should I assign today.
+
+    department: optional department name to scope the report (leave empty for all).
+    """
+    cmd = [
+        sys.executable,
+        str(SKILLS_DIR / "daily-morning-report/scripts/generate_morning_report.py"),
+    ]
+    if department:
+        cmd += ["--department", department]
+    return await _run(cmd)
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # MEMORY & DIAGNOSTICS
 # ═══════════════════════════════════════════════════════════════════════════════
 
@@ -508,27 +546,15 @@ def _wrap_tools(tool_funcs: list) -> list:
 # Agent factory
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def build_agents():
-    """Return MAF agents for agent-project-manager.
+def build_agent():
+    """Construct and return the single GitHubCopilotAgent instance.
 
-    Called by the Dynamic Agent Loader at runtime. Synchronous, zero-argument.
-    Uses GitHubCopilotAgent — CommandCenter injects the model client (BYOK).
-    No custom OpenAIChatCompletionClient; no hardcoded model tier.
+    GitHubCopilotAgent and PermissionHandler are imported here (inside the
+    function) so that agents.py can be imported locally without the
+    CommandCenter runtime being present.
     """
-    try:
-        from agent_framework_github_copilot import GitHubCopilotAgent
-        AgentClass = GitHubCopilotAgent
-    except ImportError:
-        # Fallback for local VS Code dev — agent_framework not installed
-        try:
-            from autogen_agentchat.agents import (
-                AssistantAgent as AgentClass)  # type: ignore
-        except ImportError:
-            raise ImportError(
-                "Neither agent_framework_github_copilot nor autogen_agentchat "
-                "is installed. Install agent_framework_github_copilot for "
-                "CommandCenter or autogen_agentchat for local dev."
-            )
+    from agent_framework_github_copilot import GitHubCopilotAgent  # type: ignore[import]
+    from copilot.types import PermissionHandler                     # type: ignore[import]
 
     _tool_funcs = [
         # HR Structure
@@ -544,6 +570,8 @@ def build_agents():
         clickup_add_comment,
         # Project Planning
         plan_project,
+        # Daily Morning Report
+        generate_morning_report,
         # Project Tracking
         fetch_project_status,
         generate_status_report,
@@ -559,18 +587,26 @@ def build_agents():
         run_diagnostics,
     ]
 
-    return [AgentClass(
+    return GitHubCopilotAgent(
         name="agent-project-manager",
-        instructions=_build_system_prompt(),
+        description="Project management and HR delegation agent for Fracktal Works.",
+        instructions=SYSTEM_PROMPT,
+        tools=_wrap_tools(_tool_funcs),
         default_options={
             "model": os.environ.get("COPILOT_CHAT_MODEL", "gpt-4o"),
             "provider": _gateway_provider(),
             "mcp_servers": {},
             "on_permission_request": PermissionHandler.approve_all,
         },
-        tools=_wrap_tools(_tool_funcs),
-    )]
+    )
 
+
+def build_agents() -> list:
+    """Dynamic Agent Loader entry point. Synchronous, zero-argument, pure."""
+    return [build_agent()]
+
+
+__all__ = ["build_agents", "build_agent", "SYSTEM_PROMPT"]
 
 # ── Smoke test (python agents.py) ────────────────────────────────────────────
 if __name__ == "__main__":

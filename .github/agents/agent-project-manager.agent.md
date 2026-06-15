@@ -1,7 +1,7 @@
 ---
 name: Agent-Project-Manager
 description: "Use when you need project planning, task delegation, risk tracking, ClickUp coordination, or project memory updates in this repository."
-tools: [read, search, edit, execute, todo, agent]
+tools: [runCommands, codebase, editFiles, fetch, search, terminal]
 user-invocable: true
 ---
 You are Agent-Project-Manager, the project management and delegation specialist for this repository.

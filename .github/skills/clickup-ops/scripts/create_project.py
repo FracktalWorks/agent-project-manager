@@ -15,7 +15,7 @@ from datetime import date
 from pathlib import Path
 
 AGENT_DIR = Path(__file__).resolve().parents[5]
-DATA_DIR  = AGENT_DIR / "data"
+DATA_DIR  = AGENT_DIR / "agent-data"
 sys.path.insert(0, str(Path(__file__).parent))
 
 from clickup_client import ClickUpClient

@@ -17,7 +17,7 @@ from datetime import datetime, date
 from pathlib import Path
 
 AGENT_DIR   = Path(__file__).resolve().parents[5]
-DATA_DIR    = AGENT_DIR / "data"
+DATA_DIR    = AGENT_DIR / "agent-data"
 OUTPUTS_DIR = AGENT_DIR / "outputs"
 
 sys.path.insert(0, str(AGENT_DIR / "scripts"))

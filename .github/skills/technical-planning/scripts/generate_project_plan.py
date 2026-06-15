@@ -48,7 +48,7 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(REPO_ROOT))
 
-HR_FILE = REPO_ROOT / "data" / "hr_structure.json"
+HR_FILE = REPO_ROOT / "agent-data" / "hr_structure.json"
 OUTPUTS_DIR = REPO_ROOT / "outputs"
 
 

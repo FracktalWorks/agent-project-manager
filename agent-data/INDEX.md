@@ -8,6 +8,9 @@ This directory contains reference data used by the agent.
 |---|---|---|
 | `hr_structure.json` | Company org chart — departments, teams, people, roles, capacity | User or `hr-structure` skill |
 | `project_priorities.json` | Active projects with priority scores, status, and ClickUp IDs | `project-planning` and `clickup-ops` skills |
+| `resume_profiles.json` | Inferred skills extracted from all resumes — keyed by person name | `ingest_resumes` script in `.tmp/scripts/` |
+| `Resumes/Full-Time/` | PDF resumes for full-time employees — parsed by `ingest_resumes` | User |
+| `Resumes/Interns/` | PDF resumes for interns — parsed by `ingest_resumes` | User |
 
 ## hr_structure.json
 

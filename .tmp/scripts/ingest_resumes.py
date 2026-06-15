@@ -28,12 +28,12 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-REPO_ROOT = Path(__file__).parent.parent
-HR_FILE = REPO_ROOT / "data" / "hr_structure.json"
-RESUME_PROFILES_FILE = REPO_ROOT / "data" / "resume_profiles.json"
+REPO_ROOT = Path(__file__).parent.parent.parent
+HR_FILE = REPO_ROOT / "agent-data" / "hr_structure.json"
+RESUME_PROFILES_FILE = REPO_ROOT / "agent-data" / "resume_profiles.json"
 RESUME_DIRS = [
-    REPO_ROOT / "data" / "Resumes" / "Full-Time",
-    REPO_ROOT / "data" / "Resumes" / "Interns",
+    REPO_ROOT / "agent-data" / "Resumes" / "Full-Time",
+    REPO_ROOT / "agent-data" / "Resumes" / "Interns",
 ]
 
 # ---------------------------------------------------------------------------

@@ -61,6 +61,17 @@ def test_tools_are_async():
         assert inspect.iscoroutinefunction(fn), f"Tool '{name}' must be async def"
 
 
+def test_agent_has_tools():
+    """Agent must have at least one tool — an empty tools list means it can only apologise."""
+    try:
+        from agents import build_agents
+        agent = build_agents()[0]
+        tools = getattr(agent, "tools", None) or getattr(agent, "_tools", None) or []
+        assert len(tools) > 0, "Agent has no tools — it will only apologise"
+    except ImportError:
+        pass  # MAF runtime not available — skip
+
+
 def test_config_json_valid():
     """config.json must be valid JSON with required fields and max_mutation_attempts == 1."""
     import json
@@ -73,10 +84,10 @@ def test_config_json_valid():
 
 
 def test_hr_structure_valid():
-    """data/hr_structure.json must exist and have a non-empty departments list."""
+    """agent-data/hr_structure.json must exist and have a non-empty departments list."""
     import json
-    hr_path = Path(__file__).resolve().parents[1] / "data" / "hr_structure.json"
-    assert hr_path.exists(), "data/hr_structure.json is missing"
+    hr_path = Path(__file__).resolve().parents[1] / "agent-data" / "hr_structure.json"
+    assert hr_path.exists(), "agent-data/hr_structure.json is missing"
     data = json.loads(hr_path.read_text())
     assert "departments" in data
     assert len(data["departments"]) > 0

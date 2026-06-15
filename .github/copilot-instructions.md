@@ -18,8 +18,8 @@ generates daily morning reports, and keeps everything synchronised in ClickUp.
   (`.github/agents/agent-project-manager.agent.md`) and the CommandCenter orchestrator
   (`agents.py` + `config.json`)
 - **13 skill domains** in `.github/skills/`, each with a SKILL.md + optional scripts/
-- **Shared utilities** in `scripts/` (diagnostics, memory search, workload analysis, integrations)
-- **No LangGraph** — `graph.py` is retained for reference only; the executor calls `build_agents()` exclusively
+- **Shared utilities** in `.tmp/scripts/` (diagnostics, memory search, workload analysis, integrations)
+- **No LangGraph** — `graph.py` is not supported; the executor calls `build_agents()` exclusively
 
 ## Key Files
 
@@ -32,7 +32,7 @@ generates daily morning reports, and keeps everything synchronised in ClickUp.
 | `.github/prompts/system.md` | Primary system prompt (loaded by `agents.py`) |
 | `.github/skills/*/SKILL.md` | Per-skill instructions (13 skills) |
 | `.github/skills/*/scripts/` | Python scripts that do the actual work for each skill |
-| `data/hr_structure.json` | Org chart — the HR source of truth |
+| `agent-data/hr_structure.json` | Org chart — the HR source of truth |
 | `outputs/_memory/` | Persistent memory (risk log, decisions, follow-ups, project registry) |
 
 ## Build, Test, Validate
@@ -53,7 +53,7 @@ Minimum: `test_build_agents_importable`, `test_agent_has_name_and_instructions`,
 
 **Health check:**
 ```bash
-python scripts/self_anneal_diagnostics.py
+python .tmp/scripts/self_anneal_diagnostics.py
 ```
 
 ## Project Layout (Non-Obvious Dependencies)
@@ -64,8 +64,9 @@ agent-project-manager/
 ├── config.json             ← CommandCenter contract
 ├── .github/
 │   └── skills/             ← 13 skill domains, each with SKILL.md + scripts/
-├── scripts/                ← Shared utilities (on sys.path at runtime)
-├── data/                   ← HR structure, project priorities, resumes
+├── .tmp/scripts/           ← Shared utilities (on sys.path at runtime)
+├── agent-data/             ← HR structure, project priorities, resumes
+├── inputs/                 ← User-provided files (subfolders per project)
 ├── outputs/                ← Per-project artifacts + _memory/ (JSON + FTS5 SQLite)
 ├── .tmp/                   ← Caches + short-lived intermediates (see tmp-folder instructions)
 ├── tests/                  ← pytest suite (imports agents.py, calls build_agents())

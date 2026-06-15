@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 
 AGENT_DIR = Path(__file__).resolve().parents[5]
-HR_FILE   = AGENT_DIR / "data" / "hr_structure.json"
+HR_FILE   = AGENT_DIR / "agent-data" / "hr_structure.json"
 
 
 def load_hr() -> dict:

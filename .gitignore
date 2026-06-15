@@ -1,5 +1,9 @@
 # Secrets — never commit
 .env
+.env.local
+credentials.json
+token.json
+*.token_cache.json
 
 # Python
 __pycache__/
@@ -11,16 +15,19 @@ dist/
 build/
 .venv/
 venv/
+ENV/
 *.egg
 
 # Outputs — keep memory files but skip temp build artefacts
 outputs/.tmp/
 outputs/morning_report_*.md
 
-# .tmp/ — track utilities + READMEs; ignore cache data and intermediates
+# .tmp/ — track scripts/ and READMEs; ignore cache data and intermediates
 .tmp/*
 !.tmp/README.md
-!.tmp/*.py
+!.tmp/scripts/
+.tmp/scripts/*
+!.tmp/scripts/**
 !.tmp/search_cache/
 .tmp/search_cache/*
 !.tmp/search_cache/README.md
@@ -28,13 +35,22 @@ outputs/morning_report_*.md
 .tmp/web_cache/*
 !.tmp/web_cache/README.md
 
+# Logs
+*.log
+logs/
+
 # OS
 .DS_Store
 Thumbs.db
 
-# Sensitive HR data — never commit
-data/Employee_Contact*
-data/Resumes/
-
 # IDE
 .idea/
+*.swp
+*.swo
+
+# Keep VS Code settings
+!.vscode/
+
+# Sensitive HR data — never commit
+agent-data/Employee_Contact*
+agent-data/Resumes/

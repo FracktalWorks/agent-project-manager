@@ -8,10 +8,10 @@ import json
 from pathlib import Path
 from collections import defaultdict
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 # Load .env
-env_path = Path(__file__).parent.parent / ".env"
+env_path = Path(__file__).parent.parent.parent / ".env"
 if env_path.exists():
     for line in env_path.read_text().splitlines():
         line = line.strip()
@@ -19,7 +19,7 @@ if env_path.exists():
             k, _, v = line.partition("=")
             os.environ.setdefault(k.strip(), v.strip())
 
-sys.path.insert(0, str(Path(__file__).parent.parent / ".github" / "skills" / "clickup-ops" / "scripts"))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / ".github" / "skills" / "clickup-ops" / "scripts"))
 from clickup_client import ClickUpClient
 
 client = ClickUpClient()
@@ -32,7 +32,7 @@ LISTS = {
 }
 
 # Load hr_structure.json to map ClickUp user IDs → names
-hr_file = Path(__file__).parent.parent / "data" / "hr_structure.json"
+hr_file = Path(__file__).parent.parent.parent / "agent-data" / "hr_structure.json"
 hr_data = json.loads(hr_file.read_text())
 
 user_map = {}  # clickup_user_id → name

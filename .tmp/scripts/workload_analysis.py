@@ -26,11 +26,11 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-REPO_ROOT = Path(__file__).parent.parent
+REPO_ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-HR_FILE = REPO_ROOT / "data" / "hr_structure.json"
-RESUME_PROFILES_FILE = REPO_ROOT / "data" / "resume_profiles.json"
+HR_FILE = REPO_ROOT / "agent-data" / "hr_structure.json"
+RESUME_PROFILES_FILE = REPO_ROOT / "agent-data" / "resume_profiles.json"
 REPORT_FILE = REPO_ROOT / "outputs" / "workload_report.json"
 
 HOURS_PER_TASK_ESTIMATE = 4.0   # default hours assumed per open task

@@ -23,7 +23,7 @@ List colors are the **source of truth** for project activity state. Icons in the
 
 **Layer 1: Skills (`.github/skills/*/SKILL.md`)** — detailed instructions for each capability domain.
 **Layer 2: Orchestration (YOU)** — read skills, call scripts in the right order, confirm with the user before writing to ClickUp.
-**Layer 3: Execution (`.github/skills/*/scripts/`, `scripts/`)** — Python scripts that do the actual API work.
+**Layer 3: Execution (`.github/skills/*/scripts/`, `.tmp/scripts/`)** — Python scripts that do the actual API work.
 
 ---
 
@@ -46,7 +46,7 @@ List colors are the **source of truth** for project activity state. Icons in the
 
 ---
 
-## Shared Scripts (`scripts/`)
+## Shared Scripts (`.tmp/scripts/`)
 
 | Script | Purpose |
 |---|---|
@@ -59,13 +59,13 @@ List colors are the **source of truth** for project activity state. Icons in the
 
 ---
 
-## Data Files (`data/`)
+## Data Files (`agent-data/`)
 
 | File | Purpose |
 |---|---|
-| `data/hr_structure.json` | Company org chart — departments, teams, people, roles, capacity |
-| `data/project_priorities.json` | Active projects with priority scores and status |
-| `data/INDEX.md` | Agent-readable manifest of all data/ contents |
+| `agent-data/hr_structure.json` | Company org chart — departments, teams, people, roles, capacity |
+| `agent-data/project_priorities.json` | Active projects with priority scores and status |
+| `agent-data/INDEX.md` | Agent-readable manifest of all agent-data/ contents |
 
 ---
 
@@ -89,8 +89,8 @@ List colors are the **source of truth** for project activity state. Icons in the
 
 - `outputs/{project-slug}/` — per-project deliverables: WBS, Gantt, risk register, ADRs, project brief
 - `outputs/_memory/` — cross-project persistent memory
-- `data/` — HR structure, project catalog, templates
-- `scripts/` — shared utility scripts
+- `agent-data/` — HR structure, project catalog, templates
+- `.tmp/scripts/` — shared utility scripts
 - `.tmp/` — caches and short-lived intermediates (rules: `.github/instructions/tmp-folder.instructions.md`)
 - `.github/skills/` — skill instructions + skill scripts
 - `.github/prompts/` — system prompt + reusable task prompts
@@ -102,8 +102,8 @@ List colors are the **source of truth** for project activity state. Icons in the
 ## Key Rules
 
 1. **Always confirm before writing to ClickUp.** Show the user what you plan to create/change first.
-2. **Never over-assign.** Check `data/hr_structure.json` capacity before delegating.
-3. **One source of truth.** `data/hr_structure.json` is the HR record. `outputs/_memory/project_registry.json` is the project record. Update them when things change.
+2. **Never over-assign.** Check `agent-data/hr_structure.json` capacity before delegating.
+3. **One source of truth.** `agent-data/hr_structure.json` is the HR record. `outputs/_memory/project_registry.json` is the project record. Update them when things change.
 4. **ClickUp is the task system.** All tasks, deadlines, and assignments live there — do not duplicate in JSON outputs.
 5. `max_mutation_attempts = 1` — never retry a failed ClickUp write automatically.
 6. **Break down before building.** For any new project, run `project-breakdown` before pushing to ClickUp.
@@ -166,7 +166,7 @@ def create_subtask(list_id, parent_id, name, assignees, status="todo"):
     return r.json()
 ```
 
-### Known user IDs (from `data/hr_structure.json`)
+### Known user IDs (from `agent-data/hr_structure.json`)
 ```
 Vijay Raghav Varada: 236494607
 Ayush Sarkar:        100842373

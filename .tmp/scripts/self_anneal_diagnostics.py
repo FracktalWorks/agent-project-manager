@@ -20,8 +20,8 @@ from pathlib import Path
 if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-AGENT_DIR   = Path(__file__).resolve().parent.parent
-DATA_DIR    = AGENT_DIR / "data"
+AGENT_DIR   = Path(__file__).resolve().parent.parent.parent
+DATA_DIR    = AGENT_DIR / "agent-data"
 OUTPUTS_DIR = AGENT_DIR / "outputs"
 MEMORY_DIR  = OUTPUTS_DIR / "_memory"
 
@@ -54,18 +54,18 @@ def check_data_integrity() -> list[str]:
     issues = []
     hr_path = DATA_DIR / "hr_structure.json"
     if not hr_path.exists():
-        issues.append("data/hr_structure.json is missing — populate it before delegating tasks")
+        issues.append("agent-data/hr_structure.json is missing — populate it before delegating tasks")
     else:
         try:
             hr = json.loads(hr_path.read_text(encoding="utf-8"))
             if not hr.get("departments"):
-                issues.append("data/hr_structure.json has no departments")
+                issues.append("agent-data/hr_structure.json has no departments")
         except json.JSONDecodeError as e:
-            issues.append(f"data/hr_structure.json is invalid JSON: {e}")
+            issues.append(f"agent-data/hr_structure.json is invalid JSON: {e}")
 
     pp_path = DATA_DIR / "project_priorities.json"
     if not pp_path.exists():
-        issues.append("data/project_priorities.json is missing — will be created on first project")
+        issues.append("agent-data/project_priorities.json is missing — will be created on first project")
 
     return issues
 
