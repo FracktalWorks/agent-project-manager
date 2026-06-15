@@ -34,11 +34,11 @@ from typing import Any
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-SCRIPT_DIR  = Path(__file__).resolve().parent
-SKILLS_DIR  = SCRIPT_DIR.parent.parent          # .github/skills/
-REPO_ROOT   = SKILLS_DIR.parent                  # repo root (skills/ is at root)
+SCRIPT_DIR  = Path(__file__).resolve().parent          # .../daily-morning-report/scripts/
+SKILLS_DIR  = SCRIPT_DIR.parent.parent                # .github/skills/
+REPO_ROOT   = SKILLS_DIR.parent.parent                # repo root (.github/skills/ → .github/ → /)
 
-HR_FILE     = REPO_ROOT / "data" / "hr_structure.json"
+HR_FILE     = REPO_ROOT / "agent-data" / "hr_structure.json"
 DEPT_MAP    = SCRIPT_DIR / "dept_mapping.json"
 OUTPUT_DIR  = REPO_ROOT / "outputs"
 REPORT_DIR  = REPO_ROOT / "outputs" / "morning_reports"
