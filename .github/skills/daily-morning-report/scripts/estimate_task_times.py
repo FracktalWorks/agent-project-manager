@@ -199,18 +199,65 @@ ESTIMATION_RULES: list[tuple[str, float, str]] = [
 # Fallback when no keyword matches at all
 DEFAULT_ESTIMATE_HOURS = 4.0
 
+# Conservative factor: multiply all estimates by this to err low, not high
+# 0.75 means a 16h CAD task → 12h estimate (prevents false OVERLOADED flags)
+CONSERVATIVE_FACTOR = 0.75
 
-def estimate_hours_from_name(task_name: str, description: str = "") -> tuple[float, str]:
-    """Return (hours, reason) for a task based on its name and description."""
+# Priority ceiling: max hours by priority (even if keywords suggest more)
+PRIORITY_CEILING: dict[int, float] = {
+    1: 16.0,  # urgent — cap at 2 days
+    2: 12.0,  # high   — cap at 1.5 days
+    3: 8.0,   # normal — cap at 1 day
+    4: 4.0,   # low    — cap at half day
+}
+
+# Status scaling: "in process" tasks are partially done — estimate remaining
+STATUS_SCALE: dict[str, float] = {
+    "in process":    0.5,   # ~half done
+    "in progress":   0.5,
+    "review":        0.3,   # nearly done
+    "on hold":       0.2,   # waiting, minimal remaining
+}
+
+
+def estimate_hours_from_name(task_name: str, description: str = "",
+                             status: str = "", priority: int = 0) -> tuple[float, str]:
+    """Return (hours, reason) for a task based on name + description.
+
+    Applies three refinements:
+      1. Keyword match → hours from rules
+      2. Conservative factor (0.75×) — err on the low side
+      3. Status scaling — in-process tasks get reduced estimate
+      4. Priority ceiling — caps max hours regardless of keywords
+    """
     search_text = f"{task_name} {description[:200]}".lower().strip()
     if not search_text:
-        return DEFAULT_ESTIMATE_HOURS, "empty name (fallback)"
+        hours = DEFAULT_ESTIMATE_HOURS
+        reason = "empty name (fallback)"
+    else:
+        for pattern, h, r in ESTIMATION_RULES:
+            if re.search(pattern, search_text):
+                hours = h
+                reason = r
+                break
+        else:
+            hours = DEFAULT_ESTIMATE_HOURS
+            reason = "no keyword match (fallback)"
 
-    for pattern, hours, reason in ESTIMATION_RULES:
-        if re.search(pattern, search_text):
-            return hours, reason
+    # ── Refinement 1: conservative factor ─────────────────────────────────
+    hours *= CONSERVATIVE_FACTOR
 
-    return DEFAULT_ESTIMATE_HOURS, "no keyword match (fallback)"
+    # ── Refinement 2: priority ceiling ────────────────────────────────────
+    if priority and priority in PRIORITY_CEILING:
+        hours = min(hours, PRIORITY_CEILING[priority])
+
+    # ── Refinement 3: status scaling ──────────────────────────────────────
+    status_lower = status.lower().strip()
+    if status_lower in STATUS_SCALE:
+        hours *= STATUS_SCALE[status_lower]
+        reason += f" ({status_lower} scaled)"
+
+    return round(hours, 1), reason
 
 
 # ---------------------------------------------------------------------------
@@ -226,6 +273,17 @@ def task_status_str(task: dict) -> str:
     if isinstance(raw, dict):
         return raw.get("status", "unknown")
     return str(raw or "unknown")
+
+
+def _task_priority_int(task: dict) -> int:
+    """Extract ClickUp priority as integer (1=urgent, 2=high, 3=normal, 4=low)."""
+    p = task.get("priority")
+    if isinstance(p, dict):
+        p = p.get("id")
+    try:
+        return int(p) if p is not None else 0
+    except (ValueError, TypeError):
+        return 0
 
 
 def is_backlog(task: dict) -> bool:
@@ -380,7 +438,11 @@ def main() -> None:
         current_ms = task.get("time_estimate")
         current_hrs = ms_to_hours(current_ms)
 
-        hours, reason = estimate_hours_from_name(task_name, description)
+        hours, reason = estimate_hours_from_name(
+            task_name, description,
+            status=task_status_str(task),
+            priority=_task_priority_int(task),
+        )
         new_ms = hours_to_ms(hours)
 
         result = {
