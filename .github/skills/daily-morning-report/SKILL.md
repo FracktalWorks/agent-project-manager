@@ -44,7 +44,7 @@ When the user asks for a morning report / daily report / work overview / who is 
 |---|---|
 | Which lists to include | `green` color only — set in ClickUp list settings |
 | Which tasks to show | Excludes: `backlog`, `done`, `closed`, `complete`, `completed`, `cancelled`, `canceled` |
-| Workload status | OVERLOADED: est. hours > 40h capacity |
+| Workload status | OVERLOADED: est. hours > 48h capacity |
 | | BEHIND: ≥1 overdue task (due date < today, not closed) |
 | | LIGHT_LOAD: <2 tasks OR est. hours < 25% capacity |
 | | IDLE: 0 tasks |
@@ -157,7 +157,7 @@ A consolidated view of every person in the company with their workload status:
 
 | Status | Meaning |
 |---|---|
-| 🔴 OVERLOADED | Estimated task hours > weekly capacity (default 40h) |
+| 🔴 OVERLOADED | Estimated task hours > weekly capacity (default 48h) |
 | 🟠 BEHIND | Has ≥ 1 overdue task (due date passed, not closed) |
 | 🟢 ON TRACK | Tasks assigned, none overdue, within capacity |
 | 🟡 LIGHT LOAD | Fewer than 2 open tasks OR estimated hours < 25% of capacity |
@@ -259,7 +259,7 @@ When the user asks for a morning report / daily report / work overview:
 
 | Person | Dept | Tasks | Est. Hours | Capacity | Status |
 |--------|------|-------|------------|----------|--------|
-| Ayush Sarkar | R&D | 5 | 22h | 40h | 🟢 ON TRACK |
-| Suryansh Lal | R&D | 0 | 0h | 40h | ⚪ IDLE |
+| Ayush Sarkar | R&D | 5 | 22h | 48h | 🟢 ON TRACK |
+| Suryansh Lal | R&D | 0 | 0h | 48h | ⚪ IDLE |
 ...
 ```

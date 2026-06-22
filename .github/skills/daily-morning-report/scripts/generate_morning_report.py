@@ -186,6 +186,18 @@ def _collect(client, lst: dict, space_name: str, folder_name: str | None, target
 # ---------------------------------------------------------------------------
 
 def estimate_hours(task: dict) -> float:
+    """Return estimated hours for a task.
+
+    Prefers ClickUp's built-in time_estimate (milliseconds) when available.
+    Falls back to priority-based heuristic only when time_estimate is
+    missing or zero.
+    """
+    # ── Primary: ClickUp time_estimate field (ms) ──────────────────────
+    time_est = task.get("time_estimate")
+    if time_est and time_est > 0:
+        return time_est / (3600 * 1000)
+
+    # ── Fallback: priority-based heuristic ─────────────────────────────
     priority = task.get("priority")
     if isinstance(priority, dict):
         priority = priority.get("id")
@@ -384,7 +396,7 @@ def suggest_assignments(
     # ── classify every person ────────────────────────────────────────────────
     uid_to_status: dict[int, str] = {}
     for uid, m in uid_to_member.items():
-        capacity = m.get("capacity_hours_per_week", 40) or 40
+        capacity = m.get("capacity_hours_per_week", 48) or 48
         if uid not in workload:
             uid_to_status[uid] = "IDLE"
             continue
@@ -552,7 +564,7 @@ def suggest_assignments(
     # ── Classify every person's status ───────────────────────────────────────
     uid_to_status: dict[int, str] = {}
     for uid, m in uid_to_member.items():
-        capacity = m.get("capacity_hours_per_week", 40) or 40
+        capacity = m.get("capacity_hours_per_week", 48) or 48
         if uid not in workload:
             uid_to_status[uid] = "IDLE"
             continue
@@ -593,7 +605,7 @@ def suggest_assignments(
     for dept_name in ordered_depts:
         for member in org.get(dept_name, []):
             uid      = member.get("clickup_user_id")
-            capacity = member.get("capacity_hours_per_week", 40) or 40
+            capacity = member.get("capacity_hours_per_week", 48) or 48
             status   = uid_to_status.get(uid, "IDLE") if uid else "IDLE"
 
             if status in ("OVERLOADED", "BEHIND", "ON_TRACK"):
@@ -769,7 +781,7 @@ def build_org(hr_data: dict, dept_map: dict[str, str], skip_marker: str = "_skip
 
 def classify_person(member: dict, workload: dict[int, dict]) -> dict:
     uid      = member.get("clickup_user_id")
-    capacity = member.get("capacity_hours_per_week", 40) or 40
+    capacity = member.get("capacity_hours_per_week", 48) or 48
 
     if uid is None or uid not in workload:
         return {
@@ -918,7 +930,7 @@ def render_markdown(
             name     = member.get("name", "Unknown")
             dept     = member.get("_report_dept", "—")
             role     = member.get("role", "—")
-            capacity = member.get("capacity_hours_per_week", 40) or 40
+            capacity = member.get("capacity_hours_per_week", 48) or 48
             emoji    = EMOJI[clf["status"]]
             status   = clf["status"].replace("_", " ")
 
@@ -1024,7 +1036,7 @@ def render_json(
             "status":           clf["status"],
             "task_count":       clf["task_count"],
             "estimated_hours":  clf["estimated_hours"],
-            "capacity_hours":   member.get("capacity_hours_per_week", 40),
+            "capacity_hours":   member.get("capacity_hours_per_week", 48),
             "overdue_count":    clf["overdue_count"],
         })
 

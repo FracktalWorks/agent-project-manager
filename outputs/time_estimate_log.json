@@ -1,0 +1,622 @@
+{
+  "timestamp": "2026-06-22T10:21:16.224429",
+  "dry_run": true,
+  "force": false,
+  "tasks_estimated": 68,
+  "tasks_updated": 0,
+  "errors": 0,
+  "results": [
+    {
+      "task_id": "86d3c4h13",
+      "task_name": "update CRM with all current follow ups",
+      "list": "Sales Operations",
+      "estimated_hours": 5.0,
+      "reason": "update/upgrade",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3c4dac",
+      "task_name": "Coordinate with Ted Plastics.",
+      "list": "Sales Operations",
+      "estimated_hours": 3.0,
+      "reason": "coordination",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3c45ne",
+      "task_name": "follow up with vignesh.",
+      "list": "Sales Operations",
+      "estimated_hours": 1.5,
+      "reason": "follow-up",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3b73w3",
+      "task_name": "Gupta IISc — Clay Extruder Demo Preparation",
+      "list": "Sales Operations",
+      "estimated_hours": 8.0,
+      "reason": "demo preparation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3b6hxd",
+      "task_name": "Gupta IISc Centre for Sustainable Technology — Quotation & Documentation",
+      "list": "Sales Operations",
+      "estimated_hours": 6.0,
+      "reason": "documentation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39xtyg",
+      "task_name": "Clay printer demonstration for IISC",
+      "list": "Sales Operations",
+      "estimated_hours": 6.0,
+      "reason": "demo",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39w6mz",
+      "task_name": "Share New Reseller Agreement with Resellers",
+      "list": "Sales Operations",
+      "estimated_hours": 6.0,
+      "reason": "legal/agreement",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39erd6",
+      "task_name": "3d scanner bid documents - binu",
+      "list": "Sales Operations",
+      "estimated_hours": 6.0,
+      "reason": "documentation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39er3f",
+      "task_name": "3D printer coastal research centre documents.",
+      "list": "Sales Operations",
+      "estimated_hours": 12.0,
+      "reason": "research",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d12pg7h",
+      "task_name": "Finalize Reseller Agreement",
+      "list": "Sales Operations",
+      "estimated_hours": 4.0,
+      "reason": "finalization",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3d187q",
+      "task_name": "penrose schematic .",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 12.0,
+      "reason": "schematic design",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3d15w0",
+      "task_name": "Print Settings  KT",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 2.0,
+      "reason": "knowledge transfer",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3c0z2z",
+      "task_name": "PPAP of Penrose machine",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 12.0,
+      "reason": "PPAP documentation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39akdq",
+      "task_name": "Penrose Pellet Extruder V2 CAD Design Finalisation",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 20.0,
+      "reason": "CAD design",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38qfm9",
+      "task_name": "515 Field Workshop Support",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 4.0,
+      "reason": "field support",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38qby2",
+      "task_name": "1 Coy Field Workshop Hisar Support",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 4.0,
+      "reason": "field support",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d37qxe1",
+      "task_name": "Create GitHub Repository for Penrose Manufacturing Drawings",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 12.0,
+      "reason": "assembly",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d20fcp8",
+      "task_name": "Complete Penrose User Manual Delivery",
+      "list": "Penrose Pellet Extruder",
+      "estimated_hours": 16.0,
+      "reason": "user manual",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3dbtxy",
+      "task_name": "Verify the racer chain alternate position",
+      "list": "Julia Series",
+      "estimated_hours": 4.0,
+      "reason": "verification",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3b72jy",
+      "task_name": "Research Alternative Design/Component for External Extruder Motor & Filament Sensors",
+      "list": "Julia Series",
+      "estimated_hours": 20.0,
+      "reason": "exploratory research",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3awrn3",
+      "task_name": "CREATE PPAP DOC FOR JULIA EXTENDED OLD",
+      "list": "Julia Series",
+      "estimated_hours": 12.0,
+      "reason": "PPAP documentation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39w94u",
+      "task_name": "Review Sougata's Design for Single Extruder",
+      "list": "Julia Series",
+      "estimated_hours": 6.0,
+      "reason": "technical review",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3863mf",
+      "task_name": "PCB Design: update Legacy PCB for MKS Robin v3",
+      "list": "Julia Series",
+      "estimated_hours": 24.0,
+      "reason": "PCB design",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3863df",
+      "task_name": "CAD: Updated Carriage for Inductive Sensor",
+      "list": "Julia Series",
+      "estimated_hours": 12.0,
+      "reason": "CAD work",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3db4av",
+      "task_name": "Procure left out components for MDS",
+      "list": "MDS",
+      "estimated_hours": 4.0,
+      "reason": "procurement",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3d149x",
+      "task_name": "\nEvaporator/Cooling unit_DHUM_V2_WBC",
+      "list": "MDS",
+      "estimated_hours": 16.0,
+      "reason": "thermal/mechanical design",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3bqfaf",
+      "task_name": "Spacers to be printed",
+      "list": "MDS",
+      "estimated_hours": 2.0,
+      "reason": "spacer printing",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38kd1e",
+      "task_name": "Execute test plan and close all punch-list items",
+      "list": "MDS",
+      "estimated_hours": 6.0,
+      "reason": "documentation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38kd1b",
+      "task_name": "Assemble MDS unit (Suryansh to build)",
+      "list": "MDS",
+      "estimated_hours": 12.0,
+      "reason": "assembly",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38kd18",
+      "task_name": "Generate BOM from CAD and update ODOO naming conventions",
+      "list": "MDS",
+      "estimated_hours": 6.0,
+      "reason": "BOM creation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3e0brj",
+      "task_name": "Increase Contour contrast",
+      "list": "RapidTool: Shadow Box",
+      "estimated_hours": 4.0,
+      "reason": "no keyword match (fallback)",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3e0axq",
+      "task_name": "Denoise tool shadow to improve the precised trace",
+      "list": "RapidTool: Shadow Box",
+      "estimated_hours": 4.0,
+      "reason": "no keyword match (fallback)",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3e0a20",
+      "task_name": "Fix: Skew Correctioon to fit A4 Size(CamS level)",
+      "list": "RapidTool: Shadow Box",
+      "estimated_hours": 5.0,
+      "reason": "fix/repair",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3cquqh",
+      "task_name": "Quote system",
+      "list": "RapidTool: Shadow Box",
+      "estimated_hours": 8.0,
+      "reason": "quote system",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3cqay4",
+      "task_name": "Accuracy — algorithmic, needs some cross tool real-photo testing (proposal for next level efficiency)",
+      "list": "RapidTool: Shadow Box",
+      "estimated_hours": 6.0,
+      "reason": "testing",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3cpqh4",
+      "task_name": "Bug: Debug the Trace/ optimize by overcome the False positives by testing several tools",
+      "list": "RapidTool: Shadow Box",
+      "estimated_hours": 6.0,
+      "reason": "testing",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38tp9v",
+      "task_name": "Desktop App Release Pipeline & Distribution",
+      "list": "VSP Engine",
+      "estimated_hours": 12.0,
+      "reason": "app packaging/release",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38tm16",
+      "task_name": "Online Account & License Authentication (One-Time Activation)",
+      "list": "VSP Engine",
+      "estimated_hours": 4.0,
+      "reason": "registration",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38tkyv",
+      "task_name": "Electron Application Bundling & Distribution",
+      "list": "VSP Engine",
+      "estimated_hours": 4.0,
+      "reason": "no keyword match (fallback)",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3a40rr",
+      "task_name": "Chat Agent UI/UX",
+      "list": "Command Center: Company Agent Orchastration",
+      "estimated_hours": 12.0,
+      "reason": "UI/UX work",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3d17ru",
+      "task_name": "camera test",
+      "list": "Octoprint/Control Center",
+      "estimated_hours": 6.0,
+      "reason": "testing",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3b7dcq",
+      "task_name": "Update Latest Octoprint with changes from previous Octoprint safely",
+      "list": "Octoprint/Control Center",
+      "estimated_hours": 5.0,
+      "reason": "update/upgrade",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3c9bft",
+      "task_name": "Renew DPIIT registration under DEEP TECH",
+      "list": "Founders Office",
+      "estimated_hours": 4.0,
+      "reason": "registration",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3bu59m",
+      "task_name": "Order Chairs for Aerospace /Fracktal",
+      "list": "HR",
+      "estimated_hours": 2.0,
+      "reason": "office procurement",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3bu419",
+      "task_name": "Printed T-Shirts with Fracktal Logo",
+      "list": "HR",
+      "estimated_hours": 3.0,
+      "reason": "merchandise",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3bu3tj",
+      "task_name": "Order Hard Disk, Tool Kit with Bag for After Sales",
+      "list": "HR",
+      "estimated_hours": 2.0,
+      "reason": "office procurement",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3dczya",
+      "task_name": "Update \"SPM\" on MSME Udhyam",
+      "list": "Finance & Accounting",
+      "estimated_hours": 5.0,
+      "reason": "update/upgrade",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3cyk4f",
+      "task_name": "Hathi Labs-GST & DPIIT registrations",
+      "list": "Finance & Accounting",
+      "estimated_hours": 4.0,
+      "reason": "registration",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3cmugn",
+      "task_name": "Constellation Tally updates & Filings",
+      "list": "Finance & Accounting",
+      "estimated_hours": 4.0,
+      "reason": "accounting",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3ckem1",
+      "task_name": "Bank Reconciliation",
+      "list": "Finance & Accounting",
+      "estimated_hours": 5.0,
+      "reason": "finance audit/recon",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3ckbmm",
+      "task_name": "New Logistic Partner",
+      "list": "Finance & Accounting",
+      "estimated_hours": 4.0,
+      "reason": "finalization",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3ckaub",
+      "task_name": "Clarifications on Audit Observations",
+      "list": "Finance & Accounting",
+      "estimated_hours": 5.0,
+      "reason": "finance audit/recon",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3c4cg6",
+      "task_name": "Setup R&D Inventory Dedicated Storage",
+      "list": "Finance & Accounting",
+      "estimated_hours": 8.0,
+      "reason": "setup/organize",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3brm1g",
+      "task_name": "New Current Account_ICICI_Constellation Aerospace",
+      "list": "Finance & Accounting",
+      "estimated_hours": 3.0,
+      "reason": "banking",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3brjkr",
+      "task_name": "Procurement Policy_Constellation Aerospace",
+      "list": "Finance & Accounting",
+      "estimated_hours": 4.0,
+      "reason": "procurement",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39dx7x",
+      "task_name": "GSTR3B - Payment & Returns",
+      "list": "Finance & Accounting",
+      "estimated_hours": 2.0,
+      "reason": "billing/payment",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39dww5",
+      "task_name": "Employees PT",
+      "list": "Finance & Accounting",
+      "estimated_hours": 2.0,
+      "reason": "professional tax filing",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39dweb",
+      "task_name": "GSTR2B - Reconciliation",
+      "list": "Finance & Accounting",
+      "estimated_hours": 5.0,
+      "reason": "finance audit/recon",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39dtt6",
+      "task_name": "AR tracking Dashboard Agent",
+      "list": "Finance & Accounting",
+      "estimated_hours": 8.0,
+      "reason": "dashboard work",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39dtdp",
+      "task_name": "SOP for Payment Followup ",
+      "list": "Finance & Accounting",
+      "estimated_hours": 1.5,
+      "reason": "follow-up",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38kyn9",
+      "task_name": "Prepare & Send Quotation Package to Vendor",
+      "list": "Photo Booth",
+      "estimated_hours": 4.0,
+      "reason": "finalization",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d38kyn7",
+      "task_name": "Bill of Materials (BOM) with part numbers & suppliers",
+      "list": "Photo Booth",
+      "estimated_hours": 6.0,
+      "reason": "BOM creation",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3cpa94",
+      "task_name": "AQUAGENICS SLA WHITE PARTS",
+      "list": "SLA, SLS& MJF PRINTS",
+      "estimated_hours": 3.0,
+      "reason": "3D printing job",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3adefn",
+      "task_name": "KIRLOSKAR TOYOTA SLA TPU PARTS",
+      "list": "SLA, SLS& MJF PRINTS",
+      "estimated_hours": 3.0,
+      "reason": "3D printing job",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3d3gm5",
+      "task_name": "TOM HEMRES CASE WHITE PLA PRINT",
+      "list": "FDM PRINTS",
+      "estimated_hours": 2.0,
+      "reason": "meeting",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3cq9vc",
+      "task_name": "BMSI PRINT FRABS PIPE SPONSORSHIP",
+      "list": "FDM PRINTS",
+      "estimated_hours": 3.0,
+      "reason": "3D printing",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d3ca9j6",
+      "task_name": "UNISUR PACKING COVER",
+      "list": "FDM PRINTS",
+      "estimated_hours": 3.0,
+      "reason": "packing job",
+      "previous_hours": null,
+      "action": "would_update"
+    },
+    {
+      "task_id": "86d39m2yt",
+      "task_name": "POOJA ASSOCIATES 50 QUANTITY  PRINTING",
+      "list": "FDM PRINTS",
+      "estimated_hours": 3.0,
+      "reason": "3D printing batch",
+      "previous_hours": null,
+      "action": "would_update"
+    }
+  ]
+}

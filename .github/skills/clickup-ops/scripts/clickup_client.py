@@ -100,6 +100,8 @@ class ClickUpClient:
         due_date_ms: int | None = None,
         priority: int | None = None,
         tags: list[str] | None = None,
+        time_estimate_ms: int | None = None,
+        status: str | None = None,
     ) -> dict:
         payload: dict[str, Any] = {"name": name}
         if description:
@@ -108,11 +110,16 @@ class ClickUpClient:
             payload["assignees"] = assignees
         if due_date_ms is not None:
             payload["due_date"] = due_date_ms
+            payload["due_date_time"] = False
         if priority is not None:
             # ClickUp priority: 1=urgent, 2=high, 3=normal, 4=low
             payload["priority"] = priority
         if tags:
             payload["tags"] = tags
+        if time_estimate_ms is not None:
+            payload["time_estimate"] = time_estimate_ms
+        if status is not None:
+            payload["status"] = status
         return self._request("POST", f"/list/{list_id}/task", json=payload)
 
     def create_subtask(
@@ -124,6 +131,8 @@ class ClickUpClient:
         assignees: list[int] | None = None,
         due_date_ms: int | None = None,
         priority: int | None = None,
+        time_estimate_ms: int | None = None,
+        status: str | None = None,
     ) -> dict:
         """Create a subtask under an existing parent task.
 
@@ -140,9 +149,18 @@ class ClickUpClient:
             payload["due_date_time"] = False
         if priority is not None:
             payload["priority"] = priority
+        if time_estimate_ms is not None:
+            payload["time_estimate"] = time_estimate_ms
+        if status is not None:
+            payload["status"] = status
         return self._request("POST", f"/list/{list_id}/task", json=payload)
 
     def update_task(self, task_id: str, **fields: Any) -> dict:
+        """Update a task. Supports all ClickUp task fields including time_estimate (in ms).
+
+        Example:
+            client.update_task(task_id, time_estimate=8*3600*1000)  # 8 hours
+        """
         return self._request("PUT", f"/task/{task_id}", json=fields)
 
     def get_task(self, task_id: str) -> dict:

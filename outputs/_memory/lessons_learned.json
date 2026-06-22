@@ -39,6 +39,16 @@
       "fix": "Use datetime(yyyy, mm, dd, 18, 0).timestamp() * 1000 and set due_date_time: False. 18:00 local safely falls on the correct calendar date in any timezone.",
       "prevention": "Always use the ms() helper: def ms(y,m,d): return int(datetime(y,m,d,18,0).timestamp()*1000)",
       "project": "general"
+    },
+    {
+      "id": "L-005",
+      "date": "2026-06-22",
+      "title": "Morning report capacity default was 40h — corrected to 48h",
+      "pattern": "Weekly capacity of 40h underestimated actual work hours, causing false OVERLOADED flags and inflated alarm in reports.",
+      "root_cause": "Default capacity was set to 40h in three places: hr_structure.json (21 people), generate_morning_report.py (6 fallback lines), and SKILL.md documentation.",
+      "fix": "Updated all occurrences: hr_structure.json capacity_hours_per_week and available_hours_per_week 40→48; Python script fallbacks 40→48; SKILL.md docs 40h→48h.",
+      "prevention": "When adjusting company-wide defaults, change all three layers: (1) hr_structure.json source of truth, (2) script fallback defaults, (3) SKILL.md documentation. Use grep to verify zero stale references remain.",
+      "project": "general"
     }
   ]
 }

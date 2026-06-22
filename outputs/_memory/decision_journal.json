@@ -1,6 +1,13 @@
 ﻿{
 	"decisions": [
 		{
+			"date": "2026-06-22",
+			"title": "Standardize weekly capacity at 48h",
+			"decision": "Change the default weekly capacity from 40h to 48h across hr_structure.json, generate_morning_report.py, and SKILL.md.",
+			"rationale": "40h underestimated actual working hours. 48h (6-day × 8h) better reflects Fracktal Works operating reality and reduces false OVERLOADED flags.",
+			"outcome": "All 21 people in HR structure, all 6 script fallback sites, and SKILL.md docs updated. Regenerate morning report to see corrected workload statuses."
+		},
+		{
 			"date": "2026-06-09",
 			"title": "Control Center-first upgrade scope",
 			"decision": "Prioritize only Control Center, Linux baseline, and OctoPrint upgrade work; defer Klipper task creation.",
