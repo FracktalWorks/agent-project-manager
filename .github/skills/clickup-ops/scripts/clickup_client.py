@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import os
 import time
+from pathlib import Path
 from typing import Any
 
 import httpx
@@ -31,11 +32,31 @@ class ClickUpClient:
             "Authorization": self._token,
             "Content-Type": "application/json",
         }
-        # Auto-discover team ID if not provided
+        # Auto-discover team ID if not provided, and persist to .env
         if not self._team_id:
             teams = self.get_teams()
             if teams:
                 self._team_id = teams[0]["id"]
+                self._persist_team_id(self._team_id)
+
+    @staticmethod
+    def _persist_team_id(team_id: str) -> None:
+        """Write the discovered team ID into .env so future runs skip discovery."""
+        import re
+        dotenv_path = Path.cwd() / ".env"
+        if not dotenv_path.exists():
+            return
+        text = dotenv_path.read_text(encoding="utf-8")
+        if re.search(r"^CLICKUP_TEAM_ID=", text, re.MULTILINE):
+            text = re.sub(
+                r"^CLICKUP_TEAM_ID=.*$",
+                f"CLICKUP_TEAM_ID={team_id}",
+                text,
+                flags=re.MULTILINE,
+            )
+        else:
+            text += f"\nCLICKUP_TEAM_ID={team_id}\n"
+        dotenv_path.write_text(text, encoding="utf-8")
 
     def _request(self, method: str, path: str, **kwargs: Any) -> Any:
         url = f"{BASE_URL}{path}"
