@@ -27,7 +27,9 @@ def test_agent_has_name_and_instructions():
         agents = build_agents()
         agent = agents[0]
         assert hasattr(agent, "name") and agent.name, "Agent must have a non-empty name"
-        instructions = getattr(agent, "instructions", None) or getattr(agent, "_instructions", None)
+        # GitHubCopilotAgent stores instructions in _default_options["system_message"]["content"]
+        sm = agent._default_options.get("system_message", {})
+        instructions = sm.get("content", "") if isinstance(sm, dict) else ""
         assert instructions and len(instructions) > 100, "instructions must be non-trivial"
     except ImportError:
         pass  # framework not installed locally — skip

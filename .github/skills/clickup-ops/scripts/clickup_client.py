@@ -31,6 +31,11 @@ class ClickUpClient:
             "Authorization": self._token,
             "Content-Type": "application/json",
         }
+        # Auto-discover team ID if not provided
+        if not self._team_id:
+            teams = self.get_teams()
+            if teams:
+                self._team_id = teams[0]["id"]
 
     def _request(self, method: str, path: str, **kwargs: Any) -> Any:
         url = f"{BASE_URL}{path}"
