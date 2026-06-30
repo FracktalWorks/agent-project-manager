@@ -21,10 +21,12 @@ from pathlib import Path
 from typing import Optional
 from urllib.parse import quote_plus
 
-import requests
-from dotenv import load_dotenv
+# Ensure .tmp/scripts/ is importable (for load_env)
+REPO_ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(REPO_ROOT / ".tmp" / "scripts"))
+from load_env import load_env; load_env()
 
-load_dotenv()
+import requests
 
 # Rate limiting settings
 RATE_LIMITS = {

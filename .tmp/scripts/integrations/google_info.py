@@ -15,9 +15,7 @@ import json
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
-
-load_dotenv()
+from load_env import load_env; load_env()
 
 SCOPES = ["https://www.googleapis.com/auth/drive.metadata.readonly"]
 

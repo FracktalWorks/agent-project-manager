@@ -14,9 +14,7 @@ import os
 from pathlib import Path
 
 import httpx
-from dotenv import load_dotenv
-
-load_dotenv()
+from load_env import load_env; load_env()
 NOTION_TOKEN = os.getenv("NOTION_API_TOKEN")
 API_BASE = "https://api.notion.com/v1"
 NOTION_VERSION = "2022-06-28"

@@ -49,6 +49,36 @@
       "fix": "Updated all occurrences: hr_structure.json capacity_hours_per_week and available_hours_per_week 40→48; Python script fallbacks 40→48; SKILL.md docs 40h→48h.",
       "prevention": "When adjusting company-wide defaults, change all three layers: (1) hr_structure.json source of truth, (2) script fallback defaults, (3) SKILL.md documentation. Use grep to verify zero stale references remain.",
       "project": "general"
+    },
+    {
+      "id": "L-006",
+      "date": "2026-06-23",
+      "title": "python-dotenv load_dotenv() crashes in CommandCenter runtime",
+      "pattern": "`from dotenv import load_dotenv; load_dotenv()` raises `AssertionError` — frame.f_back is None when the agent runs via subprocess or piped context.",
+      "root_cause": "load_dotenv() inspects the caller's stack frame to locate the .env file. In the CommandCenter runtime, scripts are invoked via subprocess.run() or from within the MAF framework where there is no Python caller frame.",
+      "fix": "Replace all `from dotenv import load_dotenv; load_dotenv()` with a manual .env parser. Created `.tmp/scripts/load_env.py` — canonical shared loader: reads AGENT_DIR/.env line-by-line, parses KEY=VALUE, sets os.environ with setdefault semantics. Import as: `from load_env import load_env; load_env()`.",
+      "prevention": "Never use python-dotenv in any agent script. Use `from load_env import load_env; load_env()` instead. Removed python-dotenv from pyproject.toml dependencies. All 16 scripts that used load_dotenv() were migrated to the new pattern on 2026-06-23.",
+      "project": "agent-self"
+    },
+    {
+      "id": "L-007",
+      "date": "2026-06-23",
+      "title": "No bulk task status update tooling — mass operations were done one-by-one",
+      "pattern": "Closing 14 tasks for a departing employee required 14 individual PUT /task/{id} calls, each with manual .env parsing. Slow and error-prone.",
+      "root_cause": "No shared script existed for bulk status transitions. The clickup-ops skill only had create_task, create_subtask, and update_task as individual operations.",
+      "fix": "Created `.github/skills/clickup-ops/scripts/bulk_update_tasks.py` — supports: close all tasks by assignee (--assignee), close specific task IDs (--task-ids), close from plan JSON (--plan). Has --dry-run mode. Handles subtasks automatically.",
+      "prevention": "When mass mutation is needed: `python .github/skills/clickup-ops/scripts/bulk_update_tasks.py --assignee <ID> --to-status Closed --dry-run` first, then re-run without --dry-run after review.",
+      "project": "agent-self"
+    },
+    {
+      "id": "L-008",
+      "date": "2026-06-23",
+      "title": "No cross-list unassigned task search — finding work for departing employee required manual space-by-space scanning",
+      "pattern": "Searching for unassigned tasks matching Raja's skills (Python, Django, Flask, Electron) required fetching tasks from 7+ lists individually, grep/filter manually. Took many turns and hit rate limits.",
+      "root_cause": "All task fetching was list-scoped. No tool existed to enumerate unassigned tasks across the whole workspace with skill-keyword matching.",
+      "fix": "Created `.github/skills/clickup-ops/scripts/find_unassigned_tasks.py` — enumerates all spaces/folders/lists, finds tasks with empty assignees, optionally filters by skill keywords. Supports --space-id scoping, --skip-status exclusion, --json output.",
+      "prevention": "`python .github/skills/clickup-ops/scripts/find_unassigned_tasks.py --skills 'Python,Django,Flask'` for skill-matching. Use `--json` for structured output readable by other scripts.",
+      "project": "agent-self"
     }
   ]
 }

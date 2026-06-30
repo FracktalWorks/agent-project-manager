@@ -35,13 +35,12 @@ import os
 import sys
 from pathlib import Path
 
-import httpx
-from dotenv import load_dotenv
-
-load_dotenv()
-
 REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / ".tmp" / "scripts"))
+from load_env import load_env; load_env()
+
+import httpx
 
 TOKEN = os.environ.get("CLICKUP_API_TOKEN", "")
 WORKSPACE_ID = os.environ.get("CLICKUP_TEAM_ID", "")

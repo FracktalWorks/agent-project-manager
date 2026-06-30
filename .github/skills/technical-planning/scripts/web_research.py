@@ -24,10 +24,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-import requests
-from dotenv import load_dotenv
+# Ensure .tmp/scripts/ is importable (for load_env)
+REPO_ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(REPO_ROOT / ".tmp" / "scripts"))
+from load_env import load_env; load_env()
 
-load_dotenv()
+import requests
 
 # Cache settings
 CACHE_DIR = Path(".tmp/web_cache")

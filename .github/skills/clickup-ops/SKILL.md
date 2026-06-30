@@ -35,8 +35,7 @@ python .github/skills/clickup-ops/scripts/list_workspace.py --from-cache --filte
 ```python
 import httpx, os, time
 from datetime import datetime
-from dotenv import load_dotenv
-load_dotenv()
+from load_env import load_env; load_env()
 TOKEN = os.environ.get("CLICKUP_API_TOKEN", "")
 H = {"Authorization": TOKEN, "Content-Type": "application/json"}
 
@@ -178,9 +177,7 @@ if r.status_code == 429:
 ```python
 import httpx, os, time
 from datetime import datetime
-from dotenv import load_dotenv
-
-load_dotenv()
+from load_env import load_env; load_env()
 TOKEN = os.environ.get("CLICKUP_API_TOKEN", "")
 H = {"Authorization": TOKEN, "Content-Type": "application/json"}
 

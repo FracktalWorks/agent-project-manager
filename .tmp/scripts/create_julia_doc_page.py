@@ -4,9 +4,7 @@ Hardware Projects Reference doc (2kz0eqmc-18436).
 """
 from __future__ import annotations
 import sys
-from dotenv import load_dotenv
-
-load_dotenv()
+from load_env import load_env; load_env()
 sys.path.insert(0, ".github/skills/clickup-ops/scripts")
 from clickup_client import ClickUpClient  # noqa: E402
 

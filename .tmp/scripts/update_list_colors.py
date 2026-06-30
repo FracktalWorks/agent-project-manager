@@ -31,9 +31,7 @@ import sys
 import time
 
 import httpx
-from dotenv import load_dotenv
-
-load_dotenv()
+from load_env import load_env; load_env()
 
 TOKEN = os.environ.get("CLICKUP_API_TOKEN", "")
 H = {"Authorization": TOKEN, "Content-Type": "application/json"}

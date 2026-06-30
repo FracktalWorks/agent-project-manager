@@ -14,9 +14,7 @@ import sys
 from pathlib import Path
 
 import httpx
-from dotenv import load_dotenv
-
-load_dotenv()
+from load_env import load_env; load_env()
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 API_BASE = "https://api.github.com"
 
