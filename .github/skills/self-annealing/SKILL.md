@@ -49,6 +49,7 @@ DETECT → DIAGNOSE → FIX → TEST → RECORD → UPDATE → STRONGER
 | L-005 | PDF emojis render as blank boxes | Emojis missing in PDF even though MD shows them correctly | No colour emoji font (Noto Color Emoji) installed on Linux | `sudo apt-get install fonts-noto-color-emoji && fc-cache -fv` |
 | L-006 | Chromium fails to launch on Linux | `TargetClosedError: ... libatk-1.0.so.0: cannot open shared object file` | Missing system deps for headless Chromium | Install deps: `sudo apt-get install libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 libnspr4 libnss3` |
 | L-007 | WeasyPrint produces emoji-less PDFs | PDF looks structurally correct but emojis are blank squares | WeasyPrint doesn't support coloured emoji glyphs | Always use the Playwright+Chromium pipeline (`convert_md_to_pdf.py`); never fall back to weasyprint for reports with emojis |
+| L-008 | `run_diagnostics` MAF tool reports "Tool execution failed" | Tool error even though script works fine when run directly | `_run()` in `agents.py` raises `RuntimeError` on non-zero exit; diagnostics script exits 1 when issues found (which is expected) | Rewrote `run_diagnostics()` to use `subprocess.run` directly, returning stdout/stderr regardless of exit code |
 
 ## Common Fixes
 

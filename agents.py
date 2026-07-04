@@ -508,11 +508,20 @@ async def run_diagnostics() -> str:
     Use this tool when something is not working, after a script fails, or at the
     start of a new session to verify the agent environment is healthy.
     """
-    return await _run([
+    cmd = [
         sys.executable,
         str(SCRIPTS_DIR / "self_anneal_diagnostics.py"),
         "--check", "all",
-    ])
+    ]
+    result = await asyncio.to_thread(
+        subprocess.run, cmd, capture_output=True, text=True,
+        cwd=str(AGENT_DIR), env=_run_env(),
+    )
+    # Diagnostics reports issues via non-zero exit — always return the output.
+    output = result.stdout or result.stderr or "(no output)"
+    if result.stderr and not result.stdout:
+        output = result.stderr
+    return output
 
 
 def _gateway_provider() -> dict:
