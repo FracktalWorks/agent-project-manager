@@ -46,6 +46,9 @@ DETECT → DIAGNOSE → FIX → TEST → RECORD → UPDATE → STRONGER
 | L-002 | ClickUp status error on task creation | `{"err":"Status not found","ECODE":"CRTSK_001"}` | Status string doesn't match list's exact status names | Fetch list first (`GET /list/{id}`), use exact status string from response |
 | L-003 | Due dates off by one day | Task shows as due on wrong date in ClickUp UI | `datetime(yyyy, mm, dd)` converts to midnight UTC, which is previous day in IST | Use `datetime(yyyy, mm, dd, 18, 0)` and set `"due_date_time": False` |
 | L-004 | Subtask creation 404 | `/task/{id}/subtask` returns 404 | Endpoint doesn't exist in this workspace's API version | Use `POST /list/{list_id}/task` with `"parent": parent_task_id` |
+| L-005 | PDF emojis render as blank boxes | Emojis missing in PDF even though MD shows them correctly | No colour emoji font (Noto Color Emoji) installed on Linux | `sudo apt-get install fonts-noto-color-emoji && fc-cache -fv` |
+| L-006 | Chromium fails to launch on Linux | `TargetClosedError: ... libatk-1.0.so.0: cannot open shared object file` | Missing system deps for headless Chromium | Install deps: `sudo apt-get install libatk1.0-0t64 libatk-bridge2.0-0t64 libcups2t64 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 libnspr4 libnss3` |
+| L-007 | WeasyPrint produces emoji-less PDFs | PDF looks structurally correct but emojis are blank squares | WeasyPrint doesn't support coloured emoji glyphs | Always use the Playwright+Chromium pipeline (`convert_md_to_pdf.py`); never fall back to weasyprint for reports with emojis |
 
 ## Common Fixes
 

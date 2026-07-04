@@ -35,7 +35,7 @@ CSS = """
 }
 
 body {
-    font-family: 'Segoe UI', 'Calibri', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Segoe UI', 'Calibri', 'Helvetica Neue', 'Noto Color Emoji', Arial, sans-serif;
     font-size: 10pt;
     line-height: 1.5;
     color: #333;
