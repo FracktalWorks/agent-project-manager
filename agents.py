@@ -312,6 +312,8 @@ async def fetch_project_status(project_slug: str = "") -> str:
     cmd = [sys.executable, str(SKILLS_DIR / "project-tracking/scripts/fetch_status.py")]
     if project_slug:
         cmd += ["--slug", project_slug]
+    else:
+        cmd += ["--all-projects"]
     return await _run(cmd)
 
 
@@ -322,9 +324,10 @@ async def generate_status_report(project_slug: str = "") -> str:
     summary, or wants to see ✅ on track / ⚠️ at risk / ❌ blocked breakdown.
     project_slug: optional slug to filter (leave empty for full portfolio report).
     """
-    cmd = [sys.executable, str(SKILLS_DIR / "project-tracking/scripts/generate_report.py")]
+    cmd = [sys.executable, str(SKILLS_DIR / "project-tracking/scripts/generate_report.py"),
+           "--slug", project_slug or ""]
     if project_slug:
-        cmd += ["--slug", project_slug]
+        cmd += ["--project-name", project_slug.replace("-", " ").title()]
     return await _run(cmd)
 
 

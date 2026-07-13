@@ -16,11 +16,11 @@ import sys
 from datetime import datetime, date
 from pathlib import Path
 
-AGENT_DIR   = Path(__file__).resolve().parents[5]
+AGENT_DIR   = Path(__file__).resolve().parents[4]
 DATA_DIR    = AGENT_DIR / "agent-data"
 OUTPUTS_DIR = AGENT_DIR / "outputs"
 
-sys.path.insert(0, str(AGENT_DIR / "scripts"))
+sys.path.insert(0, str(AGENT_DIR / ".tmp" / "scripts"))
 from project_data_manager import save_step, slugify
 
 

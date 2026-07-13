@@ -13,7 +13,7 @@ import argparse
 import json
 from pathlib import Path
 
-AGENT_DIR = Path(__file__).resolve().parents[5]
+AGENT_DIR = Path(__file__).resolve().parents[4]
 HR_FILE   = AGENT_DIR / "agent-data" / "hr_structure.json"
 
 

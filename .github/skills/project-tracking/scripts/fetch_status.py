@@ -47,7 +47,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-AGENT_DIR = Path(__file__).resolve().parents[5]
+AGENT_DIR = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(AGENT_DIR / ".github" / "skills" / "clickup-ops" / "scripts"))
 
 from clickup_client import ClickUpClient  # noqa: E402
@@ -129,6 +129,7 @@ def main() -> None:
     group.add_argument("--list-id", help="ClickUp list ID for a single list")
     group.add_argument("--all-projects", action="store_true",
                        help="Query all lists registered in outputs/_memory/project_registry.json")
+    group.add_argument("--slug", help="Query a single project by its slug in project_registry.json")
     parser.add_argument("--assignee", default="",
                         help="Filter tasks by assignee name (case-insensitive substring)")
     parser.add_argument("--output", default=None, help="Save JSON output to this file path")
@@ -146,6 +147,23 @@ def main() -> None:
             "fetched_at": now,
             "list_id":    args.list_id,
             "tasks":      tasks,
+        }
+    elif args.slug:
+        projects = load_project_registry()
+        target = next((p for p in projects if p.get("slug") == args.slug), None)
+        if not target:
+            print(f"Project '{args.slug}' not found in project_registry.json", file=sys.stderr)
+            sys.exit(1)
+        list_id = target.get("clickup_list_id")
+        if not list_id:
+            print(f"Project '{args.slug}' has no clickup_list_id", file=sys.stderr)
+            sys.exit(1)
+        tasks = fetch_list(client, list_id, args.assignee)
+        report = {
+            "fetched_at":   now,
+            "project_name": target.get("name", args.slug),
+            "list_id":      list_id,
+            "tasks":        tasks,
         }
     else:
         projects = load_project_registry()
